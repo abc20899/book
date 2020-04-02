@@ -1,0 +1,5317 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Matrix详解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Matrix_3D_Camera.html" />
+    
+    
+    <link rel="prev" href="Matrix_Basic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/GitBook简单教程.html">
+            
+                <a href="../../gitbook/GitBook简单教程.html">
+            
+                    
+                    gitbook简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../python/python语法基础-1.html">
+            
+                <a href="../../python/python语法基础-1.html">
+            
+                    
+                    python语法基础-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../python/python语法基础-2.html">
+            
+                <a href="../../python/python语法基础-2.html">
+            
+                    
+                    python语法基础-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../python/python语法基础-3.html">
+            
+                <a href="../../python/python语法基础-3.html">
+            
+                    
+                    python语法基础-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../python/python语法基础-4.html">
+            
+                <a href="../../python/python语法基础-4.html">
+            
+                    
+                    python语法基础-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../python/Python虚拟环境.html">
+            
+                <a href="../../python/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    自定义view
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="Canvas.html">
+            
+                <a href="Canvas.html">
+            
+                    
+                    Canvas常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="Path.html">
+            
+                <a href="Path.html">
+            
+                    
+                    Path常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="Matrix.html">
+            
+                <a href="Matrix.html">
+            
+                    
+                    Matrix常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="Bezier.html">
+            
+                <a href="Bezier.html">
+            
+                    
+                    贝塞尔曲线常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="CoordinateSystem.html">
+            
+                <a href="CoordinateSystem.html">
+            
+                    
+                    坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="AngleAndRadian.html">
+            
+                <a href="AngleAndRadian.html">
+            
+                    
+                    角度弧度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="Color.html">
+            
+                <a href="Color.html">
+            
+                    
+                    颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="CustomViewProcess.html">
+            
+                <a href="CustomViewProcess.html">
+            
+                    
+                    分类和流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="Canvas_BasicGraphics.html">
+            
+                <a href="Canvas_BasicGraphics.html">
+            
+                    
+                    绘制基本图形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="Canvas_Convert.html">
+            
+                <a href="Canvas_Convert.html">
+            
+                    
+                    画布操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="Canvas_PictureText.html">
+            
+                <a href="Canvas_PictureText.html">
+            
+                    
+                    图片文字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="Path_Basic.html">
+            
+                <a href="Path_Basic.html">
+            
+                    
+                    Path基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="Path_Bezier.html">
+            
+                <a href="Path_Bezier.html">
+            
+                    
+                    贝塞尔曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="Path_Over.html">
+            
+                <a href="Path_Over.html">
+            
+                    
+                    Path完结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="Path_Play.html">
+            
+                <a href="Path_Play.html">
+            
+                    
+                    Path玩出花样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.16" data-path="Matrix_Basic.html">
+            
+                <a href="Matrix_Basic.html">
+            
+                    
+                    Matrix原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.17" data-path="Matrix_Method.html">
+            
+                <a href="Matrix_Method.html">
+            
+                    
+                    Matrix详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.18" data-path="Matrix_3D_Camera.html">
+            
+                <a href="Matrix_3D_Camera.html">
+            
+                    
+                    Matrix Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.19" data-path="Dispatch-TouchEvent-Theory.html">
+            
+                <a href="Dispatch-TouchEvent-Theory.html">
+            
+                    
+                    事件分发机制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.20" data-path="Dispatch-TouchEvent-Source.html">
+            
+                <a href="Dispatch-TouchEvent-Source.html">
+            
+                    
+                    事件分发机制详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.21" data-path="MotionEvent.html">
+            
+                <a href="MotionEvent.html">
+            
+                    
+                    MotionEvent详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.22" data-path="touch-matrix-region.html">
+            
+                <a href="touch-matrix-region.html">
+            
+                    
+                    特殊形状控件事件处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.23" data-path="multi-touch.html">
+            
+                <a href="multi-touch.html">
+            
+                    
+                    多点触控详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.24" data-path="CustomViewRule.html">
+            
+                <a href="CustomViewRule.html">
+            
+                    
+                    自定义view基本法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../android面试/">
+            
+                <a href="../android面试/">
+            
+                    
+                    android面试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../android面试/进程保活面试.html">
+            
+                <a href="../android面试/进程保活面试.html">
+            
+                    
+                    进程保活面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../android面试/冷启动优化面试.html">
+            
+                <a href="../android面试/冷启动优化面试.html">
+            
+                    
+                    冷启动优化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../android面试/内存管理面试.html">
+            
+                <a href="../android面试/内存管理面试.html">
+            
+                    
+                    内存管理面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../android面试/内存泄漏面试.html">
+            
+                <a href="../android面试/内存泄漏面试.html">
+            
+                    
+                    内存泄漏面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../android面试/其他优化面试.html">
+            
+                <a href="../android面试/其他优化面试.html">
+            
+                    
+                    其他优化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../android面试/事件分发机制面试.html">
+            
+                <a href="../android面试/事件分发机制面试.html">
+            
+                    
+                    事件分发机制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../android面试/依赖注入.html">
+            
+                <a href="../android面试/依赖注入.html">
+            
+                    
+                    依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../android面试/自定义View.html">
+            
+                <a href="../android面试/自定义View.html">
+            
+                    
+                    自定义View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="../android面试/activity面试.html">
+            
+                <a href="../android面试/activity面试.html">
+            
+                    
+                    activity面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../android面试/AndroidStudio目录结构面试.html">
+            
+                <a href="../android面试/AndroidStudio目录结构面试.html">
+            
+                    
+                    AndroidStudio目录结构面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="../android面试/Android部分.html">
+            
+                <a href="../android面试/Android部分.html">
+            
+                    
+                    Android部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="../android面试/Android插件化面试.html">
+            
+                <a href="../android面试/Android插件化面试.html">
+            
+                    
+                    Android插件化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.13" data-path="../android面试/Android构建面试.html">
+            
+                <a href="../android面试/Android构建面试.html">
+            
+                    
+                    Android构建面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.14" data-path="../android面试/Android热更新面试.html">
+            
+                <a href="../android面试/Android热更新面试.html">
+            
+                    
+                    Android热更新面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.15" data-path="../android面试/ANR异常面试.html">
+            
+                <a href="../android面试/ANR异常面试.html">
+            
+                    
+                    ANR异常面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.16" data-path="../android面试/AsyncTask面试.html">
+            
+                <a href="../android面试/AsyncTask面试.html">
+            
+                    
+                    AsyncTask面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.17" data-path="../android面试/Binder面试.html">
+            
+                <a href="../android面试/Binder面试.html">
+            
+                    
+                    Binder面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.18" data-path="../android面试/Bitmap面试.html">
+            
+                <a href="../android面试/Bitmap面试.html">
+            
+                    
+                    Bitmap面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.19" data-path="../android面试/Broadcast面试.html">
+            
+                <a href="../android面试/Broadcast面试.html">
+            
+                    
+                    Broadcast面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.20" data-path="../android面试/ButterKnife框架面试.html">
+            
+                <a href="../android面试/ButterKnife框架面试.html">
+            
+                    
+                    ButterKnife框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.21" data-path="../android面试/fragment面试.html">
+            
+                <a href="../android面试/fragment面试.html">
+            
+                    
+                    fragment面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.22" data-path="../android面试/Git版本控制面试.html">
+            
+                <a href="../android面试/Git版本控制面试.html">
+            
+                    
+                    Git版本控制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.23" data-path="../android面试/Glide图片加载框架面试.html">
+            
+                <a href="../android面试/Glide图片加载框架面试.html">
+            
+                    
+                    Glide图片加载框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.24" data-path="../android面试/Gradle面试.html">
+            
+                <a href="../android面试/Gradle面试.html">
+            
+                    
+                    Gradle面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.25" data-path="../android面试/Handler面试.html">
+            
+                <a href="../android面试/Handler面试.html">
+            
+                    
+                    Handler面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.26" data-path="../android面试/HandlerThread面试.html">
+            
+                <a href="../android面试/HandlerThread面试.html">
+            
+                    
+                    HandlerThread面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.27" data-path="../android面试/IntentService面试.html">
+            
+                <a href="../android面试/IntentService面试.html">
+            
+                    
+                    IntentService面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.28" data-path="../android面试/ListView面试.html">
+            
+                <a href="../android面试/ListView面试.html">
+            
+                    
+                    ListView面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.29" data-path="../android面试/MVC架构设计模式面试.html">
+            
+                <a href="../android面试/MVC架构设计模式面试.html">
+            
+                    
+                    MVC架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.30" data-path="../android面试/MVP架构设计模式面试.html">
+            
+                <a href="../android面试/MVP架构设计模式面试.html">
+            
+                    
+                    MVP架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.31" data-path="../android面试/MVVM架构设计模式面试.html">
+            
+                <a href="../android面试/MVVM架构设计模式面试.html">
+            
+                    
+                    MVVM架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.32" data-path="../android面试/OKhttp框架面试.html">
+            
+                <a href="../android面试/OKhttp框架面试.html">
+            
+                    
+                    OKhttp框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.33" data-path="../android面试/OOM异常面试.html">
+            
+                <a href="../android面试/OOM异常面试.html">
+            
+                    
+                    OOM异常面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.34" data-path="../android面试/ProGuard代码混淆面试.html">
+            
+                <a href="../android面试/ProGuard代码混淆面试.html">
+            
+                    
+                    ProGuard代码混淆面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.35" data-path="../android面试/RecyclerView面试.html">
+            
+                <a href="../android面试/RecyclerView面试.html">
+            
+                    
+                    RecyclerView面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.36" data-path="../android面试/retrofit.html">
+            
+                <a href="../android面试/retrofit.html">
+            
+                    
+                    retrofit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.37" data-path="../android面试/retrofit网络框架面试.html">
+            
+                <a href="../android面试/retrofit网络框架面试.html">
+            
+                    
+                    retrofit网络框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.38" data-path="../android面试/Service面试.html">
+            
+                <a href="../android面试/Service面试.html">
+            
+                    
+                    Service面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.39" data-path="../android面试/UI卡顿面试.html">
+            
+                <a href="../android面试/UI卡顿面试.html">
+            
+                    
+                    UI卡顿面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.40" data-path="../android面试/View绘制机制面试.html">
+            
+                <a href="../android面试/View绘制机制面试.html">
+            
+                    
+                    View绘制机制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.41" data-path="../android面试/View绘制流程.html">
+            
+                <a href="../android面试/View绘制流程.html">
+            
+                    
+                    View绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.42" data-path="../android面试/进程保活面试.html">
+            
+                <a href="../android面试/进程保活面试.html">
+            
+                    
+                    Volley框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.43" data-path="../android面试/Webview面试.html">
+            
+                <a href="../android面试/Webview面试.html">
+            
+                    
+                    Webview面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.44" data-path="../android面试/JNI与NDK.html">
+            
+                <a href="../android面试/JNI与NDK.html">
+            
+                    
+                    JNI与NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../rxjava文档/">
+            
+                <a href="../rxjava文档/">
+            
+                    
+                    rxjava文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../rxjava文档/rxjava-doc-1.html">
+            
+                <a href="../rxjava文档/rxjava-doc-1.html">
+            
+                    
+                    rxjava-doc-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../rxjava文档/rxjava-doc-2.html">
+            
+                <a href="../rxjava文档/rxjava-doc-2.html">
+            
+                    
+                    rxjava-doc-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../rxjava文档/rxjava-doc-3.html">
+            
+                <a href="../rxjava文档/rxjava-doc-3.html">
+            
+                    
+                    rxjava-doc-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../rxjava文档/rxjava-doc-4.html">
+            
+                <a href="../rxjava文档/rxjava-doc-4.html">
+            
+                    
+                    rxjava-doc-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../okhttp解析/">
+            
+                <a href="../okhttp解析/">
+            
+                    
+                    okhttp解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../okhttp解析/拦截器.html">
+            
+                <a href="../okhttp解析/拦截器.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../okhttp解析/Dispather讲解.html">
+            
+                <a href="../okhttp解析/Dispather讲解.html">
+            
+                    
+                    Dispather讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../okhttp解析/okhttp分析1.html">
+            
+                <a href="../okhttp解析/okhttp分析1.html">
+            
+                    
+                    okhttp分析1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../okhttp解析/okhttp分析2.html">
+            
+                <a href="../okhttp解析/okhttp分析2.html">
+            
+                    
+                    okhttp分析2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../okhttp解析/okhttp面试_1.html">
+            
+                <a href="../okhttp解析/okhttp面试_1.html">
+            
+                    
+                    okhttp面试_1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../okhttp解析/okhttp面试_2.html">
+            
+                <a href="../okhttp解析/okhttp面试_2.html">
+            
+                    
+                    okhttp面试_2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../okhttp解析/okhttp面试_3.html">
+            
+                <a href="../okhttp解析/okhttp面试_3.html">
+            
+                    
+                    okhttp面试_3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../android高级/">
+            
+                <a href="../android高级/">
+            
+                    
+                    android高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../android高级/ApplicationIdvsPackageName.html">
+            
+                <a href="../android高级/ApplicationIdvsPackageName.html">
+            
+                    
+                    ApplicationIdvsPackageName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../android高级/ART与Dalvik.html">
+            
+                <a href="../android高级/ART与Dalvik.html">
+            
+                    
+                    ART与Dalvik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../android高级/AsyncTask详解.html">
+            
+                <a href="../android高级/AsyncTask详解.html">
+            
+                    
+                    AsyncTask详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../android高级/BroadcastReceiver安全问题.html">
+            
+                <a href="../android高级/BroadcastReceiver安全问题.html">
+            
+                    
+                    BroadcastReceiver安全问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../android高级/butterknife源码详解.html">
+            
+                <a href="../android高级/butterknife源码详解.html">
+            
+                    
+                    butterknife源码详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../android高级/Fiddler抓取Android手机数据包.html">
+            
+                <a href="../android高级/Fiddler抓取Android手机数据包.html">
+            
+                    
+                    Fiddler抓取Android手机数据包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../android高级/Github个人主页绑定域名.html">
+            
+                <a href="../android高级/Github个人主页绑定域名.html">
+            
+                    
+                    Github个人主页绑定域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="../android高级/Gradle专题.html">
+            
+                <a href="../android高级/Gradle专题.html">
+            
+                    
+                    Gradle专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="../android高级/Handler导致内存泄露分析.html">
+            
+                <a href="../android高级/Handler导致内存泄露分析.html">
+            
+                    
+                    Handler导致内存泄露分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="../android高级/HttpURLConnection详解.html">
+            
+                <a href="../android高级/HttpURLConnection详解.html">
+            
+                    
+                    HttpURLConnection详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="../android高级/HttpURLConnection与HttpClient.html">
+            
+                <a href="../android高级/HttpURLConnection与HttpClient.html">
+            
+                    
+                    HttpURLConnection与HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="../android高级/InstantRun详解.html">
+            
+                <a href="../android高级/InstantRun详解.html">
+            
+                    
+                    InstantRun详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="../android高级/Library项目中资源id使用case时报错.html">
+            
+                <a href="../android高级/Library项目中资源id使用case时报错.html">
+            
+                    
+                    Library项目中资源id使用case时报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.14" data-path="../android高级/ListView源码分析.html">
+            
+                <a href="../android高级/ListView源码分析.html">
+            
+                    
+                    ListView源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.15" data-path="../android高级/Mac下配置adb及Android命令.html">
+            
+                <a href="../android高级/Mac下配置adb及Android命令.html">
+            
+                    
+                    Mac下配置adb及Android命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.16" data-path="../android高级/Markdown学习手册.html">
+            
+                <a href="../android高级/Markdown学习手册.html">
+            
+                    
+                    Markdown学习手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.17" data-path="../android高级/MAT内存分析.html">
+            
+                <a href="../android高级/MAT内存分析.html">
+            
+                    
+                    MAT内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.18" data-path="../android高级/MaterialDesign使用.html">
+            
+                <a href="../android高级/MaterialDesign使用.html">
+            
+                    
+                    MaterialDesign使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.19" data-path="../android高级/MVC.html">
+            
+                <a href="../android高级/MVC.html">
+            
+                    
+                    MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.20" data-path="../android高级/MVP.html">
+            
+                <a href="../android高级/MVP.html">
+            
+                    
+                    MVP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.21" data-path="../android高级/RecyclerView专题.html">
+            
+                <a href="../android高级/RecyclerView专题.html">
+            
+                    
+                    RecyclerView专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.22" data-path="../android高级/Retrofit详解上.html">
+            
+                <a href="../android高级/Retrofit详解上.html">
+            
+                    
+                    Retrofit详解上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.23" data-path="../android高级/Retrofit详解下.html">
+            
+                <a href="../android高级/Retrofit详解下.html">
+            
+                    
+                    Retrofit详解下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.24" data-path="../android高级/RxJava系列全家桶.html">
+            
+                <a href="../android高级/RxJava系列全家桶.html">
+            
+                    
+                    RxJava系列全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.25" data-path="../android高级/RxJava详解上.html">
+            
+                <a href="../android高级/RxJava详解上.html">
+            
+                    
+                    RxJava详解上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.26" data-path="../android高级/RxJava详解中.html">
+            
+                <a href="../android高级/RxJava详解中.html">
+            
+                    
+                    RxJava详解中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.27" data-path="../android高级/RxJava详解下.html">
+            
+                <a href="../android高级/RxJava详解下.html">
+            
+                    
+                    RxJava详解下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.28" data-path="../android高级/VideoView源码分析.html">
+            
+                <a href="../android高级/VideoView源码分析.html">
+            
+                    
+                    VideoView源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.29" data-path="../android高级/View绘制过程详解.html">
+            
+                <a href="../android高级/View绘制过程详解.html">
+            
+                    
+                    View绘制过程详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.30" data-path="../android高级/volley-retrofit-okhttp之我们该如何选择网路框架.html">
+            
+                <a href="../android高级/volley-retrofit-okhttp之我们该如何选择网路框架.html">
+            
+                    
+                    volley-retrofit-okhttp之我们该如何选择网路框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.31" data-path="../android高级/Volley源码分析.html">
+            
+                <a href="../android高级/Volley源码分析.html">
+            
+                    
+                    Volley源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.32" data-path="../android高级/Zipalign优化.html">
+            
+                <a href="../android高级/Zipalign优化.html">
+            
+                    
+                    Zipalign优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.33" data-path="../android高级/Picasso图片加载框架的深入学习及解析.html">
+            
+                <a href="../android高级/Picasso图片加载框架的深入学习及解析.html">
+            
+                    
+                    Picasso图片加载框架的深入学习及解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.34" data-path="../android高级/invalidate和postInvalidate内部原理机制.html">
+            
+                <a href="../android高级/invalidate和postInvalidate内部原理机制.html">
+            
+                    
+                    invalidate和postInvalidate内部原理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.35" data-path="../android高级/解决Android应用启动白色闪屏.html">
+            
+                <a href="../android高级/解决Android应用启动白色闪屏.html">
+            
+                    
+                    解决Android应用启动白色闪屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.36" data-path="../android高级/通过BaseActivity实现滑动返回.html">
+            
+                <a href="../android高级/通过BaseActivity实现滑动返回.html">
+            
+                    
+                    通过BaseActivity实现滑动返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.37" data-path="../android高级/异步加载AsyncTask解析.html">
+            
+                <a href="../android高级/异步加载AsyncTask解析.html">
+            
+                    
+                    异步加载AsyncTask解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.38" data-path="../android高级/Android动画深入学习.html">
+            
+                <a href="../android高级/Android动画深入学习.html">
+            
+                    
+                    Android动画深入学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.39" data-path="../android高级/Android动画原理深入解析.html">
+            
+                <a href="../android高级/Android动画原理深入解析.html">
+            
+                    
+                    Android动画原理深入解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.40" data-path="../android高级/Android耗电解决.html">
+            
+                <a href="../android高级/Android耗电解决.html">
+            
+                    
+                    Android耗电解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.41" data-path="../android高级/Android消息通信Handler源码解析.html">
+            
+                <a href="../android高级/Android消息通信Handler源码解析.html">
+            
+                    
+                    Android消息通信Handler源码解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.42" data-path="../android高级/Android中的图像格式.html">
+            
+                <a href="../android高级/Android中的图像格式.html">
+            
+                    
+                    Android中的图像格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.43" data-path="../android高级/ArrayMap和SparseArray解析.html">
+            
+                <a href="../android高级/ArrayMap和SparseArray解析.html">
+            
+                    
+                    ArrayMap和SparseArray解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.44" data-path="../android高级/AsyncTask和Handler比较.html">
+            
+                <a href="../android高级/AsyncTask和Handler比较.html">
+            
+                    
+                    AsyncTask和Handler比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.45" data-path="../android高级/HTTP必知必会.html">
+            
+                <a href="../android高级/HTTP必知必会.html">
+            
+                    
+                    HTTP必知必会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.46" data-path="../android高级/retrofit讲解.html">
+            
+                <a href="../android高级/retrofit讲解.html">
+            
+                    
+                    retrofit讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../android基础/">
+            
+                <a href="../android基础/">
+            
+                    
+                    android基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../android基础/安全退出应用程序.html">
+            
+                <a href="../android基础/安全退出应用程序.html">
+            
+                    
+                    安全退出应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../android基础/Android基础知识.html">
+            
+                <a href="../android基础/Android基础知识.html">
+            
+                    
+                    Android基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../android基础/病毒.html">
+            
+                <a href="../android基础/病毒.html">
+            
+                    
+                    病毒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../android基础/Android命令.html">
+            
+                <a href="../android基础/Android命令.html">
+            
+                    
+                    Android命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../android基础/Android坐标系.html">
+            
+                <a href="../android基础/Android坐标系.html">
+            
+                    
+                    Android坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../android基础/超级管理员(DevicePoliceManager">
+            
+                <span>
+            
+                    
+                    超级管理员(DevicePoliceManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../android基础/程序的启动、卸载和分享.html">
+            
+                <a href="../android基础/程序的启动、卸载和分享.html">
+            
+                    
+                    程序的启动、卸载和分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../android基础/代码混淆.html">
+            
+                <a href="../android基础/代码混淆.html">
+            
+                    
+                    代码混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../android基础/读取用户logcat日志.html">
+            
+                <a href="../android基础/读取用户logcat日志.html">
+            
+                    
+                    读取用户logcat日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../android基础/短信广播接收者.html">
+            
+                <a href="../android基础/短信广播接收者.html">
+            
+                    
+                    短信广播接收者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../android基础/多线程断点下载.html">
+            
+                <a href="../android基础/多线程断点下载.html">
+            
+                    
+                    多线程断点下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../android基础/黑名单挂断电话及删除电话记录.html">
+            
+                <a href="../android基础/黑名单挂断电话及删除电话记录.html">
+            
+                    
+                    黑名单挂断电话及删除电话记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.13" data-path="../android基础/横向ListView.html">
+            
+                <a href="../android基础/横向ListView.html">
+            
+                    
+                    横向ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.14" data-path="../android基础/滑动切换Activity(GestureDetector">
+            
+                <span>
+            
+                    
+                    滑动切换Activity(GestureDetector)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.15" data-path="../android基础/获取联系人.html">
+            
+                <a href="../android基础/获取联系人.html">
+            
+                    
+                    获取联系人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.16" data-path="../android基础/获取手机及SD卡可用存储空间.html">
+            
+                <a href="../android基础/获取手机及SD卡可用存储空间.html">
+            
+                    
+                    获取手机及SD卡可用存储空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.17" data-path="../android基础/获取手机中所有安装的程序.html">
+            
+                <a href="../android基础/获取手机中所有安装的程序.html">
+            
+                    
+                    获取手机中所有安装的程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.18" data-path="../android基础/获取位置(LocationManager">
+            
+                <span>
+            
+                    
+                    获取位置(LocationManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.19" data-path="../android基础/获取应用程序缓存及一键清理.html">
+            
+                <a href="../android基础/获取应用程序缓存及一键清理.html">
+            
+                    
+                    获取应用程序缓存及一键清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.20" data-path="../android基础/开发中异常的处理.html">
+            
+                <a href="../android基础/开发中异常的处理.html">
+            
+                    
+                    开发中异常的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.21" data-path="../android基础/开发中Log的管理.html">
+            
+                <a href="../android基础/开发中Log的管理.html">
+            
+                    
+                    开发中Log的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.22" data-path="../android基础/快捷方式工具类.html">
+            
+                <a href="../android基础/快捷方式工具类.html">
+            
+                    
+                    快捷方式工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.23" data-path="../android基础/来电号码归属地提示框.html">
+            
+                <a href="../android基础/来电号码归属地提示框.html">
+            
+                    
+                    来电号码归属地提示框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.24" data-path="../android基础/来电监听及录音.html">
+            
+                <a href="../android基础/来电监听及录音.html">
+            
+                    
+                    来电监听及录音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.25" data-path="../android基础/零权限上传数据.html">
+            
+                <a href="../android基础/零权限上传数据.html">
+            
+                    
+                    零权限上传数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.26" data-path="../android基础/内存泄漏.html">
+            
+                <a href="../android基础/内存泄漏.html">
+            
+                    
+                    内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.27" data-path="../android基础/屏幕适配.html">
+            
+                <a href="../android基础/屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.28" data-path="../android基础/任务管理器(ActivityManager">
+            
+                <span>
+            
+                    
+                    任务管理器(ActivityManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.29" data-path="../android基础/手机摇晃.html">
+            
+                <a href="../android基础/手机摇晃.html">
+            
+                    
+                    手机摇晃
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.30" data-path="../android基础/竖着的Seekbar.html">
+            
+                <a href="../android基础/竖着的Seekbar.html">
+            
+                    
+                    竖着的Seekbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.31" data-path="../android基础/数据存储.html">
+            
+                <a href="../android基础/数据存储.html">
+            
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.32" data-path="../android基础/搜索框.html">
+            
+                <a href="../android基础/搜索框.html">
+            
+                    
+                    搜索框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.33" data-path="../android基础/锁屏以及解锁监听.html">
+            
+                <a href="../android基础/锁屏以及解锁监听.html">
+            
+                    
+                    锁屏以及解锁监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.34" data-path="../android基础/文件上传.html">
+            
+                <a href="../android基础/文件上传.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.35" data-path="../android基础/下拉刷新ListView.html">
+            
+                <a href="../android基础/下拉刷新ListView.html">
+            
+                    
+                    下拉刷新ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.36" data-path="../android基础/修改系统组件样式.html">
+            
+                <a href="../android基础/修改系统组件样式.html">
+            
+                    
+                    修改系统组件样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.37" data-path="../android基础/音量及屏幕亮度调节.html">
+            
+                <a href="../android基础/音量及屏幕亮度调节.html">
+            
+                    
+                    音量及屏幕亮度调节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.38" data-path="../android基础/应用安装.html">
+            
+                <a href="../android基础/应用安装.html">
+            
+                    
+                    应用安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.39" data-path="../android基础/应用后台唤醒后数据的刷新.html">
+            
+                <a href="../android基础/应用后台唤醒后数据的刷新.html">
+            
+                    
+                    应用后台唤醒后数据的刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.40" data-path="../android基础/知识大杂烩.html">
+            
+                <a href="../android基础/知识大杂烩.html">
+            
+                    
+                    知识大杂烩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.41" data-path="../android基础/资源文件拷贝的三种方式.html">
+            
+                <a href="../android基础/资源文件拷贝的三种方式.html">
+            
+                    
+                    资源文件拷贝的三种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.42" data-path="../android基础/自定义背景.html">
+            
+                <a href="../android基础/自定义背景.html">
+            
+                    
+                    自定义背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.43" data-path="../android基础/自定义控件.html">
+            
+                <a href="../android基础/自定义控件.html">
+            
+                    
+                    自定义控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.44" data-path="../android基础/自定义状态栏通知.html">
+            
+                <a href="../android基础/自定义状态栏通知.html">
+            
+                    
+                    自定义状态栏通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.45" data-path="../android基础/自定义Toast.html">
+            
+                <a href="../android基础/自定义Toast.html">
+            
+                    
+                    自定义Toast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.46" data-path="../android基础/adblogcat使用简介.html">
+            
+                <a href="../android基础/adblogcat使用简介.html">
+            
+                    
+                    adblogcat使用简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.47" data-path="../android基础/Android编码规范.html">
+            
+                <a href="../android基础/Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.48" data-path="../android基础/Android动画.html">
+            
+                <a href="../android基础/Android动画.html">
+            
+                    
+                    Android动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.49" data-path="../android基础/Android基础面试题.html">
+            
+                <a href="../android基础/Android基础面试题.html">
+            
+                    
+                    Android基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.50" data-path="../android基础/Android入门介绍.html">
+            
+                <a href="../android基础/Android入门介绍.html">
+            
+                    
+                    Android入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.51" data-path="../android基础/Android四大组件之ContentProvider.html">
+            
+                <a href="../android基础/Android四大组件之ContentProvider.html">
+            
+                    
+                    Android四大组件之ContentProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.52" data-path="../android基础/Android四大组件之Service.html">
+            
+                <a href="../android基础/Android四大组件之Service.html">
+            
+                    
+                    Android四大组件之Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.53" data-path="../android基础/Ant打包.html">
+            
+                <a href="../android基础/Ant打包.html">
+            
+                    
+                    Ant打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.54" data-path="../android基础/Bitmap优化.html">
+            
+                <a href="../android基础/Bitmap优化.html">
+            
+                    
+                    Bitmap优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.55" data-path="../android基础/DLNA简介.html">
+            
+                <a href="../android基础/DLNA简介.html">
+            
+                    
+                    DLNA简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.56" data-path="../android基础/Fragment专题.html">
+            
+                <a href="../android基础/Fragment专题.html">
+            
+                    
+                    Fragment专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.57" data-path="../android基础/Home键监听.html">
+            
+                <a href="../android基础/Home键监听.html">
+            
+                    
+                    Home键监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.58" data-path="../android基础/HttpClient执行Get和Post请求.html">
+            
+                <a href="../android基础/HttpClient执行Get和Post请求.html">
+            
+                    
+                    HttpClient执行Get和Post请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.59" data-path="../android基础/JNI_C语言基础.html">
+            
+                <a href="../android基础/JNI_C语言基础.html">
+            
+                    
+                    JNI_C语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.60" data-path="../android基础/JNI基础.html">
+            
+                <a href="../android基础/JNI基础.html">
+            
+                    
+                    JNI基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.61" data-path="../android基础/ListView专题.html">
+            
+                <a href="../android基础/ListView专题.html">
+            
+                    
+                    ListView专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.62" data-path="../android基础/Parcelable及Serializable.html">
+            
+                <a href="../android基础/Parcelable及Serializable.html">
+            
+                    
+                    Parcelable及Serializable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.63" data-path="../android基础/PopupWindow细节.html">
+            
+                <a href="../android基础/PopupWindow细节.html">
+            
+                    
+                    PopupWindow细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.64" data-path="../android基础/Scroller简介.html">
+            
+                <a href="../android基础/Scroller简介.html">
+            
+                    
+                    Scroller简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.65" data-path="../android基础/ScrollingTabs.html">
+            
+                <a href="../android基础/ScrollingTabs.html">
+            
+                    
+                    ScrollingTabs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.66" data-path="../android基础/SDKManager无法更新的问题.html">
+            
+                <a href="../android基础/SDKManager无法更新的问题.html">
+            
+                    
+                    SDKManager无法更新的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.67" data-path="../android基础/Selector使用.html">
+            
+                <a href="../android基础/Selector使用.html">
+            
+                    
+                    Selector使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.68" data-path="../android基础/SlidingMenu.html">
+            
+                <a href="../android基础/SlidingMenu.html">
+            
+                    
+                    SlidingMenu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.69" data-path="../android基础/String格式化.html">
+            
+                <a href="../android基础/String格式化.html">
+            
+                    
+                    String格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.70" data-path="../android基础/TextView跑马灯效果.html">
+            
+                <a href="../android基础/TextView跑马灯效果.html">
+            
+                    
+                    TextView跑马灯效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.71" data-path="../android基础/WebView总结.html">
+            
+                <a href="../android基础/WebView总结.html">
+            
+                    
+                    WebView总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.72" data-path="../android基础/Widget(窗口小部件">
+            
+                <span>
+            
+                    
+                    Widget(窗口小部件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.73" data-path="../android基础/Wifi状态监听.html">
+            
+                <a href="../android基础/Wifi状态监听.html">
+            
+                    
+                    Wifi状态监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.74" data-path="../android基础/XmlPullParser.html">
+            
+                <a href="../android基础/XmlPullParser.html">
+            
+                    
+                    XmlPullParser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Android编码规范.html">
+            
+                <a href="../Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Android中dip-dp-sp-pt和px.md">
+            
+                <span>
+            
+                    
+                    Android中dip-dp-sp-pt和px
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../dart2/">
+            
+                <a href="../../dart2/">
+            
+                    
+                    dart2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../dart2/dart-overview.html">
+            
+                <a href="../../dart2/dart-overview.html">
+            
+                    
+                    dart概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../ffmpeg/">
+            
+                <a href="../../ffmpeg/">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../ffmpeg/ffmpeg编译.html">
+            
+                <a href="../../ffmpeg/ffmpeg编译.html">
+            
+                    
+                    ffmpeg编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../ffmpeg/ffmpeg常用命令.html">
+            
+                <a href="../../ffmpeg/ffmpeg常用命令.html">
+            
+                    
+                    ffmpeg常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../ffmpeg/音频基础知识.html">
+            
+                <a href="../../ffmpeg/音频基础知识.html">
+            
+                    
+                    音频基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../ffmpeg/ffmpeg开发基础.html">
+            
+                <a href="../../ffmpeg/ffmpeg开发基础.html">
+            
+                    
+                    ffmpeg开发基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../ffmpeg/c基础开发.html">
+            
+                <a href="../../ffmpeg/c基础开发.html">
+            
+                    
+                    c基础开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../flutter/">
+            
+                <a href="../../flutter/">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../flutter/flutter笔记.html">
+            
+                <a href="../../flutter/flutter笔记.html">
+            
+                    
+                    flutter笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../git教程/">
+            
+                <a href="../../git教程/">
+            
+                    
+                    git教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../git教程/Git命令.html">
+            
+                <a href="../../git教程/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../git教程/Git学习.html">
+            
+                <a href="../../git教程/Git学习.html">
+            
+                    
+                    Git学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../git教程/gitignore规则不生效.html">
+            
+                <a href="../../git教程/gitignore规则不生效.html">
+            
+                    
+                    gitignore规则不生效.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../ios/">
+            
+                <a href="../../ios/">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../javascript/">
+            
+                <a href="../../javascript/">
+            
+                    
+                    javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../javascript/javaScript-语法和数据类型.html">
+            
+                <a href="../../javascript/javaScript-语法和数据类型.html">
+            
+                    
+                    javaScript-语法和数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../javascript/javaScript-循环和迭代.html">
+            
+                <a href="../../javascript/javaScript-循环和迭代.html">
+            
+                    
+                    javaScript-循环和迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../javascript/javaScript-使用对象.html">
+            
+                <a href="../../javascript/javaScript-使用对象.html">
+            
+                    
+                    javaScript-使用对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../javascript/javaScript-函数.html">
+            
+                <a href="../../javascript/javaScript-函数.html">
+            
+                    
+                    javaScript-函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../javascript/javaScript-对象模型的细节.html">
+            
+                <a href="../../javascript/javaScript-对象模型的细节.html">
+            
+                    
+                    javaScript-对象模型的细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../javascript/javaScript流程控制与错误处理.html">
+            
+                <a href="../../javascript/javaScript流程控制与错误处理.html">
+            
+                    
+                    javaScript流程控制与错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../kotlin/">
+            
+                <a href="../../kotlin/">
+            
+                    
+                    kotlin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../kotlin/Kotlin基础语法.html">
+            
+                <a href="../../kotlin/Kotlin基础语法.html">
+            
+                    
+                    Kotlin基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../linux/linux命令行相关.html">
+            
+                <a href="../../linux/linux命令行相关.html">
+            
+                    
+                    linux命令行相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../linux/Linux常用命令.html">
+            
+                <a href="../../linux/Linux常用命令.html">
+            
+                    
+                    linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../notes/">
+            
+                <a href="../../notes/">
+            
+                    
+                    notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../notes/录屏与GIF制作.html">
+            
+                <a href="../../notes/录屏与GIF制作.html">
+            
+                    
+                    录屏与GIF制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../notes/yisi.html">
+            
+                <a href="../../notes/yisi.html">
+            
+                    
+                    yisi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../notes/weex基础.html">
+            
+                <a href="../../notes/weex基础.html">
+            
+                    
+                    weex基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../notes/weex-native.html">
+            
+                <a href="../../notes/weex-native.html">
+            
+                    
+                    weex-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../notes/TensorFlow安装.html">
+            
+                <a href="../../notes/TensorFlow安装.html">
+            
+                    
+                    TensorFlow安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                <a href="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                    
+                    SublimeText3运行JavaScript控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../notes/RN-环境搭建.html">
+            
+                <a href="../../notes/RN-环境搭建.html">
+            
+                    
+                    RN-环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../notes/Mac开发必备.html">
+            
+                <a href="../../notes/Mac开发必备.html">
+            
+                    
+                    Mac开发必备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../notes/Mac键盘快捷键.html">
+            
+                <a href="../../notes/Mac键盘快捷键.html">
+            
+                    
+                    Mac键盘快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../notes/Mac常用命令.html">
+            
+                <a href="../../notes/Mac常用命令.html">
+            
+                    
+                    Mac常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../notes/远程调试WebView.html">
+            
+                <a href="../../notes/远程调试WebView.html">
+            
+                    
+                    远程调试WebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.12" data-path="../../notes/颜色透明度换算.html">
+            
+                <a href="../../notes/颜色透明度换算.html">
+            
+                    
+                    颜色透明度换算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../c/c++/README.md">
+            
+                <span>
+            
+                    
+                    c/c++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../java/">
+            
+                <a href="../../java/">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../java/java基础/">
+            
+                <a href="../../java/java基础/">
+            
+                    
+                    java基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../../java/java基础/线程.html">
+            
+                <a href="../../java/java基础/线程.html">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.2" data-path="../../java/java基础/线程池.html">
+            
+                <a href="../../java/java基础/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.3" data-path="../../java/java基础/线程中断处理.html">
+            
+                <a href="../../java/java基础/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.4" data-path="../../java/java基础/Java基础知识点.html">
+            
+                <a href="../../java/java基础/Java基础知识点.html">
+            
+                    
+                    Java基础知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.5" data-path="../../java/java基础/Java集合.html">
+            
+                <a href="../../java/java基础/Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.6" data-path="../../java/java基础/Java中的排序算法.html">
+            
+                <a href="../../java/java基础/Java中的排序算法.html">
+            
+                    
+                    Java中的排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.7" data-path="../../java/java基础/List.html">
+            
+                <a href="../../java/java基础/List.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.8" data-path="../../java/java基础/Map.html">
+            
+                <a href="../../java/java基础/Map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.9" data-path="../../java/java基础/Set.html">
+            
+                <a href="../../java/java基础/Set.html">
+            
+                    
+                    Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.10" data-path="../../java/java基础/sleep和wait.html">
+            
+                <a href="../../java/java基础/sleep和wait.html">
+            
+                    
+                    sleep和wait
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.11" data-path="../../java/java基础/String.html">
+            
+                <a href="../../java/java基础/String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../java/Java内置的进制转换.html">
+            
+                <a href="../../java/Java内置的进制转换.html">
+            
+                    
+                    Java内置的进制转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../java/Java中创建对象的5种方式.html">
+            
+                <a href="../../java/Java中创建对象的5种方式.html">
+            
+                    
+                    Java中创建对象的5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../java/java解惑/">
+            
+                <a href="../../java/java解惑/">
+            
+                    
+                    java解惑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../../java/java解惑/常用命令行大全.html">
+            
+                <a href="../../java/java解惑/常用命令行大全.html">
+            
+                    
+                    常用命令行大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../../java/java解惑/单例的最佳实现方式.html">
+            
+                <a href="../../java/java解惑/单例的最佳实现方式.html">
+            
+                    
+                    单例的最佳实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../../java/java解惑/单链表.html">
+            
+                <a href="../../java/java解惑/单链表.html">
+            
+                    
+                    单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                <a href="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                    
+                    获取今后多少天后的日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../../java/java解惑/剑指Offer(上">
+            
+                <span>
+            
+                    
+                    剑指Offer(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.6" data-path="../../java/java解惑/剑指Offer(下">
+            
+                <span>
+            
+                    
+                    剑指Offer(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.7" data-path="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                <a href="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                    
+                    强引用、软引用、弱引用、虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.8" data-path="../../java/java解惑/生产者消费者.html">
+            
+                <a href="../../java/java解惑/生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.9" data-path="../../java/java解惑/死锁.html">
+            
+                <a href="../../java/java解惑/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.10" data-path="../../java/java解惑/算法.html">
+            
+                <a href="../../java/java解惑/算法.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.11" data-path="../../java/java解惑/网络请求相关内容总结.html">
+            
+                <a href="../../java/java解惑/网络请求相关内容总结.html">
+            
+                    
+                    网络请求相关内容总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.12" data-path="../../java/java解惑/线程池的原理.html">
+            
+                <a href="../../java/java解惑/线程池的原理.html">
+            
+                    
+                    线程池的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.13" data-path="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                <a href="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                    
+                    原子性、可见性以及有序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.14" data-path="../../java/java解惑/Base64加密.html">
+            
+                <a href="../../java/java解惑/Base64加密.html">
+            
+                    
+                    Base64加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.15" data-path="../../java/java解惑/Git命令.html">
+            
+                <a href="../../java/java解惑/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.16" data-path="../../java/java解惑/hashCode与equals.html">
+            
+                <a href="../../java/java解惑/hashCode与equals.html">
+            
+                    
+                    hashCode与equals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.17" data-path="../../java/java解惑/HashMap实现原理分析.html">
+            
+                <a href="../../java/java解惑/HashMap实现原理分析.html">
+            
+                    
+                    HashMap实现原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.18" data-path="../../java/java解惑/Java基础面试题.html">
+            
+                <a href="../../java/java解惑/Java基础面试题.html">
+            
+                    
+                    Java基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.19" data-path="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                <a href="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                    
+                    JVM垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.20" data-path="../../java/java解惑/MD5加密.html">
+            
+                <a href="../../java/java解惑/MD5加密.html">
+            
+                    
+                    MD5加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.21" data-path="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                <a href="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                    
+                    MVC与MVP及MVVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.22" data-path="../../java/java解惑/RMB大小写转换.html">
+            
+                <a href="../../java/java解惑/RMB大小写转换.html">
+            
+                    
+                    RMB大小写转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.23" data-path="../../java/java解惑/Vim使用教程.html">
+            
+                <a href="../../java/java解惑/Vim使用教程.html">
+            
+                    
+                    Vim使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.24" data-path="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                <a href="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                    
+                    volatile和Synchronized区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../java/设计模式/">
+            
+                <a href="../../java/设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../../java/设计模式/01-面向对象六大原则.html">
+            
+                <a href="../../java/设计模式/01-面向对象六大原则.html">
+            
+                    
+                    01-面向对象六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../../java/设计模式/02-单例模式.html">
+            
+                <a href="../../java/设计模式/02-单例模式.html">
+            
+                    
+                    02-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../../java/设计模式/03-Builder模式.html">
+            
+                <a href="../../java/设计模式/03-Builder模式.html">
+            
+                    
+                    03-Builder模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../../java/设计模式/04-原型模式.html">
+            
+                <a href="../../java/设计模式/04-原型模式.html">
+            
+                    
+                    04-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../../java/设计模式/05-工厂方法模式.html">
+            
+                <a href="../../java/设计模式/05-工厂方法模式.html">
+            
+                    
+                    05-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.6" data-path="../../java/设计模式/06-抽象工厂模式.html">
+            
+                <a href="../../java/设计模式/06-抽象工厂模式.html">
+            
+                    
+                    06-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.7" data-path="../../java/设计模式/07-策略模式.html">
+            
+                <a href="../../java/设计模式/07-策略模式.html">
+            
+                    
+                    07-策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.8" data-path="../../java/设计模式/08-状态模式.html">
+            
+                <a href="../../java/设计模式/08-状态模式.html">
+            
+                    
+                    08-状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.9" data-path="../../java/设计模式/09-责任链模式.html">
+            
+                <a href="../../java/设计模式/09-责任链模式.html">
+            
+                    
+                    09-责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.10" data-path="../../java/设计模式/10-解释器模式.html">
+            
+                <a href="../../java/设计模式/10-解释器模式.html">
+            
+                    
+                    10-解释器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.11" data-path="../../java/设计模式/11-命令模式.html">
+            
+                <a href="../../java/设计模式/11-命令模式.html">
+            
+                    
+                    11-命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.12" data-path="../../java/设计模式/12-观察者模式.html">
+            
+                <a href="../../java/设计模式/12-观察者模式.html">
+            
+                    
+                    12-观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.13" data-path="../../java/设计模式/13-备忘录模式.html">
+            
+                <a href="../../java/设计模式/13-备忘录模式.html">
+            
+                    
+                    13-备忘录模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.14" data-path="../../java/设计模式/14-迭代器模式.html">
+            
+                <a href="../../java/设计模式/14-迭代器模式.html">
+            
+                    
+                    14-迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.15" data-path="../../java/设计模式/15-模板方法模式.html">
+            
+                <a href="../../java/设计模式/15-模板方法模式.html">
+            
+                    
+                    15-模板方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.16" data-path="../../java/设计模式/16-访问者模式.html">
+            
+                <a href="../../java/设计模式/16-访问者模式.html">
+            
+                    
+                    16-访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.17" data-path="../../java/设计模式/18-代理模式.html">
+            
+                <a href="../../java/设计模式/18-代理模式.html">
+            
+                    
+                    18-代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.18" data-path="../../java/设计模式/19-组合模式.html">
+            
+                <a href="../../java/设计模式/19-组合模式.html">
+            
+                    
+                    19-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.19" data-path="../../java/设计模式/20-适配器模式.html">
+            
+                <a href="../../java/设计模式/20-适配器模式.html">
+            
+                    
+                    20-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.20" data-path="../../java/设计模式/21-装饰模式.html">
+            
+                <a href="../../java/设计模式/21-装饰模式.html">
+            
+                    
+                    21-装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.21" data-path="../../java/设计模式/22-享元模式.html">
+            
+                <a href="../../java/设计模式/22-享元模式.html">
+            
+                    
+                    22-享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.22" data-path="../../java/设计模式/23-外观模式.html">
+            
+                <a href="../../java/设计模式/23-外观模式.html">
+            
+                    
+                    23-外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.23" data-path="../../java/设计模式/24-桥接模式.html">
+            
+                <a href="../../java/设计模式/24-桥接模式.html">
+            
+                    
+                    24-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Matrix详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="matrix&#x8BE6;&#x89E3;">Matrix&#x8BE6;&#x89E3;</h1>
+<h3 id="&#x4F5C;&#x8005;&#x5FAE;&#x535A;-gcssloop">&#x4F5C;&#x8005;&#x5FAE;&#x535A;: <a href="http://weibo.com/GcsSloop" target="_blank">@GcsSloop</a></h3>
+<h3 id="&#x76F8;&#x5173;&#x6587;&#x7AE0;-&#x81EA;&#x5B9A;&#x4E49;view&#x76EE;&#x5F55;">&#x76F8;&#x5173;&#x6587;&#x7AE0;: <a href="http://www.gcssloop.com/1970/01/CustomViewIndex/" target="_blank">&#x81EA;&#x5B9A;&#x4E49;View&#x76EE;&#x5F55;</a></h3>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;Matrix&#x505A;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x504F;&#x5411;&#x7406;&#x8BBA;&#xFF0C;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x5219;&#x4F1A;&#x8BE6;&#x7EC6;&#x7684;&#x8BB2;&#x89E3;Matrix&#x7684;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;Matrix&#x7684;&#x4E00;&#x4E9B;&#x5B9E;&#x7528;&#x6280;&#x5DE7;&#x3002;</p>
+<h2 id="matrix&#x65B9;&#x6CD5;&#x8868;">Matrix&#x65B9;&#x6CD5;&#x8868;</h2>
+<p>&#x6309;&#x7167;&#x60EF;&#x4F8B;&#xFF0C;&#x5148;&#x653E;&#x65B9;&#x6CD5;&#x8868;&#x505A;&#x6982;&#x89C8;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;&#x7C7B;&#x522B;</th>
+<th>&#x76F8;&#x5173;API</th>
+<th>&#x6458;&#x8981;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x57FA;&#x672C;&#x65B9;&#x6CD5;</td>
+<td>equals hashCode toString toShortString</td>
+<td>&#x6BD4;&#x8F83;&#x3001; &#x83B7;&#x53D6;&#x54C8;&#x5E0C;&#x503C;&#x3001; &#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td>&#x6570;&#x503C;&#x64CD;&#x4F5C;</td>
+<td>set reset setValues getValues</td>
+<td>&#x8BBE;&#x7F6E;&#x3001; &#x91CD;&#x7F6E;&#x3001; &#x8BBE;&#x7F6E;&#x6570;&#x503C;&#x3001; &#x83B7;&#x53D6;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td>&#x6570;&#x503C;&#x8BA1;&#x7B97;</td>
+<td>mapPoints mapRadius mapRect mapVectors</td>
+<td>&#x8BA1;&#x7B97;&#x53D8;&#x6362;&#x540E;&#x7684;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td>&#x8BBE;&#x7F6E;(set)</td>
+<td>setConcat setRotate setScale setSkew setTranslate</td>
+<td>&#x8BBE;&#x7F6E;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td>&#x524D;&#x4E58;(pre)</td>
+<td>preConcat preRotate preScale preSkew preTranslate</td>
+<td>&#x524D;&#x4E58;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td>&#x540E;&#x4E58;(post)</td>
+<td>postConcat postRotate postScale postSkew postTranslate</td>
+<td>&#x540E;&#x4E58;&#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td>&#x7279;&#x6B8A;&#x65B9;&#x6CD5;</td>
+<td>setPolyToPoly setRectToRect rectStaysRect setSinCos</td>
+<td>&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>&#x77E9;&#x9635;&#x76F8;&#x5173;</td>
+<td>invert isAffine(API21) isIdentity</td>
+<td>&#x6C42;&#x9006;&#x77E9;&#x9635;&#x3001; &#x662F;&#x5426;&#x4E3A;&#x4EFF;&#x5C04;&#x77E9;&#x9635;&#x3001; &#x662F;&#x5426;&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635; ...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="matrix&#x65B9;&#x6CD5;&#x8BE6;&#x89E3;">Matrix&#x65B9;&#x6CD5;&#x8BE6;&#x89E3;</h2>
+<h3 id="&#x6784;&#x9020;&#x65B9;&#x6CD5;">&#x6784;&#x9020;&#x65B9;&#x6CD5;</h3>
+<p>&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x5728;&#x4E0A;&#x9762;&#x8868;&#x683C;&#x4E2D;&#x5217;&#x51FA;&#x3002;</p>
+<h4 id="&#x65E0;&#x53C2;&#x6784;&#x9020;">&#x65E0;&#x53C2;&#x6784;&#x9020;</h4>
+<pre><code class="lang-java">Matrix ()
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;Matrix&#xFF0C;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x7684;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x5168;&#x90E8;&#x4E3A;&#x7A7A;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4F4D;&#x77E9;&#x9635;,&#x5982;&#x4E0B;:</p>
+<p>![](<a href="http://latex.codecogs.com/png.latex?$$" target="_blank">http://latex.codecogs.com/png.latex?$$</a>
+\left [ 
+\begin{matrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 
+\end{1} 
+\right ]</p>
+<p>$$)</p>
+<h4 id="&#x6709;&#x53C2;&#x6784;&#x9020;">&#x6709;&#x53C2;&#x6784;&#x9020;</h4>
+<pre><code class="lang-java">Matrix (Matrix src)
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5219;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x77E9;&#x9635;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x683C;&#x5F0F;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix(src);
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Matrix&#xFF0C;&#x5E76;&#x5BF9;src&#x6DF1;&#x62F7;&#x8D1D;(&#x7406;&#x89E3;&#x4E3A;&#x65B0;&#x7684;matrix&#x548C;src&#x662F;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5185;&#x90E8;&#x6570;&#x503C;&#x76F8;&#x540C;&#x5373;&#x53EF;)&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x65B9;&#x6CD5;">&#x57FA;&#x672C;&#x65B9;&#x6CD5;</h3>
+<p>&#x57FA;&#x672C;&#x65B9;&#x6CD5;&#x5185;&#x5BB9;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x6B64;&#x5904;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x3002;</p>
+<h4 id="1equals">1.equals</h4>
+<p>&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;Matrix&#x7684;&#x6570;&#x503C;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;</p>
+<h4 id="2hashcode">2.hashCode</h4>
+<p>&#x83B7;&#x53D6;Matrix&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x3002;</p>
+<h4 id="3tostring">3.toString</h4>
+<p>&#x5C06;Matrix&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;: <code>Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}</code></p>
+<h4 id="4toshortstring">4.toShortString</h4>
+<p>&#x5C06;Matrix&#x8F6C;&#x6362;&#x4E3A;&#x77ED;&#x5B57;&#x7B26;&#x4E32;: <code>[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]</code></p>
+<h3 id="&#x6570;&#x503C;&#x64CD;&#x4F5C;">&#x6570;&#x503C;&#x64CD;&#x4F5C;</h3>
+<p>&#x6570;&#x503C;&#x64CD;&#x4F5C;&#x8FD9;&#x4E00;&#x7EC4;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x63A7;&#x5236;Matrix&#x91CC;&#x9762;&#x7684;&#x6570;&#x503C;&#x3002;</p>
+<h4 id="1set">1.set</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set</span> <span class="hljs-params">(Matrix src)</span>
+</span></code></pre>
+<p>&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x53C2;&#x6570;Matrix&#x7684;&#x6570;&#x503C;&#x590D;&#x5236;&#x5230;&#x5F53;&#x524D;Matrix&#x4E2D;&#x3002;&#x5982;&#x679C;&#x53C2;&#x6570;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x91CD;&#x7F6E;&#x5F53;&#x524D;Matrix&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;<code>reset()</code>&#x3002;</p>
+<h4 id="2reset">2.reset</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reset</span> <span class="hljs-params">()</span>
+</span></code></pre>
+<p>&#x91CD;&#x7F6E;&#x5F53;&#x524D;Matrix(&#x5C06;&#x5F53;&#x524D;Matrix&#x91CD;&#x7F6E;&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635;)&#x3002;</p>
+<h4 id="3setvalues">3.setValues</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setValues</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] values)</span>
+</span></code></pre>
+<p>setValues&#x7684;&#x53C2;&#x6570;&#x662F;&#x6D6E;&#x70B9;&#x578B;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x957F;&#x5EA6;&#x9700;&#x8981;&#x5927;&#x4E8E;9&#xFF0C;&#x62F7;&#x8D1D;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x524D;9&#x4F4D;&#x6570;&#x503C;&#x8D4B;&#x503C;&#x7ED9;&#x5F53;&#x524D;Matrix&#x3002;</p>
+<h4 id="4getvalues">4.getValues</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getValues</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] values)</span>
+</span></code></pre>
+<p>&#x5F88;&#x663E;&#x7136;&#xFF0C;getValues&#x548C;setValues&#x662F;&#x4E00;&#x5BF9;&#x65B9;&#x6CD5;&#xFF0C;&#x53C2;&#x6570;&#x4E5F;&#x662F;&#x6D6E;&#x70B9;&#x578B;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x957F;&#x5EA6;&#x9700;&#x8981;&#x5927;&#x4E8E;9&#xFF0C;&#x5C06;Matrix&#x4E2D;&#x7684;&#x6570;&#x503C;&#x62F7;&#x8D1D;&#x8FDB;&#x53C2;&#x6570;&#x7684;&#x524D;9&#x4F4D;&#x4E2D;&#x3002;</p>
+<h3 id="&#x6570;&#x503C;&#x8BA1;&#x7B97;">&#x6570;&#x503C;&#x8BA1;&#x7B97;</h3>
+<h4 id="1mappoints">1.mapPoints</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mapPoints</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] pts)</span>
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">mapPoints</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] dst, <span class="hljs-keyword">float</span>[] src)</span>
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">mapPoints</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] dst, <span class="hljs-keyword">int</span> dstIndex,<span class="hljs-keyword">float</span>[] src, <span class="hljs-keyword">int</span> srcIndex, <span class="hljs-keyword">int</span> pointCount)</span>
+</span></code></pre>
+<p>&#x8BA1;&#x7B97;&#x4E00;&#x7EC4;&#x70B9;&#x57FA;&#x4E8E;&#x5F53;&#x524D;Matrix&#x53D8;&#x6362;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;(&#x7531;&#x4E8E;&#x662F;&#x8BA1;&#x7B97;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x53C2;&#x6570;&#x4E2D;&#x7684;float&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x5076;&#x6570;&#x7684;,&#x82E5;&#x4E3A;&#x5947;&#x6570;&#xFF0C;&#x5219;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x4E0D;&#x53C2;&#x4E0E;&#x8BA1;&#x7B97;)&#x3002;</p>
+<p>&#x5B83;&#x6709;&#x4E09;&#x4E2A;&#x91CD;&#x8F7D;&#x65B9;&#x6CD5;:</p>
+<p>(1) <code>void mapPoints (float[] pts)</code> &#x65B9;&#x6CD5;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;pts&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x539F;&#x59CB;&#x6570;&#x503C;&#xFF0C;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4ECD;&#x5B58;&#x653E;&#x5728;pts&#x4E2D;&#x3002;</p>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x521D;&#x59CB;&#x6570;&#x636E;&#x4E3A;&#x4E09;&#x4E2A;&#x70B9; (0, 0) (80, 100) (400, 300) </span>
+<span class="hljs-keyword">float</span>[] pts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[]{<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">80</span>, <span class="hljs-number">100</span>, <span class="hljs-number">400</span>, <span class="hljs-number">300</span>};
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix&#xFF0C;x&#x5750;&#x6807;&#x7F29;&#x653E;0.5</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;pts&#x8BA1;&#x7B97;&#x4E4B;&#x524D;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;before: &quot;</span>+ Arrays.toString(pts));
+
+<span class="hljs-comment">// &#x8C03;&#x7528;map&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;</span>
+matrix.mapPoints(pts);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;pts&#x8BA1;&#x7B97;&#x4E4B;&#x540E;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;after : &quot;</span>+ Arrays.toString(pts));
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>before: [0.0, 0.0, 80.0, 100.0, 400.0, 300.0]
+after : [0.0, 0.0, 40.0, 100.0, 200.0, 300.0]
+</code></pre><p>(2) <code>void mapPoints (float[] dst, float[] src)</code> &#xFF0C;src&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x539F;&#x59CB;&#x6570;&#x503C;&#xFF0C;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x5B58;&#x653E;&#x5728;dst&#x4E2D;&#xFF0C;src&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x539F;&#x59CB;&#x6570;&#x636E;&#x9700;&#x8981;&#x4FDD;&#x7559;&#x5219;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x521D;&#x59CB;&#x6570;&#x636E;&#x4E3A;&#x4E09;&#x4E2A;&#x70B9; (0, 0) (80, 100) (400, 300)</span>
+<span class="hljs-keyword">float</span>[] src = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[]{<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">80</span>, <span class="hljs-number">100</span>, <span class="hljs-number">400</span>, <span class="hljs-number">300</span>};
+<span class="hljs-keyword">float</span>[] dst = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">6</span>];
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix&#xFF0C;x&#x5750;&#x6807;&#x7F29;&#x653E;0.5</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;&#x8BA1;&#x7B97;&#x4E4B;&#x524D;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;before: src=&quot;</span>+ Arrays.toString(src));
+Log.i(TAG, <span class="hljs-string">&quot;before: dst=&quot;</span>+ Arrays.toString(dst));
+
+<span class="hljs-comment">// &#x8C03;&#x7528;map&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;</span>
+matrix.mapPoints(dst,src);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;&#x8BA1;&#x7B97;&#x4E4B;&#x540E;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;after : src=&quot;</span>+ Arrays.toString(src));
+Log.i(TAG, <span class="hljs-string">&quot;after : dst=&quot;</span>+ Arrays.toString(dst));
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>before: src=[0.0, 0.0, 80.0, 100.0, 400.0, 300.0]
+before: dst=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+after : src=[0.0, 0.0, 80.0, 100.0, 400.0, 300.0]
+after : dst=[0.0, 0.0, 40.0, 100.0, 200.0, 300.0]
+</code></pre><p>(3) <code>void mapPoints (float[] dst, int dstIndex,float[] src, int srcIndex, int pointCount)</code> &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x53EA;&#x8BA1;&#x7B97;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x503C;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x6458;&#x8981;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dst</td>
+<td>&#x76EE;&#x6807;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>dstIndex</td>
+<td>&#x76EE;&#x6807;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#x8D77;&#x59CB;&#x4E0B;&#x6807;</td>
+</tr>
+<tr>
+<td>src</td>
+<td>&#x6E90;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>srcIndex</td>
+<td>&#x6E90;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#x8D77;&#x59CB;&#x4E0B;&#x6807;</td>
+</tr>
+<tr>
+<td>pointCount</td>
+<td>&#x8BA1;&#x7B97;&#x7684;&#x70B9;&#x4E2A;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;:</p>
+<p>&gt;</p>
+<blockquote>
+<p>&#x5C06;&#x7B2C;&#x4E8C;&#x3001;&#x4E09;&#x4E2A;&#x70B9;&#x8BA1;&#x7B97;&#x540E;&#x5B58;&#x50A8;&#x8FDB;dst&#x6700;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x521D;&#x59CB;&#x6570;&#x636E;&#x4E3A;&#x4E09;&#x4E2A;&#x70B9; (0, 0) (80, 100) (400, 300)</span>
+<span class="hljs-keyword">float</span>[] src = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[]{<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">80</span>, <span class="hljs-number">100</span>, <span class="hljs-number">400</span>, <span class="hljs-number">300</span>};
+<span class="hljs-keyword">float</span>[] dst = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">6</span>];
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix&#xFF0C;x&#x5750;&#x6807;&#x7F29;&#x653E;0.5</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;&#x8BA1;&#x7B97;&#x4E4B;&#x524D;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;before: src=&quot;</span>+ Arrays.toString(src));
+Log.i(TAG, <span class="hljs-string">&quot;before: dst=&quot;</span>+ Arrays.toString(dst));
+
+<span class="hljs-comment">// &#x8C03;&#x7528;map&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;(&#x6700;&#x540E;&#x4E00;&#x4E2A;2&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x70B9;&#xFF0C;&#x5373;&#x56DB;&#x4E2A;&#x6570;&#x503C;,&#x5E76;&#x975E;&#x4E24;&#x4E2A;&#x6570;&#x503C;)</span>
+matrix.mapPoints(dst, <span class="hljs-number">0</span>, src, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// &#x8F93;&#x51FA;&#x8BA1;&#x7B97;&#x4E4B;&#x540E;&#x6570;&#x636E;</span>
+Log.i(TAG, <span class="hljs-string">&quot;after : src=&quot;</span>+ Arrays.toString(src));
+Log.i(TAG, <span class="hljs-string">&quot;after : dst=&quot;</span>+ Arrays.toString(dst));
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>before: src=[0.0, 0.0, 80.0, 100.0, 400.0, 300.0]
+before: dst=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+after : src=[0.0, 0.0, 80.0, 100.0, 400.0, 300.0]
+after : dst=[40.0, 100.0, 200.0, 300.0, 0.0, 0.0]
+</code></pre><h4 id="2mapradius">2.mapRadius</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">mapRadius</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> radius)</span>
+</span></code></pre>
+<p>&#x6D4B;&#x91CF;&#x534A;&#x5F84;&#xFF0C;&#x7531;&#x4E8E;&#x5706;&#x53EF;&#x80FD;&#x4F1A;&#x56E0;&#x4E3A;&#x753B;&#x5E03;&#x53D8;&#x6362;&#x53D8;&#x6210;&#x692D;&#x5706;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x5904;&#x6D4B;&#x91CF;&#x7684;&#x662F;&#x5E73;&#x5747;&#x534A;&#x5F84;&#x3002;</p>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">float</span> radius = <span class="hljs-number">100</span>;
+<span class="hljs-keyword">float</span> result = <span class="hljs-number">0</span>;
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix&#xFF0C;x&#x5750;&#x6807;&#x7F29;&#x653E;0.5</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+
+Log.i(TAG, <span class="hljs-string">&quot;mapRadius: &quot;</span>+radius);
+
+result = matrix.mapRadius(radius);
+
+Log.i(TAG, <span class="hljs-string">&quot;mapRadius: &quot;</span>+result);
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>mapRadius: 100.0
+mapRadius: 70.71068
+</code></pre><h4 id="3maprect">3.mapRect</h4>
+<pre><code>boolean mapRect (RectF rect)
+
+boolean mapRect (RectF dst, RectF src)
+</code></pre><p>&#x6D4B;&#x91CF;&#x77E9;&#x5F62;&#x53D8;&#x6362;&#x540E;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>(1) <code>boolean mapRect (RectF rect)</code> &#x6D4B;&#x91CF;rect&#x5E76;&#x5C06;&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x653E;&#x5165;rect&#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x5224;&#x65AD;&#x77E9;&#x5F62;&#x7ECF;&#x8FC7;&#x53D8;&#x6362;&#x540E;&#x662F;&#x5426;&#x4ECD;&#x4E3A;&#x77E9;&#x5F62;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-java">RectF rect = <span class="hljs-keyword">new</span> RectF(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>, <span class="hljs-number">1000</span>, <span class="hljs-number">800</span>);
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+matrix.postSkew(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>);
+
+Log.i(TAG, <span class="hljs-string">&quot;mapRadius: &quot;</span>+rect.toString());
+
+<span class="hljs-keyword">boolean</span> result = matrix.mapRect(rect);
+
+Log.i(TAG, <span class="hljs-string">&quot;mapRadius: &quot;</span>+rect.toString());
+Log.e(TAG, <span class="hljs-string">&quot;isRect: &quot;</span>+ result);
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>mapRadius: RectF(400.0, 400.0, 1000.0, 800.0)
+mapRadius: RectF(600.0, 400.0, 1300.0, 800.0)
+isRect: false
+</code></pre><p>&gt;</p>
+<blockquote>
+<p>&#x7531;&#x4E8E;&#x4F7F;&#x7528;&#x4E86;&#x9519;&#x5207;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;false&#x3002;</p>
+</blockquote>
+<p>(2) <code>boolean mapRect (RectF dst, RectF src)</code> &#x6D4B;&#x91CF;src&#x5E76;&#x5C06;&#x6D4B;&#x91CF;&#x7ED3;&#x679C;&#x653E;&#x5165;dst&#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x5224;&#x65AD;&#x77E9;&#x5F62;&#x7ECF;&#x8FC7;&#x53D8;&#x6362;&#x540E;&#x662F;&#x5426;&#x4ECD;&#x4E3A;&#x77E9;&#x5F62;,&#x548C;&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x592A;&#x5927;&#x533A;&#x522B;&#xFF0C;&#x6B64;&#x5904;&#x5C31;&#x4E0D;&#x5570;&#x55E6;&#x4E86;&#x3002;</p>
+<h4 id="4mapvectors">4.mapVectors</h4>
+<p>&#x6D4B;&#x91CF;&#x5411;&#x91CF;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mapVectors</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] vecs)</span>
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">mapVectors</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] dst, <span class="hljs-keyword">float</span>[] src)</span>
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">mapVectors</span> <span class="hljs-params">(<span class="hljs-keyword">float</span>[] dst, <span class="hljs-keyword">int</span> dstIndex, <span class="hljs-keyword">float</span>[] src, <span class="hljs-keyword">int</span> srcIndex, <span class="hljs-keyword">int</span> vectorCount)</span>
+</span></code></pre>
+<p><code>mapVectors</code> &#x4E0E; <code>mapPoints</code> &#x57FA;&#x672C;&#x4E0A;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53C2;&#x7167;&#x4E0A;&#x9762;&#x7684;<code>mapPoints</code>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x800C;&#x4E24;&#x8005;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;<code>mapVectors</code>&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x4F4D;&#x79FB;&#x7684;&#x5F71;&#x54CD;&#xFF0C;&#x8FD9;&#x7B26;&#x5408;&#x5411;&#x91CF;&#x7684;&#x5B9A;&#x5F8B;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x4E86;&#x89E3;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x627E;&#x5230;&#x4EE5;&#x524D;&#x6559;&#x8FC7;&#x4F60;&#x7684;&#x8001;&#x5E08;&#x7136;&#x540E;&#x628A;&#x5B66;&#x8D39;&#x8981;&#x56DE;&#x6765;&#x3002;</p>
+<p>&#x533A;&#x522B;:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">float</span>[] src = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[]{<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>};
+<span class="hljs-keyword">float</span>[] dst = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">2</span>];
+
+<span class="hljs-comment">// &#x6784;&#x9020;&#x4E00;&#x4E2A;matrix</span>
+Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+matrix.setScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1f</span>);
+matrix.postTranslate(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>);
+
+<span class="hljs-comment">// &#x8BA1;&#x7B97;&#x5411;&#x91CF;, &#x4E0D;&#x53D7;&#x4F4D;&#x79FB;&#x5F71;&#x54CD;</span>
+matrix.mapVectors(dst, src);
+Log.i(TAG, <span class="hljs-string">&quot;mapVectors: &quot;</span>+Arrays.toString(dst));
+
+<span class="hljs-comment">// &#x8BA1;&#x7B97;&#x70B9;</span>
+matrix.mapPoints(dst, src);
+Log.i(TAG, <span class="hljs-string">&quot;mapPoints: &quot;</span>+Arrays.toString(dst));
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code>mapVectors: [500.0, 800.0]
+mapPoints: [600.0, 900.0]
+</code></pre><h3 id="set&#x3001;pre-&#x4E0E;-post">set&#x3001;pre &#x4E0E; post</h3>
+<p>&#x5BF9;&#x4E8E;&#x56DB;&#x79CD;&#x57FA;&#x672C;&#x53D8;&#x6362; &#x5E73;&#x79FB;(translate)&#x3001;&#x7F29;&#x653E;(scale)&#x3001;&#x65CB;&#x8F6C;(rotate)&#x3001; &#x9519;&#x5207;(skew) &#x5B83;&#x4EEC;&#x6BCF;&#x4E00;&#x79CD;&#x90FD;&#x4E09;&#x79CD;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#xFF0C;&#x5206;&#x522B;&#x4E3A; &#x8BBE;&#x7F6E;(set)&#x3001; &#x524D;&#x4E58;(pre) &#x548C; &#x540E;&#x4E58; (post)&#x3002;&#x800C;&#x5B83;&#x4EEC;&#x7684;&#x57FA;&#x7840;&#x662F;Concat&#xFF0C;&#x901A;&#x8FC7;&#x5148;&#x6784;&#x9020;&#x51FA;&#x7279;&#x6B8A;&#x77E9;&#x9635;&#x7136;&#x540E;&#x7528;&#x539F;&#x59CB;&#x77E9;&#x9635;Concat&#x7279;&#x6B8A;&#x77E9;&#x9635;&#xFF0C;&#x8FBE;&#x5230;&#x53D8;&#x6362;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p><strong>&#x5173;&#x4E8E;&#x56DB;&#x79CD;&#x57FA;&#x672C;&#x53D8;&#x6362;&#x7684;&#x77E5;&#x8BC6;&#x548C;&#x4E09;&#x79CD;&#x5BF9;&#x5E94;&#x64CD;&#x4F5C;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="http://www.gcssloop.com/2015/02/Canvas_Convert/" target="_blank">Canvas&#x4E4B;&#x753B;&#x5E03;&#x64CD;&#x4F5C;</a> &#x548C; <a href="http://www.gcssloop.com/2015/02/Matrix_Basic/" target="_blank">Matrix&#x539F;&#x7406;</a> &#x8FD9;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x3002;</strong></p>
+<p>&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x7684;&#x6587;&#x7AE0;&#x5DF2;&#x7ECF;&#x8BE6;&#x7EC6;&#x7684;&#x8BB2;&#x89E3;&#x8FC7;&#x4E86;&#x5B83;&#x4EEC;&#x7684;&#x539F;&#x7406;&#x4E0E;&#x7528;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x6B64;&#x5904;&#x5C31;&#x7B80;&#x8981;&#x7684;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x7B80;&#x4ECB;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set</td>
+<td>&#x8BBE;&#x7F6E;&#xFF0C;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x5BFC;&#x81F4;&#x4E4B;&#x524D;&#x7684;&#x64CD;&#x4F5C;&#x5931;&#x6548;&#x3002;</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>&#x524D;&#x4E58;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x77E9;&#x9635;&#x7684;&#x53F3;&#x4E58;&#xFF0C; <code>M&apos; = M * S</code>  (S&#x6307;&#x4E3A;&#x7279;&#x6B8A;&#x77E9;&#x9635;)</td>
+</tr>
+<tr>
+<td>post</td>
+<td>&#x540E;&#x4E58;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x77E9;&#x9635;&#x7684;&#x5DE6;&#x4E58;&#xFF0C;<code>M&apos; = S * M</code> &#xFF08;S&#x6307;&#x4E3A;&#x7279;&#x6B8A;&#x77E9;&#x9635;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Matrix &#x76F8;&#x5173;&#x7684;&#x91CD;&#x8981;&#x77E5;&#x8BC6;&#xFF1A;</strong></p>
+<ul>
+<li><p>1.&#x4E00;&#x5F00;&#x59CB;&#x4ECE;Canvas&#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x5230;Matrix&#x5E76;&#x4E0D;&#x662F;&#x521D;&#x59CB;&#x77E9;&#x9635;&#xFF0C;&#x800C;&#x662F;&#x7ECF;&#x8FC7;&#x504F;&#x79FB;&#x540E;&#x5230;&#x77E9;&#x9635;&#xFF0C;&#x4E14;&#x504F;&#x79FB;&#x8DDD;&#x79BB;&#x5C31;&#x662F;&#x8DDD;&#x79BB;&#x5C4F;&#x5E55;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</li>
+<li><blockquote>
+<p>&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5224;&#x5B9A;View&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#xFF0C;View&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6240;&#x5904;&#x4F4D;&#x7F6E;&#x505A;&#x51FA;&#x8C03;&#x6574;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>2.&#x6784;&#x9020;Matrix&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#xFF0C;&#x524D;&#x4E58;(pre)&#x4E0E;&#x540E;&#x4E58;(post)&#x7ED3;&#x679C;&#x5DEE;&#x522B;&#x5F88;&#x5927;&#x3002;</p>
+</li>
+<li><blockquote>
+<p>&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x53C2;&#x89C1;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0; <a href="http://www.gcssloop.com/2015/02/Matrix_Basic/" target="_blank">Matrix&#x539F;&#x7406;</a> &#x5373;&#x53EF;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>3.&#x53D7;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x5F71;&#x54CD;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+</li>
+<li><blockquote>
+<p>&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x6784;&#x9020;&#x987A;&#x5E8F;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="&#x7279;&#x6B8A;&#x65B9;&#x6CD5;">&#x7279;&#x6B8A;&#x65B9;&#x6CD5;</h3>
+<p>&#x8FD9;&#x4E00;&#x7C7B;&#x65B9;&#x6CD5;&#x770B;&#x4F3C;&#x4E0D;&#x8D77;&#x773C;&#xFF0C;&#x4F46;&#x62FF;&#x6765;&#x7A0D;&#x5FAE;&#x52A0;&#x5DE5;&#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x80FD;&#x5236;&#x4F5C;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x6548;&#x679C;&#x3002;</p>
+<h4 id="1setpolytopoly">1.setPolyToPoly</h4>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">setPolyToPoly</span> <span class="hljs-params">(
+        <span class="hljs-keyword">float</span>[] src,     // &#x539F;&#x59CB;&#x6570;&#x7EC4; src [x,y]&#xFF0C;&#x5B58;&#x50A8;&#x5185;&#x5BB9;&#x4E3A;&#x4E00;&#x7EC4;&#x70B9;
+        <span class="hljs-keyword">int</span> srcIndex,     // &#x539F;&#x59CB;&#x6570;&#x7EC4;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;
+        <span class="hljs-keyword">float</span>[] dst,     // &#x76EE;&#x6807;&#x6570;&#x7EC4; dst [x,y]&#xFF0C;&#x5B58;&#x50A8;&#x5185;&#x5BB9;&#x4E3A;&#x4E00;&#x7EC4;&#x70B9;
+        <span class="hljs-keyword">int</span> dstIndex,     // &#x76EE;&#x6807;&#x6570;&#x7EC4;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;
+        <span class="hljs-keyword">int</span> pointCount)</span>    <span class="hljs-comment">// &#x6D4B;&#x63A7;&#x70B9;&#x7684;&#x6570;&#x91CF; &#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;: 0&#x5230;4</span>
+</span></code></pre>
+<p>Poly&#x5168;&#x79F0;&#x662F;Polygon&#xFF0C;&#x591A;&#x8FB9;&#x5F62;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x4E86;&#x89E3;&#x4E86;&#x610F;&#x601D;&#x5927;&#x81F4;&#x5C31;&#x80FD;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;&#x505A;&#x4EC0;&#x4E48;&#x7528;&#x7684;&#x4E86;&#xFF0C;&#x5E94;&#x8BE5;&#x4E0E;PS&#x4E2D;&#x81EA;&#x7531;&#x53D8;&#x6362;&#x4E2D;&#x7684;&#x626D;&#x66F2;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x3002;</p>
+<p><img src="http://ww1.sinaimg.cn/large/005Xtdi2jw1f71ppx7q0lg30go0b44ga.gif" alt=""></p>
+<blockquote>
+<p>&#x4ECE;&#x53C2;&#x6570;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x5230;setPolyToPoly&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x652F;&#x6301;4&#x4E2A;&#x70B9;&#xFF0C;&#x8FD9;&#x56DB;&#x4E2A;&#x70B9;&#x901A;&#x5E38;&#x4E3A;&#x56FE;&#x5F62;&#x7684;&#x56DB;&#x4E2A;&#x89D2;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x56DB;&#x4E2A;&#x89D2;&#x5C06;&#x89C6;&#x56FE;&#x4ECE;&#x77E9;&#x5F62;&#x53D8;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x5F62;&#x72B6;&#x3002;</p>
+</blockquote>
+<p>&#x7B80;&#x5355;&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatrixSetPolyToPolyTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">View</span> </span>{
+
+    <span class="hljs-keyword">private</span> Bitmap mBitmap;             <span class="hljs-comment">// &#x8981;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x7247;</span>
+    <span class="hljs-keyword">private</span> Matrix mPolyMatrix;         <span class="hljs-comment">// &#x6D4B;&#x8BD5;setPolyToPoly&#x7528;&#x7684;Matrix</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MatrixSetPolyToPolyTest</span><span class="hljs-params">(Context context)</span> </span>{
+        <span class="hljs-keyword">super</span>(context);
+
+        initBitmapAndMatrix();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initBitmapAndMatrix</span><span class="hljs-params">()</span> </span>{
+        mBitmap = BitmapFactory.decodeResource(getResources(),
+                R.drawable.poly_test);
+
+        mPolyMatrix = <span class="hljs-keyword">new</span> Matrix();
+
+
+        <span class="hljs-keyword">float</span>[] src = {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>,                                    <span class="hljs-comment">// &#x5DE6;&#x4E0A;</span>
+                mBitmap.getWidth(), <span class="hljs-number">0</span>,                          <span class="hljs-comment">// &#x53F3;&#x4E0A;</span>
+                mBitmap.getWidth(), mBitmap.getHeight(),        <span class="hljs-comment">// &#x53F3;&#x4E0B;</span>
+                <span class="hljs-number">0</span>, mBitmap.getHeight()};                        <span class="hljs-comment">// &#x5DE6;&#x4E0B;</span>
+
+        <span class="hljs-keyword">float</span>[] dst = {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>,                                    <span class="hljs-comment">// &#x5DE6;&#x4E0A;</span>
+                mBitmap.getWidth(), <span class="hljs-number">400</span>,                        <span class="hljs-comment">// &#x53F3;&#x4E0A;</span>
+                mBitmap.getWidth(), mBitmap.getHeight() - <span class="hljs-number">200</span>,  <span class="hljs-comment">// &#x53F3;&#x4E0B;</span>
+                <span class="hljs-number">0</span>, mBitmap.getHeight()};                        <span class="hljs-comment">// &#x5DE6;&#x4E0B;</span>
+
+        <span class="hljs-comment">// &#x6838;&#x5FC3;&#x8981;&#x70B9;</span>
+        mPolyMatrix.setPolyToPoly(src, <span class="hljs-number">0</span>, dst, <span class="hljs-number">0</span>, src.length &gt;&gt; <span class="hljs-number">1</span>); <span class="hljs-comment">// src.length &gt;&gt; 1 &#x4E3A;&#x4F4D;&#x79FB;&#x8FD0;&#x7B97; &#x76F8;&#x5F53;&#x4E8E;&#x5904;&#x4EE5;2</span>
+
+        <span class="hljs-comment">// &#x6B64;&#x5904;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x663E;&#x793A;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x4E86;&#x7B49;&#x6BD4;&#x7F29;&#x653E;&#x548C;&#x5E73;&#x79FB;(&#x56FE;&#x7247;&#x672C;&#x8EAB;&#x6709;&#x70B9;&#x5927;)</span>
+        mPolyMatrix.postScale(<span class="hljs-number">0.26f</span>, <span class="hljs-number">0.26f</span>);
+        mPolyMatrix.postTranslate(<span class="hljs-number">0</span>,<span class="hljs-number">200</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDraw</span><span class="hljs-params">(Canvas canvas)</span> </span>{
+        <span class="hljs-keyword">super</span>.onDraw(canvas);
+
+        <span class="hljs-comment">// &#x6839;&#x636E;Matrix&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x53D8;&#x6362;&#x540E;&#x7684;&#x56FE;&#x7247;</span>
+        canvas.drawBitmap(mBitmap, mPolyMatrix, <span class="hljs-keyword">null</span>);
+    }
+}
+</code></pre>
+<p><img src="http://ww3.sinaimg.cn/large/005Xtdi2jw1f730v51dowj308c0etgm0.jpg" alt=""></p>
+<p>&#x6587;&#x7AE0;&#x53D1;&#x51FA;&#x540E;&#x6709;&#x5C0F;&#x4F19;&#x4F34;&#x5728;GitHub&#x4E0A;&#x63D0;&#x51FA;&#x7591;&#x95EE;&#xFF0C;&#x8BF4;&#x6B64;&#x5904;&#x8BB2;&#x89E3;&#x5230;&#x5E76;&#x4E0D;&#x6E05;&#x695A;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x7279;&#x6B64;&#x8865;&#x5145;&#x4E00;&#x4E0B;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;<code>pointCount</code>&#x652F;&#x6301;&#x70B9;&#x7684;&#x4E2A;&#x6570;&#x4E3A;0&#x5230;4&#x4E2A;&#xFF0C;&#x56DB;&#x4E2A;&#x4E00;&#x822C;&#x6307;&#x56FE;&#x5F62;&#x7684;&#x56DB;&#x4E2A;&#x89D2;&#xFF0C;&#x5C5E;&#x4E8E;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x60C5;&#x5F62;&#xFF0C;&#x4F46;&#x524D;&#x9762;&#x51E0;&#x79CD;&#x662F;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x5462;&#xFF1F;</p>
+<blockquote>
+<p>&#x53D1;&#x5E03;&#x6B64;&#x6587;&#x7684;&#x65F6;&#x5019;&#x4E4B;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x8BB2;&#x89E3;0&#x5230;3&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x524D;&#x9762;&#x7684;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x5F88;&#x5C11;&#x4F1A;&#x51FA;&#x73B0;&#xFF0C;    <del>&#x624D;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x5077;&#x61D2;&#x5462;&#xFF0C;&#x54FC;&#x3002;</del></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">pointCount</th>
+<th>&#x6458;&#x8981;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td>&#x76F8;&#x5F53;&#x4E8E;<code>reset</code></td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td>&#x76F8;&#x5F53;&#x4E8E;<code>translate</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td>&#x53EF;&#x4EE5;&#x8FDB;&#x884C; &#x7F29;&#x653E;&#x3001;&#x65CB;&#x8F6C;&#x3001;&#x5E73;&#x79FB; &#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td>&#x53EF;&#x4EE5;&#x8FDB;&#x884C; &#x7F29;&#x653E;&#x3001;&#x65CB;&#x8F6C;&#x3001;&#x5E73;&#x79FB;&#x3001;&#x9519;&#x5207; &#x53D8;&#x6362;</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td>&#x53EF;&#x4EE5;&#x8FDB;&#x884C; &#x7F29;&#x653E;&#x3001;&#x65CB;&#x8F6C;&#x3001;&#x5E73;&#x79FB;&#x3001;&#x9519;&#x5207;&#x4EE5;&#x53CA;&#x4EFB;&#x4F55;&#x5F62;&#x53D8;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x4ECE;&#x4E0A;&#x8868;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x51FA;&#x4E00;&#x4E2A;&#x89C4;&#x5F8B;, &#x968F;&#x7740;<code>pointCount</code>&#x6570;&#x503C;&#x589E;&#x5927;setPolyToPoly&#x7684;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x6027;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x5F3A;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x5E9F;&#x8BDD;&#x4E48;&#xFF0C;&#x53EF;&#x8C03;&#x6574;&#x70B9;&#x6570;&#x591A;&#x4E86;&#x80FD;&#x5E72;&#x7684;&#x4E8B;&#x60C5;&#x81EA;&#x7136;&#x4E5F;&#x591A;&#x4E86;&#x3002;</p>
+<p>&#x53EA;&#x5217;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x5C31;&#x7B97;&#x4EA4;&#x4EE3;&#x5B8C;&#x6BD5;&#x4E86;&#x663E;&#x5F97;&#x8BDA;&#x610F;&#x4E0D;&#x8DB3;&#xFF0C;&#x4E3A;&#x4E86;&#x5F70;&#x663E;&#x8BDA;&#x610F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x8BE6;&#x7EC6;&#x7684;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;&#x3002;</p>
+</blockquote>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x524D;&#x9762;&#x51E0;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x5F88;&#x5C11;&#x51FA;&#x73B0;?</strong></p>
+<p>&#x4F5C;&#x4E3A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#xFF0C;&#x5199;&#x51FA;&#x6765;&#x7684;&#x4EE3;&#x7801;&#x51FA;&#x4E86;&#x8981;&#x8BA9;&#x673A;&#x5668;&quot;&#x770B;&#x61C2;&quot;&#xFF0C;&#x6CA1;&#x6709;&#x6B67;&#x4E49;&#x4E4B;&#x5916;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x8FD8;&#x662F;&#x8BA9;&#x4EBA;&#x770B;&#x61C2;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x540E;&#x671F;&#x7684;&#x7EF4;&#x62A4;&#x4FEE;&#x6539;&#xFF0C;&#x4ECE;&#x4E0A;&#x8FB9;&#x7684;&#x8868;&#x683C;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x51E0;&#x79CD;&#x79CD;&#x60C5;&#x51B5;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x66F4;&#x76F4;&#x89C2;&#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x6709;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x7279;&#x6B8A;&#x5F62;&#x53D8;&#x662F;&#x6CA1;&#x6709;&#x66FF;&#x4EE3;&#x65B9;&#x6CD5;&#x7684;&#x3002;</p>
+<p><strong>&#x6D4B;&#x63A7;&#x70B9;&#x9009;&#x53D6;&#x4F4D;&#x7F6E;?</strong></p>
+<p>&#x6D4B;&#x63A7;&#x70B9;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4EFB;&#x4F55;&#x4F60;&#x8BA4;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EA;&#x8981;src&#x4E0E;dst&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x5373;&#x53EF;&#x3002;&#x4E0D;&#x8FC7;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x9009;&#x62E9;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x70B9;&#xFF1A; &#x56FE;&#x5F62;&#x7684;&#x56DB;&#x4E2A;&#x89D2;&#xFF0C;&#x8FB9;&#x7EBF;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x4EE5;&#x53CA;&#x56FE;&#x5F62;&#x7684;&#x4E2D;&#x5FC3;&#x70B9;&#x7B49;&#x3002;<strong>&#x4E0D;&#x8FC7;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x6D4B;&#x63A7;&#x70B9;&#x9009;&#x53D6;&#x90FD;&#x5E94;&#x5F53;&#x662F;&#x4E0D;&#x91CD;&#x590D;&#x7684;(src&#x4E0E;dst&#x5747;&#x662F;&#x5982;&#x6B64;)&#xFF0C;&#x5982;&#x679C;&#x9009;&#x53D6;&#x4E86;&#x91CD;&#x590D;&#x7684;&#x70B9;&#x4F1A;&#x76F4;&#x63A5;&#x5BFC;&#x81F4;&#x6D4B;&#x91CF;&#x5931;&#x6548;&#xFF0C;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x4F60;&#x4E0D;&#x5141;&#x8BB8;&#x5C06;&#x4E00;&#x4E2A;&#x65B9;&#x5F62;(&#x56DB;&#x4E2A;&#x70B9;)&#x6620;&#x5C04;&#x4E3A;&#x4E09;&#x89D2;&#x5F62;(&#x56DB;&#x4E2A;&#x70B9;&#xFF0C;&#x4F46;&#x5176;&#x4E2D;&#x4E24;&#x4E2A;&#x4F4D;&#x7F6E;&#x91CD;&#x53E0;)&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x63A5;&#x8FD1;&#x4E8E;&#x4E09;&#x89D2;&#x5F62;&#x3002;</strong>&#x3002;</p>
+<p><strong>&#x4F5C;&#x7528;&#x8303;&#x56F4;?</strong></p>
+<p>&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x5F53;&#x7136;&#x662F;&#x8BBE;&#x7F6E;&#x4E86;Matrix&#x7684;&#x5168;&#x90E8;&#x533A;&#x57DF;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5C06;&#x8FD9;&#x4E2A;Matrix&#x8D4B;&#x503C;&#x7ED9;&#x4E86;Canvas&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x5C31;&#x662F;&#x6574;&#x4E2A;&#x753B;&#x5E03;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;Bitmap&#xFF0C;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x5C31;&#x662F;&#x6574;&#x5F20;&#x56FE;&#x7247;&#x3002;</p>
+<hr>
+<p><strong>&#x63A5;&#x4E0B;&#x6765;&#x7528;&#x793A;&#x4F8B;&#x6F14;&#x793A;&#x4E00;&#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x793A;&#x4F8B;&#x7684;src&#x5747;&#x4E3A;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#xFF0C;dst&#x6839;&#x636E;&#x624B;&#x52BF;&#x53D8;&#x5316;&#x3002;</strong></p>
+<p><strong>pointCount&#x4E3A;0</strong></p>
+<p>pointCount&#x4E3A;0&#x548C;<code>reset</code>&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4FDD;&#x6301;matrix&#x4E0D;&#x53D8;&#xFF0C;&#x5728;&#x6700;&#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> == count) {
+    <span class="hljs-keyword">this</span>-&gt;reset();
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<p><img src="http://ww4.sinaimg.cn/large/005Xtdi2jw1f7b7v5z6k3g308c0cxdg6.gif" alt=""></p>
+<p><strong>pointCount&#x4E3A;1</strong></p>
+<p>pointCount&#x4E3A;0&#x548C;<code>translate</code>&#x662F;&#x7B49;&#x4EF7;&#x7684;&#xFF0C;&#x5728;&#x6700;&#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> == count) {
+    <span class="hljs-keyword">this</span>-&gt;setTranslate(dst[<span class="hljs-number">0</span>].fX - src[<span class="hljs-number">0</span>].fX, dst[<span class="hljs-number">0</span>].fY - src[<span class="hljs-number">0</span>].fY);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<blockquote>
+<p>&#x5E73;&#x79FB;&#x7684;&#x8DDD;&#x79BB;&#x662F;dst - src.</p>
+</blockquote>
+<p>&#x5F53;&#x6D4B;&#x63A7;&#x70B9;&#x4E3A;1&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E;&#x4F60;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x70B9;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EA;&#x80FD;&#x62D6;&#x62FD;&#x7740;&#x5B83;&#x5728;2D&#x5E73;&#x9762;&#x4E0A;&#x6ED1;&#x52A8;&#x3002;</p>
+<p><img src="http://ww3.sinaimg.cn/large/005Xtdi2jw1f7b7vp3id5g308c0cxdyx.gif" alt=""></p>
+<p><strong>pointCount&#x4E3A;2</strong></p>
+<p>&#x5F53;pointCount&#x4E3A;2&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x7F29;&#x653E;&#x3001;&#x5E73;&#x79FB;&#x548C;&#x65CB;&#x8F6C;&#x3002;</p>
+<p><img src="http://ww2.sinaimg.cn/large/005Xtdi2jw1f7b7w51e52g308c0cxx2k.gif" alt=""></p>
+<p><strong>pointCount&#x4E3A;3</strong></p>
+<p>&#x5F53;pointCount&#x4E3A;3&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x7F29;&#x653E;&#x3001;&#x5E73;&#x79FB;&#x3001;&#x65CB;&#x8F6C;&#x548C;&#x9519;&#x5207;&#x3002;</p>
+<p><img src="http://ww4.sinaimg.cn/large/005Xtdi2jw1f7b7x5mxnug308c0cxwnz.gif" alt=""></p>
+<p><strong>pointCount&#x4E3A;4</strong></p>
+<p>&#x5F53;pointCount&#x4E3A;4&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x56FE;&#x50CF;&#x62C9;&#x4F38;&#x4E3A;&#x4EFB;&#x610F;&#x56DB;&#x8FB9;&#x5F62;&#x3002;</p>
+<p><img src="http://ww1.sinaimg.cn/large/005Xtdi2jw1f7b7ygigbrg308c0cxaks.gif" alt=""></p>
+<p>&#x4E0A;&#x9762;&#x5DF2;&#x7ECF;&#x7528;&#x56FE;&#x4F8B;&#x6BD4;&#x8F83;&#x8BE6;&#x7EC6;&#x7684;&#x5C55;&#x793A;&#x4E86;&#x4E0D;&#x540C;&#x64CD;&#x63A7;&#x70B9;&#x4E2A;&#x6570;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F9D;&#x65E7;&#x5B58;&#x5728;&#x7591;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4EE3;&#x7801;&#x81EA;&#x5DF1;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<h4 id="&#x70B9;&#x51FB;&#x6B64;&#x5904;&#x67E5;&#x770B;setpolytopoly&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;"><a href="https://github.com/GcsSloop/AndroidNote/blob/master/CustomView/Advance/Code/SetPolyToPoly.md" target="_blank">&#x70B9;&#x51FB;&#x6B64;&#x5904;&#x67E5;&#x770B;setPolyToPoly&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</a></h4>
+<h4 id="2setrecttorect">2.setRectToRect</h4>
+<pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">setRectToRect</span> <span class="hljs-params">(RectF src,             // &#x6E90;&#x533A;&#x57DF;
+                RectF dst,                     // &#x76EE;&#x6807;&#x533A;&#x57DF;
+                Matrix.ScaleToFit stf)</span>        <span class="hljs-comment">// &#x7F29;&#x653E;&#x9002;&#x914D;&#x6A21;&#x5F0F;</span>
+</span></code></pre>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x5C06;&#x6E90;&#x77E9;&#x5F62;&#x7684;&#x5185;&#x5BB9;&#x586B;&#x5145;&#x5230;&#x76EE;&#x6807;&#x77E9;&#x5F62;&#x4E2D;&#xFF0C;&#x7136;&#x800C;&#x5728;&#x5927;&#x591A;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6E90;&#x77E9;&#x5F62;&#x548C;&#x76EE;&#x6807;&#x77E9;&#x5F62;&#x7684;&#x957F;&#x5BBD;&#x6BD4;&#x662F;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x5230;&#x5E95;&#x8BE5;&#x5982;&#x4F55;&#x586B;&#x5145;&#x5462;&#xFF0C;&#x8FD9;&#x4E2A;&#x586B;&#x5145;&#x7684;&#x6A21;&#x5F0F;&#x5C31;&#x7531;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570; <code>stf</code> &#x6765;&#x786E;&#x5B9A;&#x3002;</p>
+<p>ScaleToFit &#x662F;&#x4E00;&#x4E2A;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x5171;&#x5305;&#x542B;&#x4E86;&#x56DB;&#x79CD;&#x6A21;&#x5F0F;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x6A21;&#x5F0F;</th>
+<th>&#x6458;&#x8981;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CENTER</td>
+<td>&#x5C45;&#x4E2D;&#xFF0C;&#x5BF9;src&#x7B49;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#xFF0C;&#x5C06;&#x5176;&#x5C45;&#x4E2D;&#x653E;&#x7F6E;&#x5728;dst&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td>START</td>
+<td>&#x9876;&#x90E8;&#xFF0C;&#x5BF9;src&#x7B49;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#xFF0C;&#x5C06;&#x5176;&#x653E;&#x7F6E;&#x5728;dst&#x7684;&#x5DE6;&#x4E0A;&#x89D2;&#x3002;</td>
+</tr>
+<tr>
+<td>END</td>
+<td>&#x5E95;&#x90E8;&#xFF0C;&#x5BF9;src&#x7B49;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#xFF0C;&#x5C06;&#x5176;&#x653E;&#x7F6E;&#x5728;dst&#x7684;&#x53F3;&#x4E0B;&#x89D2;&#x3002;</td>
+</tr>
+<tr>
+<td>FILL</td>
+<td>&#x5145;&#x6EE1;&#xFF0C;&#x62C9;&#x4F38;src&#x7684;&#x5BBD;&#x548C;&#x9AD8;&#xFF0C;&#x4F7F;&#x5176;&#x5B8C;&#x5168;&#x586B;&#x5145;&#x6EE1;dst&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x4E0D;&#x540C;&#x5BBD;&#x9AD8;&#x6BD4;&#x7684;src&#x4E0E;dst&#x5728;&#x4E0D;&#x540C;&#x6A21;&#x5F0F;&#x4E0B;&#x662F;&#x600E;&#x6837;&#x7684;&#x3002;</p>
+<blockquote>
+<p>&#x5047;&#x8BBE;&#x7070;&#x8272;&#x90E8;&#x5206;&#x662F;dst&#xFF0C;&#x6A59;&#x8272;&#x90E8;&#x5206;&#x662F;src&#xFF0C;&#x7531;&#x4E8E;&#x662F;&#x6D4B;&#x8BD5;&#x4E0D;&#x540C;&#x5BBD;&#x9AD8;&#x6BD4;&#xFF0C;&#x793A;&#x4F8B;&#x4E2D;&#x8BA9;dst&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF0C;&#x770B;&#x4E24;&#x79CD;&#x5BBD;&#x9AD8;&#x6BD4;&#x7684;src&#x5728;&#x4E0D;&#x540C;&#x6A21;&#x5F0F;&#x4E0B;&#x586B;&#x5145;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">src(&#x539F;&#x59CB;&#x72B6;&#x6001;)</th>
+<th style="text-align:center"><img src="http://ww3.sinaimg.cn/large/005Xtdi2jw1f737xedthmj308c050glf.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CENTER</td>
+<td style="text-align:center"><img src="http://ww1.sinaimg.cn/large/005Xtdi2jw1f737xqulh9j308c050t8k.jpg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">START</td>
+<td style="text-align:center"><img src="http://ww1.sinaimg.cn/large/005Xtdi2jw1f737y0ts9oj308c050glg.jpg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">END</td>
+<td style="text-align:center"><img src="http://ww2.sinaimg.cn/large/005Xtdi2jw1f737zi7tm1j308c050a9w.jpg" alt=""></td>
+</tr>
+<tr>
+<td style="text-align:center">FILL</td>
+<td style="text-align:center"><img src="http://ww3.sinaimg.cn/large/005Xtdi2jw1f737yj8pcrj308c0500sl.jpg" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0B;&#x9762;&#x7528;&#x4EE3;&#x7801;&#x6F14;&#x793A;&#x4E00;&#x4E0B;&#x5C45;&#x4E2D;&#x7684;&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatrixSetRectToRectTest</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">View</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String TAG = <span class="hljs-string">&quot;MatrixSetRectToRectTest&quot;</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mViewWidth, mViewHeight;
+
+    <span class="hljs-keyword">private</span> Bitmap mBitmap;             <span class="hljs-comment">// &#x8981;&#x7ED8;&#x5236;&#x7684;&#x56FE;&#x7247;</span>
+    <span class="hljs-keyword">private</span> Matrix mRectMatrix;         <span class="hljs-comment">// &#x6D4B;&#x8BD5;etRectToRect&#x7528;&#x7684;Matrix</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MatrixSetRectToRectTest</span><span class="hljs-params">(Context context)</span> </span>{
+        <span class="hljs-keyword">super</span>(context);
+
+        mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.rect_test);
+        mRectMatrix = <span class="hljs-keyword">new</span> Matrix();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSizeChanged</span><span class="hljs-params">(<span class="hljs-keyword">int</span> w, <span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> oldw, <span class="hljs-keyword">int</span> oldh)</span> </span>{
+        <span class="hljs-keyword">super</span>.onSizeChanged(w, h, oldw, oldh);
+        mViewWidth = w;
+        mViewHeight = h;
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDraw</span><span class="hljs-params">(Canvas canvas)</span> </span>{
+        <span class="hljs-keyword">super</span>.onDraw(canvas);
+
+        RectF src= <span class="hljs-keyword">new</span> RectF(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, mBitmap.getWidth(), mBitmap.getHeight() );
+        RectF dst = <span class="hljs-keyword">new</span> RectF(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, mViewWidth, mViewHeight );
+
+        <span class="hljs-comment">// &#x6838;&#x5FC3;&#x8981;&#x70B9;</span>
+        mRectMatrix.setRectToRect(src,dst, Matrix.ScaleToFit.CENTER);
+
+        <span class="hljs-comment">// &#x6839;&#x636E;Matrix&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x53D8;&#x6362;&#x540E;&#x7684;&#x56FE;&#x7247;</span>
+        canvas.drawBitmap(mBitmap, mRectMatrix, <span class="hljs-keyword">new</span> Paint());
+    }
+}
+</code></pre>
+<p><img src="http://ww4.sinaimg.cn/large/005Xtdi2jw1f7385r77wmj308c0etgm8.jpg" alt=""></p>
+<h4 id="3rectstaysrect">3.rectStaysRect</h4>
+<p>&#x5224;&#x65AD;&#x77E9;&#x5F62;&#x7ECF;&#x8FC7;&#x53D8;&#x6362;&#x540E;&#x662F;&#x5426;&#x4ECD;&#x4E3A;&#x77E9;&#x5F62;&#xFF0C;&#x5047;&#x5982;Matrix&#x8FDB;&#x884C;&#x4E86;&#x5E73;&#x79FB;&#x3001;&#x7F29;&#x653E;&#x5219;&#x753B;&#x5E03;&#x4EC5;&#x4EC5;&#x662F;&#x4F4D;&#x7F6E;&#x548C;&#x5927;&#x5C0F;&#x6539;&#x53D8;&#xFF0C;&#x77E9;&#x5F62;&#x53D8;&#x6362;&#x540E;&#x4ECD;&#x7136;&#x4E3A;&#x77E9;&#x5F62;&#xFF0C;&#x4F46;Matrix&#x8FDB;&#x884C;&#x4E86;&#x975E;90&#x5EA6;&#x500D;&#x6570;&#x7684;&#x65CB;&#x8F6C;&#x6216;&#x8005;&#x9519;&#x5207;&#xFF0C;&#x5219;&#x77E9;&#x5F62;&#x53D8;&#x6362;&#x540E;&#x5C31;&#x4E0D;&#x518D;&#x662F;&#x77E9;&#x5F62;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x4E0D;&#x8FC7;&#x591A;&#x8D58;&#x8FF0;&#xFF0C;&#x987A;&#x4FBF;&#x8BF4;&#x4E00;&#x4E0B;&#xFF0C;&#x524D;&#x9762;&#x7684;<code>mapRect</code>&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x6839;&#x636E;<code>rectStaysRect</code>&#x6765;&#x5224;&#x65AD;&#x7684;&#x3002;</p>
+<h4 id="4setsincos">4.setSinCos</h4>
+<p>&#x8BBE;&#x7F6E;sinCos&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x63A7;&#x5236;Matrix&#x65CB;&#x8F6C;&#x7684;&#xFF0C;&#x7531;&#x4E8E;Matrix&#x5DF2;&#x7ECF;&#x5C01;&#x88C5;&#x597D;&#x4E86;Rotate&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x5E76;&#x4E0D;&#x5E38;&#x7528;&#xFF0C;&#x5728;&#x6B64;&#x4EC5;&#x4F5C;&#x6982;&#x8FF0;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x65B9;&#x6CD5;&#x4E00;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setSinCos</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> sinValue,     // &#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x7684;sin&#x503C;
+                <span class="hljs-keyword">float</span> cosValue)</span>        <span class="hljs-comment">// &#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x7684;cos&#x503C;</span>
+
+<span class="hljs-comment">// &#x65B9;&#x6CD5;&#x4E8C;</span>
+<span class="hljs-keyword">void</span> <span class="hljs-title">setSinCos</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> sinValue,     // &#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x7684;sin&#x503C;
+                <span class="hljs-keyword">float</span> cosValue,     // &#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x7684;cos&#x503C;
+                <span class="hljs-keyword">float</span> px,             // &#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;x&#x5750;&#x6807;
+                <span class="hljs-keyword">float</span> py)</span>            <span class="hljs-comment">// &#x4E2D;&#x5FC3;&#x4F4D;&#x7F6E;y&#x5750;&#x6807;</span>
+</span></code></pre>
+<p>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;:</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+<span class="hljs-comment">// &#x65CB;&#x8F6C;90&#x5EA6;</span>
+<span class="hljs-comment">// sin90=1</span>
+<span class="hljs-comment">// cos90=0</span>
+matrix.setSinCos(<span class="hljs-number">1f</span>, <span class="hljs-number">0f</span>);
+
+Log.i(TAG, <span class="hljs-string">&quot;setSinCos:&quot;</span>+matrix.toShortString());
+
+<span class="hljs-comment">// &#x91CD;&#x7F6E;</span>
+matrix.reset();
+
+<span class="hljs-comment">// &#x65CB;&#x8F6C;90&#x5EA6;</span>
+matrix.setRotate(<span class="hljs-number">90</span>);
+
+Log.i(TAG, <span class="hljs-string">&quot;setRotate:&quot;</span>+matrix.toShortString());
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">setSinCos:[0.0, -1.0, 0.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]
+setRotate:[0.0, -1.0, 0.0][1.0, 0.0, 0.0][0.0, 0.0, 1.0]
+</code></pre>
+<h3 id="&#x77E9;&#x9635;&#x76F8;&#x5173;">&#x77E9;&#x9635;&#x76F8;&#x5173;</h3>
+<p>&#x77E9;&#x9635;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#x5C31;&#x5C5E;&#x4E8E;&#x54EA;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x9760;&#x8FD1;&#x5E95;&#x5C42;&#x7684;&#x4E1C;&#x897F;&#x4E86;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x5F00;&#x53D1;&#x8005;&#x5F88;&#x5C11;&#x76F4;&#x63A5;&#x63A5;&#x89E6;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x60F3;&#x8981;&#x5F04;&#x660E;&#x767D;&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x56DE;&#x53BB;&#x8BF7;&#x6559;&#x4F60;&#x4EEC;&#x7684;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x8001;&#x5E08;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x4EC5;&#x4F5C;&#x6982;&#x8FF0;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;</th>
+<th>&#x6458;&#x8981;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>invert</td>
+<td>&#x6C42;&#x77E9;&#x9635;&#x7684;&#x9006;&#x77E9;&#x9635;</td>
+</tr>
+<tr>
+<td>isAffine</td>
+<td>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x77E9;&#x9635;&#x662F;&#x5426;&#x4E3A;&#x4EFF;&#x5C04;&#x77E9;&#x9635;&#xFF0C;API21(5.0)&#x624D;&#x6DFB;&#x52A0;&#x7684;&#x65B9;&#x6CD5;&#x3002;</td>
+</tr>
+<tr>
+<td>isIdentity</td>
+<td>&#x5224;&#x65AD;&#x5F53;&#x524D;&#x77E9;&#x9635;&#x662F;&#x5426;&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1invert">1.invert</h4>
+<p>&#x6C42;&#x77E9;&#x9635;&#x7684;&#x9006;&#x77E9;&#x9635;&#xFF0C;&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x4E0E;&#x4E4B;&#x524D;&#x76F8;&#x53CD;&#x7684;&#x77E9;&#x9635;&#xFF0C;&#x5982;&#x679C;&#x4E4B;&#x524D;&#x662F;&#x5E73;&#x79FB;200px&#xFF0C;&#x5219;&#x6C42;&#x7684;&#x77E9;&#x9635;&#x4E3A;&#x53CD;&#x5411;&#x5E73;&#x79FB;200px&#xFF0C;&#x5982;&#x679C;&#x4E4B;&#x524D;&#x662F;&#x7F29;&#x5C0F;&#x5230;0.5f&#xFF0C;&#x5219;&#x7ED3;&#x679C;&#x662F;&#x653E;&#x5927;&#x5230;2&#x500D;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">invert</span> <span class="hljs-params">(Matrix inverse)</span>
+</span></code></pre>
+<p>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;:</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+Matrix invert = <span class="hljs-keyword">new</span> Matrix();
+matrix.setTranslate(<span class="hljs-number">200</span>,<span class="hljs-number">500</span>);
+
+Log.e(TAG, <span class="hljs-string">&quot;before - matrix &quot;</span>+matrix.toShortString() );
+
+Boolean result = matrix.invert(invert);
+
+Log.e(TAG, <span class="hljs-string">&quot;after  - result &quot;</span>+result );
+Log.e(TAG, <span class="hljs-string">&quot;after  - matrix &quot;</span>+matrix.toShortString() );
+Log.e(TAG, <span class="hljs-string">&quot;after  - invert &quot;</span>+invert.toShortString() );
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-shell">before - matrix [1.0, 0.0, 200.0][0.0, 1.0, 500.0][0.0, 0.0, 1.0]
+after  - result true
+after  - matrix [1.0, 0.0, 200.0][0.0, 1.0, 500.0][0.0, 0.0, 1.0]
+after  - invert [1.0, 0.0, -200.0][0.0, 1.0, -500.0][0.0, 0.0, 1.0]
+</code></pre>
+<h4 id="2isaffine">2.isAffine</h4>
+<p>&#x5224;&#x65AD;&#x77E9;&#x9635;&#x662F;&#x5426;&#x662F;&#x4EFF;&#x5C04;&#x77E9;&#x9635;, &#x8C8C;&#x4F3C;&#x5E76;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x5375;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#x59CB;&#x7EC8;&#x90FD;&#x4E3A;true&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x6240;&#x6709;&#x53D8;&#x6362;&#x90FD;&#x662F;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF0C;&#x90A3;&#x53D8;&#x6362;&#x51FA;&#x6765;&#x7684;&#x77E9;&#x9635;&#x81EA;&#x7136;&#x662F;&#x4EFF;&#x5C04;&#x77E9;&#x9635;&#x55BD;&#x3002;</p>
+<p>&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x4EFF;&#x5C04;&#x77E9;&#x9635;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;&#x5C31;&#x662F;&#xFF0C;&#x76F4;&#x7EBF;&#x662F;&#x5426;&#x4ECD;&#x4E3A;&#x76F4;&#x7EBF;&#xFF0C;&#x7B80;&#x5355;&#x60F3;&#x4E00;&#x4E0B;&#x5C31;&#x77E5;&#x9053;&#xFF0C;&#x4E0D;&#x8BBA;&#x5E73;&#x79FB;&#xFF0C;&#x65CB;&#x8F6C;&#xFF0C;&#x9519;&#x5207;&#xFF0C;&#x7F29;&#x653E;&#xFF0C;&#x76F4;&#x7EBF;&#x53D8;&#x6362;&#x540E;&#x6700;&#x7EC8;&#x4ECD;&#x4E3A;&#x76F4;&#x7EBF;&#xFF0C;&#x8981;&#x60F3;&#x8BA9;<code>isAffine</code>&#x7684;&#x7ED3;&#x679C;&#x53D8;&#x4E3A;false&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x80FD;&#x628A;&#x76F4;&#x7EBF;&#x63B0;&#x5F2F;&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x80FD;&#x591F;&#x63B0;&#x5F2F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4ECD;&#x662F;&#x76F4;&#x7537;(&#x5C31;&#x7B97;&#x627E;&#x5230;&#x4E86;&#xFF0C;&#x6211;&#x4F9D;&#x65E7;&#x662F;&#x76F4;&#x7537;)&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;:</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+Log.i(TAG,<span class="hljs-string">&quot;isAffine=&quot;</span>+matrix.isAffine());
+
+matrix.postTranslate(<span class="hljs-number">200</span>,<span class="hljs-number">0</span>);
+matrix.postScale(<span class="hljs-number">0.5f</span>, <span class="hljs-number">1</span>);
+matrix.postSkew(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);
+matrix.postRotate(<span class="hljs-number">56</span>);
+
+Log.i(TAG,<span class="hljs-string">&quot;isAffine=&quot;</span>+matrix.isAffine());
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">isAffine=true
+isAffine=true
+</code></pre>
+<h4 id="3isidentity">3.isIdentity</h4>
+<p>&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#xFF0C;&#x4EC0;&#x4E48;&#x662F;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#x5462;&#xFF0C;&#x5C31;&#x662F;&#x6587;&#x7AE0;&#x4E00;&#x5F00;&#x59CB;&#x7684;&#x90A3;&#x4E2A;:</p>
+<p>![](<a href="http://latex.codecogs.com/png.latex?$$" target="_blank">http://latex.codecogs.com/png.latex?$$</a>
+\left [ 
+\begin{matrix} 
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 
+\end{1} 
+\right ]</p>
+<p>$$)</p>
+<p>&#x65B0;&#x521B;&#x5EFA;&#x7684;Matrix&#x548C;&#x91CD;&#x7F6E;&#x540E;&#x7684;Matrix&#x90FD;&#x662F;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#xFF0C;&#x4E0D;&#x8FC7;&#xFF0C;&#x53EA;&#x8981;&#x968F;&#x610F;&#x64CD;&#x4F5C;&#x4E00;&#x6B65;&#xFF0C;&#x5C31;&#x4E0D;&#x5728;&#x662F;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#x4E86;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre><code class="lang-java">Matrix matrix = <span class="hljs-keyword">new</span> Matrix();
+Log.i(TAG,<span class="hljs-string">&quot;isIdentity=&quot;</span>+matrix.isIdentity());
+
+matrix.postTranslate(<span class="hljs-number">200</span>,<span class="hljs-number">0</span>);
+
+Log.i(TAG,<span class="hljs-string">&quot;isIdentity=&quot;</span>+matrix.isIdentity());
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-shell">isIdentity=true
+isIdentity=false
+</code></pre>
+<h2 id="matrix&#x5B9E;&#x7528;&#x6280;&#x5DE7;">Matrix&#x5B9E;&#x7528;&#x6280;&#x5DE7;</h2>
+<p>&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x548C;&#x793A;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x4E86;Matrix&#x5927;&#x90E8;&#x5206;&#x65B9;&#x6CD5;&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x539F;&#x7406;&#x548C;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x53EF;&#x80FD;&#x4F1A;&#x521B;&#x9020;&#x51FA;&#x795E;&#x5947;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x7F51;&#x4E0A;&#x6709;&#x5F88;&#x591A;&#x6559;&#x7A0B;&#x8BB2;Bitmap&#x5229;&#x7528;Matrix&#x53D8;&#x6362;&#x6765;&#x5236;&#x4F5C;&#x955C;&#x50CF;&#x5012;&#x5F71;&#x7B49;&#xFF0C;&#x8FD9;&#x90FD;&#x5C5E;&#x4E8E;Matrix&#x7684;&#x57FA;&#x672C;&#x5E94;&#x7528;&#xFF0C;&#x6211;&#x5C31;&#x4E0D;&#x5728;&#x8D58;&#x8FF0;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x51E0;&#x79CD;&#x7136;&#x5E76;&#x5375;&#x7684;&#x5C0F;&#x6280;&#x5DE7;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5F00;&#x542F;&#x81EA;&#x5DF1;&#x7684;&#x8111;&#x6D1E;&#x6765;&#x53D1;&#x6325;&#x3002;</p>
+<h3 id="1&#x83B7;&#x53D6;view&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;">1.&#x83B7;&#x53D6;View&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;</h3>
+<p>&#x5728;&#x4E4B;&#x524D;&#x7684;&#x6587;&#x7AE0;<a href="http://www.gcssloop.com/2015/02/Matrix_Basic/" target="_blank">Matrix&#x539F;&#x7406;</a>&#x4E2D;&#x6211;&#x4EEC;&#x63D0;&#x5230;&#x8FC7;Matrix&#x6700;&#x6839;&#x672C;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5750;&#x6807;&#x6620;&#x5C04;&#xFF0C;&#x5C06;View&#x7684;&#x76F8;&#x5BF9;&#x5750;&#x6807;&#x6620;&#x5C04;&#x4E3A;&#x5C4F;&#x5E55;&#x7684;&#x7EDD;&#x5BF9;&#x5750;&#x6807;&#xFF0C;&#x4E5F;&#x63D0;&#x5230;&#x8FC7;&#x6211;&#x4EEC;&#x5728;onDraw&#x51FD;&#x6570;&#x7684;canvas&#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x5230;Matrix&#x5E76;&#x4E0D;&#x662F;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#xFF0C;&#x7ED3;&#x5408;&#x8FD9;&#x4E24;&#x70B9;&#xFF0C;&#x806A;&#x660E;&#x7684;&#x4F60;&#x80AF;&#x5B9A;&#x60F3;&#x5230;&#x4E86;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;canvas&#x7684;Matrix&#x5165;&#x624B;&#x53D6;&#x5F97;View&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x7EDD;&#x5BF9;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x4E5F;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;&#x7136;&#x5E76;&#x5375;&#x7684;&#x5C0F;&#x6280;&#x5DE7;&#x800C;&#x5DF2;&#xFF0C;&#x4F7F;&#x7528;<code>getLocationOnScreen</code>&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;View&#x5728;&#x5C4F;&#x5E55;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F46;&#x5982;&#x679C;&#x4F60;&#x662F;&#x60F3;&#x8BA9;&#x4E0B;&#x4E00;&#x4EFB;&#x63A5;&#x76D8;&#x4FA0;&#x5F04;&#x4E0D;&#x660E;&#x767D;&#x4F60;&#x5728;&#x505A;&#x4EC0;&#x4E48;&#x6216;&#x8005;&#x662F;&#x88AB;&#x540C;&#x4E8B;&#x6253;&#x6B7B;&#x7684;&#x8BDD;&#xFF0C;&#x5C3D;&#x7BA1;&#x8FD9;&#x4E48;&#x505A;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x793A;&#x4F8B;:</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDraw</span><span class="hljs-params">(Canvas canvas)</span> </span>{
+    <span class="hljs-keyword">float</span>[] values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">9</span>];
+    <span class="hljs-keyword">int</span>[] location1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+
+    Matrix matrix = canvas.getMatrix();
+    matrix.getValues(values);
+
+    location1[<span class="hljs-number">0</span>] = (<span class="hljs-keyword">int</span>) values[<span class="hljs-number">2</span>];
+    location1[<span class="hljs-number">1</span>] = (<span class="hljs-keyword">int</span>) values[<span class="hljs-number">5</span>];
+    Log.i(TAG, <span class="hljs-string">&quot;location1 = &quot;</span> + Arrays.toString(location1));
+
+    <span class="hljs-keyword">int</span>[] location2 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
+    <span class="hljs-keyword">this</span>.getLocationOnScreen(location2);
+    Log.i(TAG, <span class="hljs-string">&quot;location2 = &quot;</span> + Arrays.toString(location2));
+}
+</code></pre>
+<p>&#x7ED3;&#x679C;:</p>
+<pre><code class="lang-shell">location1 = [0, 243]
+location2 = [0, 243]
+</code></pre>
+<h3 id="2&#x5229;&#x7528;setpolytopoly&#x5236;&#x9020;3d&#x6548;&#x679C;">2.&#x5229;&#x7528;setPolyToPoly&#x5236;&#x9020;3D&#x6548;&#x679C;</h3>
+<p>&#x8FD9;&#x4E2A;&#x5168;&#x51ED;&#x5927;&#x5BB6;&#x60F3;&#x8C61;&#x529B;&#x5566;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x641C;&#x4E86;&#x4E00;&#x4E0B;&#x8FD8;&#x771F;&#x641C;&#x5230;&#x4E86;&#x597D;&#x4E1C;&#x897F;&#xFF0C;&#x4E4B;&#x524D;&#x9E3F;&#x6D0B;&#x5927;&#x5927;&#x53D1;&#x8FC7;&#x4E00;&#x7BC7;&#x535A;&#x6587;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x4E86;&#x5229;&#x7528;setPolyToPoly&#x5236;&#x9020;&#x7684;&#x6298;&#x53E0;&#x6548;&#x679C;&#x5E03;&#x5C40;&#xFF0C;&#x5927;&#x5BB6;&#x76F4;&#x63A5;&#x5230;&#x4ED6;&#x7684;&#x535A;&#x5BA2;&#x53BB;&#x770B;&#x5427;&#xFF0C;&#x6211;&#x5C31;&#x4E0D;&#x5199;&#x4E86;&#x3002;</p>
+<blockquote>
+<p>&#x56FE;&#x7247;&#x5F15;&#x7528;&#x81EA;&#x9E3F;&#x6D0B;&#x5927;&#x5927;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x7A0D;&#x4F5C;&#x4E86;&#x4E00;&#x4E0B;&#x5904;&#x7406;&#x3002;</p>
+</blockquote>
+<p><img src="http://ww2.sinaimg.cn/large/005Xtdi2gw1f74bvmz52mg308c0bbb29.gif" alt=""></p>
+<p>&#x535A;&#x6587;&#x94FE;&#x63A5;:</p>
+<p><strong><a href="http://blog.csdn.net/lmj623565791/article/details/44278417" target="_blank">Android FoldingLayout &#x6298;&#x53E0;&#x5E03;&#x5C40; &#x539F;&#x7406;&#x53CA;&#x5B9E;&#x73B0;&#xFF08;&#x4E00;&#xFF09;</a></strong></p>
+<p><strong><a href="http://blog.csdn.net/lmj623565791/article/details/44283093" target="_blank">Android FoldingLayout &#x6298;&#x53E0;&#x5E03;&#x5C40; &#x539F;&#x7406;&#x53CA;&#x5B9E;&#x73B0;&#xFF08;&#x4E8C;&#xFF09;</a></strong></p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x672C;&#x7BC7;&#x57FA;&#x672C;&#x8BB2;&#x89E3;&#x4E86;Matrix&#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x76EE;&#x524D;&#x5BF9;Matrix&#x8BB2;&#x89E3;&#x6700;&#x5168;&#x9762;&#x7684;&#x4E00;&#x7BC7;&#x4E2D;&#x6587;&#x6587;&#x7AE0;&#x4E86;&#xFF0C;&#x5EFA;&#x8BAE;&#x914D;&#x5408;&#x4E0A;&#x4E00;&#x7BC7;<a href="http://www.gcssloop.com/2015/02/Matrix_Basic/" target="_blank">Matrix&#x539F;&#x7406;</a>&#x98DF;&#x7528;&#x6548;&#x679C;&#x66F4;&#x4F73;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x672C;&#x4EBA;&#x6C34;&#x5E73;&#x6709;&#x9650;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x4E8E;&#x8BEF;&#x89E3;&#x6216;&#x8005;&#x7B14;&#x8BEF;&#x96BE;&#x514D;&#x51FA;&#x9519;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6709;&#x95EE;&#x9898;&#x6216;&#x8005;&#x5BF9;&#x6587;&#x4E2D;&#x5185;&#x5BB9;&#x5B58;&#x5728;&#x7591;&#x95EE;&#x6B22;&#x8FCE;&#x5728;&#x4E0B;&#x9762;&#x8BC4;&#x8BBA;&#x533A;&#x544A;&#x8BC9;&#x6211;&#xFF0C;&#x8BF7;&#x5BF9;&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#x5C3D;&#x91CF;&#x8BE6;&#x7EC6;&#xFF0C;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x95EE;&#x9898;&#x6839;&#x6E90;&#x3002;</p>
+<h2 id="about-me">About Me</h2>
+<h3 id="&#x4F5C;&#x8005;&#x5FAE;&#x535A;-gcssloop">&#x4F5C;&#x8005;&#x5FAE;&#x535A;: <a href="http://weibo.com/GcsSloop" target="_blank">@GcsSloop</a></h3>
+<p><a href="https://github.com/GcsSloop/AndroidNote/blob/magic-world/FINDME.md" target="_blank"> <img src="http://ww4.sinaimg.cn/large/005Xtdi2gw1f1qn89ihu3j315o0dwwjc.jpg" width="300/"> </a></p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p><a href="https://developer.android.com/reference/android/graphics/Matrix.html" target="_blank">Matrix</a></p>
+<p><a href="https://developer.android.com/reference/android/graphics/Matrix.ScaleToFit.html" target="_blank">Matrix.ScaleToFit</a></p>
+<p><a href="http://biandroid.iteye.com/blog/1399462" target="_blank">Android&#x4E2D;&#x56FE;&#x50CF;&#x53D8;&#x6362;Matrix&#x7684;&#x539F;&#x7406;&#x3001;&#x4EE3;&#x7801;&#x9A8C;&#x8BC1;&#x548C;&#x5E94;&#x7528;</a></p>
+<p><a href="http://code.tutsplus.com/tutorials/understanding-affine-transformations-with-matrix-mathematics--active-10884" target="_blank">Understanding Affine Transformations With Matrix Mathematics</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Matrix_Basic.html" class="navigation navigation-prev " aria-label="Previous page: Matrix原理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Matrix_3D_Camera.html" class="navigation navigation-next " aria-label="Next page: Matrix Camera">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Matrix详解","level":"1.4.1.17","depth":3,"next":{"title":"Matrix Camera","level":"1.4.1.18","depth":3,"path":"android/自定义view/Matrix_3D_Camera.md","ref":"android/自定义view/Matrix_3D_Camera.md","articles":[]},"previous":{"title":"Matrix原理","level":"1.4.1.16","depth":3,"path":"android/自定义view/Matrix_Basic.md","ref":"android/自定义view/Matrix_Basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/自定义view/Matrix_Method.md","mtime":"2017-05-08T07:43:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T07:32:34.606Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

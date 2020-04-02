@@ -1,0 +1,95 @@
+工具：
+  ffmpeg
+  ffplay
+  flashplayer rtmp流
+
+1.准备好流媒体服务器 
+	https://github.com/denji/homebrew-nginx
+	//添加brew  nginx-full仓库
+	brew tap denji/nginx   Cloning into '/usr/local/Homebrew/Library/Taps/denji/homebrew-nginx'...
+	brew install nginx-full --with-upload-module
+	brew install nginx-full --with-rtmp-module
+
+	==> ./configure --prefix=/usr/local/Cellar/nginx-full/1.15.8 --with-http_ssl_module --with-pcre --with-ipv6 --sbin
+	==> Caveats
+	==> openssl
+	A CA file has been bootstrapped using certificates from the SystemRoots
+	keychain. To add additional certificates (e.g. the certificates added in
+	the System keychain), place .pem files in
+	  /usr/local/etc/openssl/certs
+
+	and run
+	  /usr/local/opt/openssl/bin/c_rehash
+
+	openssl is keg-only, which means it was not symlinked into /usr/local,
+	because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
+
+	If you need to have openssl first in your PATH run:
+	  echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
+
+	For compilers to find openssl you may need to set:
+	  export LDFLAGS="-L/usr/local/opt/openssl/lib"
+	  export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+	For pkg-config to find openssl you may need to set:
+	  export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+
+	==> nginx-full
+	Docroot is: /usr/local/var/www
+
+	默认配置文件 in /usr/local/etc/nginx/nginx.conf  to 8080 so that
+	nginx can run without sudo.
+
+	nginx will load all files in /usr/local/etc/nginx/servers/.
+
+	- Tips -
+	nginx 启动
+	Run port 80:
+	 $ sudo chown root:wheel /usr/local/opt/nginx-full/bin/nginx
+	 $ sudo chmod u+s /usr/local/opt/nginx-full/bin/nginx
+	Reload config:
+	 $ nginx -s reload
+	Reopen Logfile:
+	 $ nginx -s reopen
+	Stop process:
+	 $ nginx -s stop
+	Waiting on exit process
+	 $ nginx -s quit
+
+ 2.配置rtmp服务
+   修改配置文件
+   /usr/local/etc/nginx/nginx.conf
+   #配置rtmp服务
+	rtmp {
+	    server{
+	         listen 1935;  #指定服务端口
+	         chunk_size 4000; #片段大小
+
+	         #指定流应用
+	         application live
+	         {
+	               live on;
+	               record off;
+	               allow play all;
+	         }
+	    }
+	}
+ 
+ 3.推拉流
+   ffmpeg -re -i out.mp4 -c copy -f flv rtmp://server/live/streamName
+   转发流
+   ffmpeg -i url -c:a copy -c:v copy -f flv rtmp://localhost:1935/live/room
+   ffmpeg -i http://ivi.bupt.edu.cn/hls/cctv15.m3u8 -bsf:a aac_adtstoasc -c:a copy -c:v copy -f flv rtmp://localhost:1935/live/room
+   
+   播放流
+   ffplay rtmp://localhost:1935/live/room
+
+   flashplayer
+   http://bbs.chinaffmpeg.com/1.swf
+
+
+  
+
+
+
+

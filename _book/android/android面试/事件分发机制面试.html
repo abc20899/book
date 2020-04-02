@@ -1,0 +1,4640 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>事件分发机制面试 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="依赖注入.html" />
+    
+    
+    <link rel="prev" href="其他优化面试.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/GitBook简单教程.html">
+            
+                <a href="../../gitbook/GitBook简单教程.html">
+            
+                    
+                    gitbook简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../python/python语法基础-1.html">
+            
+                <a href="../../python/python语法基础-1.html">
+            
+                    
+                    python语法基础-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../python/python语法基础-2.html">
+            
+                <a href="../../python/python语法基础-2.html">
+            
+                    
+                    python语法基础-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../python/python语法基础-3.html">
+            
+                <a href="../../python/python语法基础-3.html">
+            
+                    
+                    python语法基础-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../python/python语法基础-4.html">
+            
+                <a href="../../python/python语法基础-4.html">
+            
+                    
+                    python语法基础-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../python/Python虚拟环境.html">
+            
+                <a href="../../python/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../自定义view/">
+            
+                <a href="../自定义view/">
+            
+                    
+                    自定义view
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../自定义view/Canvas.html">
+            
+                <a href="../自定义view/Canvas.html">
+            
+                    
+                    Canvas常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../自定义view/Path.html">
+            
+                <a href="../自定义view/Path.html">
+            
+                    
+                    Path常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../自定义view/Matrix.html">
+            
+                <a href="../自定义view/Matrix.html">
+            
+                    
+                    Matrix常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../自定义view/Bezier.html">
+            
+                <a href="../自定义view/Bezier.html">
+            
+                    
+                    贝塞尔曲线常用操作速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../自定义view/CoordinateSystem.html">
+            
+                <a href="../自定义view/CoordinateSystem.html">
+            
+                    
+                    坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../自定义view/AngleAndRadian.html">
+            
+                <a href="../自定义view/AngleAndRadian.html">
+            
+                    
+                    角度弧度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../自定义view/Color.html">
+            
+                <a href="../自定义view/Color.html">
+            
+                    
+                    颜色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../自定义view/CustomViewProcess.html">
+            
+                <a href="../自定义view/CustomViewProcess.html">
+            
+                    
+                    分类和流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../自定义view/Canvas_BasicGraphics.html">
+            
+                <a href="../自定义view/Canvas_BasicGraphics.html">
+            
+                    
+                    绘制基本图形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../自定义view/Canvas_Convert.html">
+            
+                <a href="../自定义view/Canvas_Convert.html">
+            
+                    
+                    画布操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../自定义view/Canvas_PictureText.html">
+            
+                <a href="../自定义view/Canvas_PictureText.html">
+            
+                    
+                    图片文字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../自定义view/Path_Basic.html">
+            
+                <a href="../自定义view/Path_Basic.html">
+            
+                    
+                    Path基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="../自定义view/Path_Bezier.html">
+            
+                <a href="../自定义view/Path_Bezier.html">
+            
+                    
+                    贝塞尔曲线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="../自定义view/Path_Over.html">
+            
+                <a href="../自定义view/Path_Over.html">
+            
+                    
+                    Path完结篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="../自定义view/Path_Play.html">
+            
+                <a href="../自定义view/Path_Play.html">
+            
+                    
+                    Path玩出花样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.16" data-path="../自定义view/Matrix_Basic.html">
+            
+                <a href="../自定义view/Matrix_Basic.html">
+            
+                    
+                    Matrix原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.17" data-path="../自定义view/Matrix_Method.html">
+            
+                <a href="../自定义view/Matrix_Method.html">
+            
+                    
+                    Matrix详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.18" data-path="../自定义view/Matrix_3D_Camera.html">
+            
+                <a href="../自定义view/Matrix_3D_Camera.html">
+            
+                    
+                    Matrix Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.19" data-path="../自定义view/Dispatch-TouchEvent-Theory.html">
+            
+                <a href="../自定义view/Dispatch-TouchEvent-Theory.html">
+            
+                    
+                    事件分发机制原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.20" data-path="../自定义view/Dispatch-TouchEvent-Source.html">
+            
+                <a href="../自定义view/Dispatch-TouchEvent-Source.html">
+            
+                    
+                    事件分发机制详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.21" data-path="../自定义view/MotionEvent.html">
+            
+                <a href="../自定义view/MotionEvent.html">
+            
+                    
+                    MotionEvent详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.22" data-path="../自定义view/touch-matrix-region.html">
+            
+                <a href="../自定义view/touch-matrix-region.html">
+            
+                    
+                    特殊形状控件事件处理方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.23" data-path="../自定义view/multi-touch.html">
+            
+                <a href="../自定义view/multi-touch.html">
+            
+                    
+                    多点触控详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.24" data-path="../自定义view/CustomViewRule.html">
+            
+                <a href="../自定义view/CustomViewRule.html">
+            
+                    
+                    自定义view基本法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    android面试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="进程保活面试.html">
+            
+                <a href="进程保活面试.html">
+            
+                    
+                    进程保活面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="冷启动优化面试.html">
+            
+                <a href="冷启动优化面试.html">
+            
+                    
+                    冷启动优化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="内存管理面试.html">
+            
+                <a href="内存管理面试.html">
+            
+                    
+                    内存管理面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="内存泄漏面试.html">
+            
+                <a href="内存泄漏面试.html">
+            
+                    
+                    内存泄漏面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="其他优化面试.html">
+            
+                <a href="其他优化面试.html">
+            
+                    
+                    其他优化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.6" data-path="事件分发机制面试.html">
+            
+                <a href="事件分发机制面试.html">
+            
+                    
+                    事件分发机制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="依赖注入.html">
+            
+                <a href="依赖注入.html">
+            
+                    
+                    依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="自定义View.html">
+            
+                <a href="自定义View.html">
+            
+                    
+                    自定义View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" data-path="activity面试.html">
+            
+                <a href="activity面试.html">
+            
+                    
+                    activity面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="AndroidStudio目录结构面试.html">
+            
+                <a href="AndroidStudio目录结构面试.html">
+            
+                    
+                    AndroidStudio目录结构面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.11" data-path="Android部分.html">
+            
+                <a href="Android部分.html">
+            
+                    
+                    Android部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.12" data-path="Android插件化面试.html">
+            
+                <a href="Android插件化面试.html">
+            
+                    
+                    Android插件化面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.13" data-path="Android构建面试.html">
+            
+                <a href="Android构建面试.html">
+            
+                    
+                    Android构建面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.14" data-path="Android热更新面试.html">
+            
+                <a href="Android热更新面试.html">
+            
+                    
+                    Android热更新面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.15" data-path="ANR异常面试.html">
+            
+                <a href="ANR异常面试.html">
+            
+                    
+                    ANR异常面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.16" data-path="AsyncTask面试.html">
+            
+                <a href="AsyncTask面试.html">
+            
+                    
+                    AsyncTask面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.17" data-path="Binder面试.html">
+            
+                <a href="Binder面试.html">
+            
+                    
+                    Binder面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.18" data-path="Bitmap面试.html">
+            
+                <a href="Bitmap面试.html">
+            
+                    
+                    Bitmap面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.19" data-path="Broadcast面试.html">
+            
+                <a href="Broadcast面试.html">
+            
+                    
+                    Broadcast面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.20" data-path="ButterKnife框架面试.html">
+            
+                <a href="ButterKnife框架面试.html">
+            
+                    
+                    ButterKnife框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.21" data-path="fragment面试.html">
+            
+                <a href="fragment面试.html">
+            
+                    
+                    fragment面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.22" data-path="Git版本控制面试.html">
+            
+                <a href="Git版本控制面试.html">
+            
+                    
+                    Git版本控制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.23" data-path="Glide图片加载框架面试.html">
+            
+                <a href="Glide图片加载框架面试.html">
+            
+                    
+                    Glide图片加载框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.24" data-path="Gradle面试.html">
+            
+                <a href="Gradle面试.html">
+            
+                    
+                    Gradle面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.25" data-path="Handler面试.html">
+            
+                <a href="Handler面试.html">
+            
+                    
+                    Handler面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.26" data-path="HandlerThread面试.html">
+            
+                <a href="HandlerThread面试.html">
+            
+                    
+                    HandlerThread面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.27" data-path="IntentService面试.html">
+            
+                <a href="IntentService面试.html">
+            
+                    
+                    IntentService面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.28" data-path="ListView面试.html">
+            
+                <a href="ListView面试.html">
+            
+                    
+                    ListView面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.29" data-path="MVC架构设计模式面试.html">
+            
+                <a href="MVC架构设计模式面试.html">
+            
+                    
+                    MVC架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.30" data-path="MVP架构设计模式面试.html">
+            
+                <a href="MVP架构设计模式面试.html">
+            
+                    
+                    MVP架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.31" data-path="MVVM架构设计模式面试.html">
+            
+                <a href="MVVM架构设计模式面试.html">
+            
+                    
+                    MVVM架构设计模式面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.32" data-path="OKhttp框架面试.html">
+            
+                <a href="OKhttp框架面试.html">
+            
+                    
+                    OKhttp框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.33" data-path="OOM异常面试.html">
+            
+                <a href="OOM异常面试.html">
+            
+                    
+                    OOM异常面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.34" data-path="ProGuard代码混淆面试.html">
+            
+                <a href="ProGuard代码混淆面试.html">
+            
+                    
+                    ProGuard代码混淆面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.35" data-path="RecyclerView面试.html">
+            
+                <a href="RecyclerView面试.html">
+            
+                    
+                    RecyclerView面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.36" data-path="retrofit.html">
+            
+                <a href="retrofit.html">
+            
+                    
+                    retrofit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.37" data-path="retrofit网络框架面试.html">
+            
+                <a href="retrofit网络框架面试.html">
+            
+                    
+                    retrofit网络框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.38" data-path="Service面试.html">
+            
+                <a href="Service面试.html">
+            
+                    
+                    Service面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.39" data-path="UI卡顿面试.html">
+            
+                <a href="UI卡顿面试.html">
+            
+                    
+                    UI卡顿面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.40" data-path="View绘制机制面试.html">
+            
+                <a href="View绘制机制面试.html">
+            
+                    
+                    View绘制机制面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.41" data-path="View绘制流程.html">
+            
+                <a href="View绘制流程.html">
+            
+                    
+                    View绘制流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.42" data-path="进程保活面试.html">
+            
+                <a href="进程保活面试.html">
+            
+                    
+                    Volley框架面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.43" data-path="Webview面试.html">
+            
+                <a href="Webview面试.html">
+            
+                    
+                    Webview面试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.44" data-path="JNI与NDK.html">
+            
+                <a href="JNI与NDK.html">
+            
+                    
+                    JNI与NDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../rxjava文档/">
+            
+                <a href="../rxjava文档/">
+            
+                    
+                    rxjava文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../rxjava文档/rxjava-doc-1.html">
+            
+                <a href="../rxjava文档/rxjava-doc-1.html">
+            
+                    
+                    rxjava-doc-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../rxjava文档/rxjava-doc-2.html">
+            
+                <a href="../rxjava文档/rxjava-doc-2.html">
+            
+                    
+                    rxjava-doc-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../rxjava文档/rxjava-doc-3.html">
+            
+                <a href="../rxjava文档/rxjava-doc-3.html">
+            
+                    
+                    rxjava-doc-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../rxjava文档/rxjava-doc-4.html">
+            
+                <a href="../rxjava文档/rxjava-doc-4.html">
+            
+                    
+                    rxjava-doc-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../okhttp解析/">
+            
+                <a href="../okhttp解析/">
+            
+                    
+                    okhttp解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../okhttp解析/拦截器.html">
+            
+                <a href="../okhttp解析/拦截器.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../okhttp解析/Dispather讲解.html">
+            
+                <a href="../okhttp解析/Dispather讲解.html">
+            
+                    
+                    Dispather讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../okhttp解析/okhttp分析1.html">
+            
+                <a href="../okhttp解析/okhttp分析1.html">
+            
+                    
+                    okhttp分析1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../okhttp解析/okhttp分析2.html">
+            
+                <a href="../okhttp解析/okhttp分析2.html">
+            
+                    
+                    okhttp分析2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../okhttp解析/okhttp面试_1.html">
+            
+                <a href="../okhttp解析/okhttp面试_1.html">
+            
+                    
+                    okhttp面试_1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../okhttp解析/okhttp面试_2.html">
+            
+                <a href="../okhttp解析/okhttp面试_2.html">
+            
+                    
+                    okhttp面试_2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../okhttp解析/okhttp面试_3.html">
+            
+                <a href="../okhttp解析/okhttp面试_3.html">
+            
+                    
+                    okhttp面试_3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../android高级/">
+            
+                <a href="../android高级/">
+            
+                    
+                    android高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../android高级/ApplicationIdvsPackageName.html">
+            
+                <a href="../android高级/ApplicationIdvsPackageName.html">
+            
+                    
+                    ApplicationIdvsPackageName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../android高级/ART与Dalvik.html">
+            
+                <a href="../android高级/ART与Dalvik.html">
+            
+                    
+                    ART与Dalvik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../android高级/AsyncTask详解.html">
+            
+                <a href="../android高级/AsyncTask详解.html">
+            
+                    
+                    AsyncTask详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../android高级/BroadcastReceiver安全问题.html">
+            
+                <a href="../android高级/BroadcastReceiver安全问题.html">
+            
+                    
+                    BroadcastReceiver安全问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../android高级/butterknife源码详解.html">
+            
+                <a href="../android高级/butterknife源码详解.html">
+            
+                    
+                    butterknife源码详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../android高级/Fiddler抓取Android手机数据包.html">
+            
+                <a href="../android高级/Fiddler抓取Android手机数据包.html">
+            
+                    
+                    Fiddler抓取Android手机数据包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../android高级/Github个人主页绑定域名.html">
+            
+                <a href="../android高级/Github个人主页绑定域名.html">
+            
+                    
+                    Github个人主页绑定域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="../android高级/Gradle专题.html">
+            
+                <a href="../android高级/Gradle专题.html">
+            
+                    
+                    Gradle专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="../android高级/Handler导致内存泄露分析.html">
+            
+                <a href="../android高级/Handler导致内存泄露分析.html">
+            
+                    
+                    Handler导致内存泄露分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="../android高级/HttpURLConnection详解.html">
+            
+                <a href="../android高级/HttpURLConnection详解.html">
+            
+                    
+                    HttpURLConnection详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="../android高级/HttpURLConnection与HttpClient.html">
+            
+                <a href="../android高级/HttpURLConnection与HttpClient.html">
+            
+                    
+                    HttpURLConnection与HttpClient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="../android高级/InstantRun详解.html">
+            
+                <a href="../android高级/InstantRun详解.html">
+            
+                    
+                    InstantRun详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="../android高级/Library项目中资源id使用case时报错.html">
+            
+                <a href="../android高级/Library项目中资源id使用case时报错.html">
+            
+                    
+                    Library项目中资源id使用case时报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.14" data-path="../android高级/ListView源码分析.html">
+            
+                <a href="../android高级/ListView源码分析.html">
+            
+                    
+                    ListView源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.15" data-path="../android高级/Mac下配置adb及Android命令.html">
+            
+                <a href="../android高级/Mac下配置adb及Android命令.html">
+            
+                    
+                    Mac下配置adb及Android命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.16" data-path="../android高级/Markdown学习手册.html">
+            
+                <a href="../android高级/Markdown学习手册.html">
+            
+                    
+                    Markdown学习手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.17" data-path="../android高级/MAT内存分析.html">
+            
+                <a href="../android高级/MAT内存分析.html">
+            
+                    
+                    MAT内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.18" data-path="../android高级/MaterialDesign使用.html">
+            
+                <a href="../android高级/MaterialDesign使用.html">
+            
+                    
+                    MaterialDesign使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.19" data-path="../android高级/MVC.html">
+            
+                <a href="../android高级/MVC.html">
+            
+                    
+                    MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.20" data-path="../android高级/MVP.html">
+            
+                <a href="../android高级/MVP.html">
+            
+                    
+                    MVP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.21" data-path="../android高级/RecyclerView专题.html">
+            
+                <a href="../android高级/RecyclerView专题.html">
+            
+                    
+                    RecyclerView专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.22" data-path="../android高级/Retrofit详解上.html">
+            
+                <a href="../android高级/Retrofit详解上.html">
+            
+                    
+                    Retrofit详解上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.23" data-path="../android高级/Retrofit详解下.html">
+            
+                <a href="../android高级/Retrofit详解下.html">
+            
+                    
+                    Retrofit详解下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.24" data-path="../android高级/RxJava系列全家桶.html">
+            
+                <a href="../android高级/RxJava系列全家桶.html">
+            
+                    
+                    RxJava系列全家桶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.25" data-path="../android高级/RxJava详解上.html">
+            
+                <a href="../android高级/RxJava详解上.html">
+            
+                    
+                    RxJava详解上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.26" data-path="../android高级/RxJava详解中.html">
+            
+                <a href="../android高级/RxJava详解中.html">
+            
+                    
+                    RxJava详解中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.27" data-path="../android高级/RxJava详解下.html">
+            
+                <a href="../android高级/RxJava详解下.html">
+            
+                    
+                    RxJava详解下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.28" data-path="../android高级/VideoView源码分析.html">
+            
+                <a href="../android高级/VideoView源码分析.html">
+            
+                    
+                    VideoView源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.29" data-path="../android高级/View绘制过程详解.html">
+            
+                <a href="../android高级/View绘制过程详解.html">
+            
+                    
+                    View绘制过程详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.30" data-path="../android高级/volley-retrofit-okhttp之我们该如何选择网路框架.html">
+            
+                <a href="../android高级/volley-retrofit-okhttp之我们该如何选择网路框架.html">
+            
+                    
+                    volley-retrofit-okhttp之我们该如何选择网路框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.31" data-path="../android高级/Volley源码分析.html">
+            
+                <a href="../android高级/Volley源码分析.html">
+            
+                    
+                    Volley源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.32" data-path="../android高级/Zipalign优化.html">
+            
+                <a href="../android高级/Zipalign优化.html">
+            
+                    
+                    Zipalign优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.33" data-path="../android高级/Picasso图片加载框架的深入学习及解析.html">
+            
+                <a href="../android高级/Picasso图片加载框架的深入学习及解析.html">
+            
+                    
+                    Picasso图片加载框架的深入学习及解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.34" data-path="../android高级/invalidate和postInvalidate内部原理机制.html">
+            
+                <a href="../android高级/invalidate和postInvalidate内部原理机制.html">
+            
+                    
+                    invalidate和postInvalidate内部原理机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.35" data-path="../android高级/解决Android应用启动白色闪屏.html">
+            
+                <a href="../android高级/解决Android应用启动白色闪屏.html">
+            
+                    
+                    解决Android应用启动白色闪屏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.36" data-path="../android高级/通过BaseActivity实现滑动返回.html">
+            
+                <a href="../android高级/通过BaseActivity实现滑动返回.html">
+            
+                    
+                    通过BaseActivity实现滑动返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.37" data-path="../android高级/异步加载AsyncTask解析.html">
+            
+                <a href="../android高级/异步加载AsyncTask解析.html">
+            
+                    
+                    异步加载AsyncTask解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.38" data-path="../android高级/Android动画深入学习.html">
+            
+                <a href="../android高级/Android动画深入学习.html">
+            
+                    
+                    Android动画深入学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.39" data-path="../android高级/Android动画原理深入解析.html">
+            
+                <a href="../android高级/Android动画原理深入解析.html">
+            
+                    
+                    Android动画原理深入解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.40" data-path="../android高级/Android耗电解决.html">
+            
+                <a href="../android高级/Android耗电解决.html">
+            
+                    
+                    Android耗电解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.41" data-path="../android高级/Android消息通信Handler源码解析.html">
+            
+                <a href="../android高级/Android消息通信Handler源码解析.html">
+            
+                    
+                    Android消息通信Handler源码解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.42" data-path="../android高级/Android中的图像格式.html">
+            
+                <a href="../android高级/Android中的图像格式.html">
+            
+                    
+                    Android中的图像格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.43" data-path="../android高级/ArrayMap和SparseArray解析.html">
+            
+                <a href="../android高级/ArrayMap和SparseArray解析.html">
+            
+                    
+                    ArrayMap和SparseArray解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.44" data-path="../android高级/AsyncTask和Handler比较.html">
+            
+                <a href="../android高级/AsyncTask和Handler比较.html">
+            
+                    
+                    AsyncTask和Handler比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.45" data-path="../android高级/HTTP必知必会.html">
+            
+                <a href="../android高级/HTTP必知必会.html">
+            
+                    
+                    HTTP必知必会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.46" data-path="../android高级/retrofit讲解.html">
+            
+                <a href="../android高级/retrofit讲解.html">
+            
+                    
+                    retrofit讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../android基础/">
+            
+                <a href="../android基础/">
+            
+                    
+                    android基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../android基础/安全退出应用程序.html">
+            
+                <a href="../android基础/安全退出应用程序.html">
+            
+                    
+                    安全退出应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../android基础/Android基础知识.html">
+            
+                <a href="../android基础/Android基础知识.html">
+            
+                    
+                    Android基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../android基础/病毒.html">
+            
+                <a href="../android基础/病毒.html">
+            
+                    
+                    病毒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../android基础/Android命令.html">
+            
+                <a href="../android基础/Android命令.html">
+            
+                    
+                    Android命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../android基础/Android坐标系.html">
+            
+                <a href="../android基础/Android坐标系.html">
+            
+                    
+                    Android坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../android基础/超级管理员(DevicePoliceManager">
+            
+                <span>
+            
+                    
+                    超级管理员(DevicePoliceManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../android基础/程序的启动、卸载和分享.html">
+            
+                <a href="../android基础/程序的启动、卸载和分享.html">
+            
+                    
+                    程序的启动、卸载和分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../android基础/代码混淆.html">
+            
+                <a href="../android基础/代码混淆.html">
+            
+                    
+                    代码混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../android基础/读取用户logcat日志.html">
+            
+                <a href="../android基础/读取用户logcat日志.html">
+            
+                    
+                    读取用户logcat日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../android基础/短信广播接收者.html">
+            
+                <a href="../android基础/短信广播接收者.html">
+            
+                    
+                    短信广播接收者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../android基础/多线程断点下载.html">
+            
+                <a href="../android基础/多线程断点下载.html">
+            
+                    
+                    多线程断点下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../android基础/黑名单挂断电话及删除电话记录.html">
+            
+                <a href="../android基础/黑名单挂断电话及删除电话记录.html">
+            
+                    
+                    黑名单挂断电话及删除电话记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.13" data-path="../android基础/横向ListView.html">
+            
+                <a href="../android基础/横向ListView.html">
+            
+                    
+                    横向ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.14" data-path="../android基础/滑动切换Activity(GestureDetector">
+            
+                <span>
+            
+                    
+                    滑动切换Activity(GestureDetector)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.15" data-path="../android基础/获取联系人.html">
+            
+                <a href="../android基础/获取联系人.html">
+            
+                    
+                    获取联系人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.16" data-path="../android基础/获取手机及SD卡可用存储空间.html">
+            
+                <a href="../android基础/获取手机及SD卡可用存储空间.html">
+            
+                    
+                    获取手机及SD卡可用存储空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.17" data-path="../android基础/获取手机中所有安装的程序.html">
+            
+                <a href="../android基础/获取手机中所有安装的程序.html">
+            
+                    
+                    获取手机中所有安装的程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.18" data-path="../android基础/获取位置(LocationManager">
+            
+                <span>
+            
+                    
+                    获取位置(LocationManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.19" data-path="../android基础/获取应用程序缓存及一键清理.html">
+            
+                <a href="../android基础/获取应用程序缓存及一键清理.html">
+            
+                    
+                    获取应用程序缓存及一键清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.20" data-path="../android基础/开发中异常的处理.html">
+            
+                <a href="../android基础/开发中异常的处理.html">
+            
+                    
+                    开发中异常的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.21" data-path="../android基础/开发中Log的管理.html">
+            
+                <a href="../android基础/开发中Log的管理.html">
+            
+                    
+                    开发中Log的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.22" data-path="../android基础/快捷方式工具类.html">
+            
+                <a href="../android基础/快捷方式工具类.html">
+            
+                    
+                    快捷方式工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.23" data-path="../android基础/来电号码归属地提示框.html">
+            
+                <a href="../android基础/来电号码归属地提示框.html">
+            
+                    
+                    来电号码归属地提示框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.24" data-path="../android基础/来电监听及录音.html">
+            
+                <a href="../android基础/来电监听及录音.html">
+            
+                    
+                    来电监听及录音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.25" data-path="../android基础/零权限上传数据.html">
+            
+                <a href="../android基础/零权限上传数据.html">
+            
+                    
+                    零权限上传数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.26" data-path="../android基础/内存泄漏.html">
+            
+                <a href="../android基础/内存泄漏.html">
+            
+                    
+                    内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.27" data-path="../android基础/屏幕适配.html">
+            
+                <a href="../android基础/屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.28" data-path="../android基础/任务管理器(ActivityManager">
+            
+                <span>
+            
+                    
+                    任务管理器(ActivityManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.29" data-path="../android基础/手机摇晃.html">
+            
+                <a href="../android基础/手机摇晃.html">
+            
+                    
+                    手机摇晃
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.30" data-path="../android基础/竖着的Seekbar.html">
+            
+                <a href="../android基础/竖着的Seekbar.html">
+            
+                    
+                    竖着的Seekbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.31" data-path="../android基础/数据存储.html">
+            
+                <a href="../android基础/数据存储.html">
+            
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.32" data-path="../android基础/搜索框.html">
+            
+                <a href="../android基础/搜索框.html">
+            
+                    
+                    搜索框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.33" data-path="../android基础/锁屏以及解锁监听.html">
+            
+                <a href="../android基础/锁屏以及解锁监听.html">
+            
+                    
+                    锁屏以及解锁监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.34" data-path="../android基础/文件上传.html">
+            
+                <a href="../android基础/文件上传.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.35" data-path="../android基础/下拉刷新ListView.html">
+            
+                <a href="../android基础/下拉刷新ListView.html">
+            
+                    
+                    下拉刷新ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.36" data-path="../android基础/修改系统组件样式.html">
+            
+                <a href="../android基础/修改系统组件样式.html">
+            
+                    
+                    修改系统组件样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.37" data-path="../android基础/音量及屏幕亮度调节.html">
+            
+                <a href="../android基础/音量及屏幕亮度调节.html">
+            
+                    
+                    音量及屏幕亮度调节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.38" data-path="../android基础/应用安装.html">
+            
+                <a href="../android基础/应用安装.html">
+            
+                    
+                    应用安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.39" data-path="../android基础/应用后台唤醒后数据的刷新.html">
+            
+                <a href="../android基础/应用后台唤醒后数据的刷新.html">
+            
+                    
+                    应用后台唤醒后数据的刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.40" data-path="../android基础/知识大杂烩.html">
+            
+                <a href="../android基础/知识大杂烩.html">
+            
+                    
+                    知识大杂烩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.41" data-path="../android基础/资源文件拷贝的三种方式.html">
+            
+                <a href="../android基础/资源文件拷贝的三种方式.html">
+            
+                    
+                    资源文件拷贝的三种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.42" data-path="../android基础/自定义背景.html">
+            
+                <a href="../android基础/自定义背景.html">
+            
+                    
+                    自定义背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.43" data-path="../android基础/自定义控件.html">
+            
+                <a href="../android基础/自定义控件.html">
+            
+                    
+                    自定义控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.44" data-path="../android基础/自定义状态栏通知.html">
+            
+                <a href="../android基础/自定义状态栏通知.html">
+            
+                    
+                    自定义状态栏通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.45" data-path="../android基础/自定义Toast.html">
+            
+                <a href="../android基础/自定义Toast.html">
+            
+                    
+                    自定义Toast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.46" data-path="../android基础/adblogcat使用简介.html">
+            
+                <a href="../android基础/adblogcat使用简介.html">
+            
+                    
+                    adblogcat使用简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.47" data-path="../android基础/Android编码规范.html">
+            
+                <a href="../android基础/Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.48" data-path="../android基础/Android动画.html">
+            
+                <a href="../android基础/Android动画.html">
+            
+                    
+                    Android动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.49" data-path="../android基础/Android基础面试题.html">
+            
+                <a href="../android基础/Android基础面试题.html">
+            
+                    
+                    Android基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.50" data-path="../android基础/Android入门介绍.html">
+            
+                <a href="../android基础/Android入门介绍.html">
+            
+                    
+                    Android入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.51" data-path="../android基础/Android四大组件之ContentProvider.html">
+            
+                <a href="../android基础/Android四大组件之ContentProvider.html">
+            
+                    
+                    Android四大组件之ContentProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.52" data-path="../android基础/Android四大组件之Service.html">
+            
+                <a href="../android基础/Android四大组件之Service.html">
+            
+                    
+                    Android四大组件之Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.53" data-path="../android基础/Ant打包.html">
+            
+                <a href="../android基础/Ant打包.html">
+            
+                    
+                    Ant打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.54" data-path="../android基础/Bitmap优化.html">
+            
+                <a href="../android基础/Bitmap优化.html">
+            
+                    
+                    Bitmap优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.55" data-path="../android基础/DLNA简介.html">
+            
+                <a href="../android基础/DLNA简介.html">
+            
+                    
+                    DLNA简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.56" data-path="../android基础/Fragment专题.html">
+            
+                <a href="../android基础/Fragment专题.html">
+            
+                    
+                    Fragment专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.57" data-path="../android基础/Home键监听.html">
+            
+                <a href="../android基础/Home键监听.html">
+            
+                    
+                    Home键监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.58" data-path="../android基础/HttpClient执行Get和Post请求.html">
+            
+                <a href="../android基础/HttpClient执行Get和Post请求.html">
+            
+                    
+                    HttpClient执行Get和Post请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.59" data-path="../android基础/JNI_C语言基础.html">
+            
+                <a href="../android基础/JNI_C语言基础.html">
+            
+                    
+                    JNI_C语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.60" data-path="../android基础/JNI基础.html">
+            
+                <a href="../android基础/JNI基础.html">
+            
+                    
+                    JNI基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.61" data-path="../android基础/ListView专题.html">
+            
+                <a href="../android基础/ListView专题.html">
+            
+                    
+                    ListView专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.62" data-path="../android基础/Parcelable及Serializable.html">
+            
+                <a href="../android基础/Parcelable及Serializable.html">
+            
+                    
+                    Parcelable及Serializable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.63" data-path="../android基础/PopupWindow细节.html">
+            
+                <a href="../android基础/PopupWindow细节.html">
+            
+                    
+                    PopupWindow细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.64" data-path="../android基础/Scroller简介.html">
+            
+                <a href="../android基础/Scroller简介.html">
+            
+                    
+                    Scroller简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.65" data-path="../android基础/ScrollingTabs.html">
+            
+                <a href="../android基础/ScrollingTabs.html">
+            
+                    
+                    ScrollingTabs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.66" data-path="../android基础/SDKManager无法更新的问题.html">
+            
+                <a href="../android基础/SDKManager无法更新的问题.html">
+            
+                    
+                    SDKManager无法更新的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.67" data-path="../android基础/Selector使用.html">
+            
+                <a href="../android基础/Selector使用.html">
+            
+                    
+                    Selector使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.68" data-path="../android基础/SlidingMenu.html">
+            
+                <a href="../android基础/SlidingMenu.html">
+            
+                    
+                    SlidingMenu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.69" data-path="../android基础/String格式化.html">
+            
+                <a href="../android基础/String格式化.html">
+            
+                    
+                    String格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.70" data-path="../android基础/TextView跑马灯效果.html">
+            
+                <a href="../android基础/TextView跑马灯效果.html">
+            
+                    
+                    TextView跑马灯效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.71" data-path="../android基础/WebView总结.html">
+            
+                <a href="../android基础/WebView总结.html">
+            
+                    
+                    WebView总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.72" data-path="../android基础/Widget(窗口小部件">
+            
+                <span>
+            
+                    
+                    Widget(窗口小部件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.73" data-path="../android基础/Wifi状态监听.html">
+            
+                <a href="../android基础/Wifi状态监听.html">
+            
+                    
+                    Wifi状态监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.74" data-path="../android基础/XmlPullParser.html">
+            
+                <a href="../android基础/XmlPullParser.html">
+            
+                    
+                    XmlPullParser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Android编码规范.html">
+            
+                <a href="../Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Android中dip-dp-sp-pt和px.md">
+            
+                <span>
+            
+                    
+                    Android中dip-dp-sp-pt和px
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../dart2/">
+            
+                <a href="../../dart2/">
+            
+                    
+                    dart2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../dart2/dart-overview.html">
+            
+                <a href="../../dart2/dart-overview.html">
+            
+                    
+                    dart概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../ffmpeg/">
+            
+                <a href="../../ffmpeg/">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../ffmpeg/ffmpeg编译.html">
+            
+                <a href="../../ffmpeg/ffmpeg编译.html">
+            
+                    
+                    ffmpeg编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../ffmpeg/ffmpeg常用命令.html">
+            
+                <a href="../../ffmpeg/ffmpeg常用命令.html">
+            
+                    
+                    ffmpeg常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../ffmpeg/音频基础知识.html">
+            
+                <a href="../../ffmpeg/音频基础知识.html">
+            
+                    
+                    音频基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../ffmpeg/ffmpeg开发基础.html">
+            
+                <a href="../../ffmpeg/ffmpeg开发基础.html">
+            
+                    
+                    ffmpeg开发基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../ffmpeg/c基础开发.html">
+            
+                <a href="../../ffmpeg/c基础开发.html">
+            
+                    
+                    c基础开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../flutter/">
+            
+                <a href="../../flutter/">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../flutter/flutter笔记.html">
+            
+                <a href="../../flutter/flutter笔记.html">
+            
+                    
+                    flutter笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../git教程/">
+            
+                <a href="../../git教程/">
+            
+                    
+                    git教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../git教程/Git命令.html">
+            
+                <a href="../../git教程/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../git教程/Git学习.html">
+            
+                <a href="../../git教程/Git学习.html">
+            
+                    
+                    Git学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../git教程/gitignore规则不生效.html">
+            
+                <a href="../../git教程/gitignore规则不生效.html">
+            
+                    
+                    gitignore规则不生效.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../ios/">
+            
+                <a href="../../ios/">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../javascript/">
+            
+                <a href="../../javascript/">
+            
+                    
+                    javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../javascript/javaScript-语法和数据类型.html">
+            
+                <a href="../../javascript/javaScript-语法和数据类型.html">
+            
+                    
+                    javaScript-语法和数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../javascript/javaScript-循环和迭代.html">
+            
+                <a href="../../javascript/javaScript-循环和迭代.html">
+            
+                    
+                    javaScript-循环和迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../javascript/javaScript-使用对象.html">
+            
+                <a href="../../javascript/javaScript-使用对象.html">
+            
+                    
+                    javaScript-使用对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../javascript/javaScript-函数.html">
+            
+                <a href="../../javascript/javaScript-函数.html">
+            
+                    
+                    javaScript-函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../javascript/javaScript-对象模型的细节.html">
+            
+                <a href="../../javascript/javaScript-对象模型的细节.html">
+            
+                    
+                    javaScript-对象模型的细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../javascript/javaScript流程控制与错误处理.html">
+            
+                <a href="../../javascript/javaScript流程控制与错误处理.html">
+            
+                    
+                    javaScript流程控制与错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../kotlin/">
+            
+                <a href="../../kotlin/">
+            
+                    
+                    kotlin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../kotlin/Kotlin基础语法.html">
+            
+                <a href="../../kotlin/Kotlin基础语法.html">
+            
+                    
+                    Kotlin基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../linux/linux命令行相关.html">
+            
+                <a href="../../linux/linux命令行相关.html">
+            
+                    
+                    linux命令行相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../linux/Linux常用命令.html">
+            
+                <a href="../../linux/Linux常用命令.html">
+            
+                    
+                    linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../notes/">
+            
+                <a href="../../notes/">
+            
+                    
+                    notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../notes/录屏与GIF制作.html">
+            
+                <a href="../../notes/录屏与GIF制作.html">
+            
+                    
+                    录屏与GIF制作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../notes/yisi.html">
+            
+                <a href="../../notes/yisi.html">
+            
+                    
+                    yisi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../notes/weex基础.html">
+            
+                <a href="../../notes/weex基础.html">
+            
+                    
+                    weex基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../notes/weex-native.html">
+            
+                <a href="../../notes/weex-native.html">
+            
+                    
+                    weex-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../notes/TensorFlow安装.html">
+            
+                <a href="../../notes/TensorFlow安装.html">
+            
+                    
+                    TensorFlow安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                <a href="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                    
+                    SublimeText3运行JavaScript控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../notes/RN-环境搭建.html">
+            
+                <a href="../../notes/RN-环境搭建.html">
+            
+                    
+                    RN-环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../notes/Mac开发必备.html">
+            
+                <a href="../../notes/Mac开发必备.html">
+            
+                    
+                    Mac开发必备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../notes/Mac键盘快捷键.html">
+            
+                <a href="../../notes/Mac键盘快捷键.html">
+            
+                    
+                    Mac键盘快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../notes/Mac常用命令.html">
+            
+                <a href="../../notes/Mac常用命令.html">
+            
+                    
+                    Mac常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../notes/远程调试WebView.html">
+            
+                <a href="../../notes/远程调试WebView.html">
+            
+                    
+                    远程调试WebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.12" data-path="../../notes/颜色透明度换算.html">
+            
+                <a href="../../notes/颜色透明度换算.html">
+            
+                    
+                    颜色透明度换算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../c/c++/README.md">
+            
+                <span>
+            
+                    
+                    c/c++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../java/">
+            
+                <a href="../../java/">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../java/java基础/">
+            
+                <a href="../../java/java基础/">
+            
+                    
+                    java基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../../java/java基础/线程.html">
+            
+                <a href="../../java/java基础/线程.html">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.2" data-path="../../java/java基础/线程池.html">
+            
+                <a href="../../java/java基础/线程池.html">
+            
+                    
+                    线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.3" data-path="../../java/java基础/线程中断处理.html">
+            
+                <a href="../../java/java基础/线程中断处理.html">
+            
+                    
+                    线程中断处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.4" data-path="../../java/java基础/Java基础知识点.html">
+            
+                <a href="../../java/java基础/Java基础知识点.html">
+            
+                    
+                    Java基础知识点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.5" data-path="../../java/java基础/Java集合.html">
+            
+                <a href="../../java/java基础/Java集合.html">
+            
+                    
+                    Java集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.6" data-path="../../java/java基础/Java中的排序算法.html">
+            
+                <a href="../../java/java基础/Java中的排序算法.html">
+            
+                    
+                    Java中的排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.7" data-path="../../java/java基础/List.html">
+            
+                <a href="../../java/java基础/List.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.8" data-path="../../java/java基础/Map.html">
+            
+                <a href="../../java/java基础/Map.html">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.9" data-path="../../java/java基础/Set.html">
+            
+                <a href="../../java/java基础/Set.html">
+            
+                    
+                    Set
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.10" data-path="../../java/java基础/sleep和wait.html">
+            
+                <a href="../../java/java基础/sleep和wait.html">
+            
+                    
+                    sleep和wait
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.11" data-path="../../java/java基础/String.html">
+            
+                <a href="../../java/java基础/String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../java/Java内置的进制转换.html">
+            
+                <a href="../../java/Java内置的进制转换.html">
+            
+                    
+                    Java内置的进制转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../java/Java中创建对象的5种方式.html">
+            
+                <a href="../../java/Java中创建对象的5种方式.html">
+            
+                    
+                    Java中创建对象的5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../java/java解惑/">
+            
+                <a href="../../java/java解惑/">
+            
+                    
+                    java解惑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.4.1" data-path="../../java/java解惑/常用命令行大全.html">
+            
+                <a href="../../java/java解惑/常用命令行大全.html">
+            
+                    
+                    常用命令行大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.2" data-path="../../java/java解惑/单例的最佳实现方式.html">
+            
+                <a href="../../java/java解惑/单例的最佳实现方式.html">
+            
+                    
+                    单例的最佳实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.3" data-path="../../java/java解惑/单链表.html">
+            
+                <a href="../../java/java解惑/单链表.html">
+            
+                    
+                    单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.4" data-path="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                <a href="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                    
+                    获取今后多少天后的日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.5" data-path="../../java/java解惑/剑指Offer(上">
+            
+                <span>
+            
+                    
+                    剑指Offer(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.6" data-path="../../java/java解惑/剑指Offer(下">
+            
+                <span>
+            
+                    
+                    剑指Offer(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.7" data-path="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                <a href="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                    
+                    强引用、软引用、弱引用、虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.8" data-path="../../java/java解惑/生产者消费者.html">
+            
+                <a href="../../java/java解惑/生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.9" data-path="../../java/java解惑/死锁.html">
+            
+                <a href="../../java/java解惑/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.10" data-path="../../java/java解惑/算法.html">
+            
+                <a href="../../java/java解惑/算法.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.11" data-path="../../java/java解惑/网络请求相关内容总结.html">
+            
+                <a href="../../java/java解惑/网络请求相关内容总结.html">
+            
+                    
+                    网络请求相关内容总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.12" data-path="../../java/java解惑/线程池的原理.html">
+            
+                <a href="../../java/java解惑/线程池的原理.html">
+            
+                    
+                    线程池的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.13" data-path="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                <a href="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                    
+                    原子性、可见性以及有序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.14" data-path="../../java/java解惑/Base64加密.html">
+            
+                <a href="../../java/java解惑/Base64加密.html">
+            
+                    
+                    Base64加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.15" data-path="../../java/java解惑/Git命令.html">
+            
+                <a href="../../java/java解惑/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.16" data-path="../../java/java解惑/hashCode与equals.html">
+            
+                <a href="../../java/java解惑/hashCode与equals.html">
+            
+                    
+                    hashCode与equals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.17" data-path="../../java/java解惑/HashMap实现原理分析.html">
+            
+                <a href="../../java/java解惑/HashMap实现原理分析.html">
+            
+                    
+                    HashMap实现原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.18" data-path="../../java/java解惑/Java基础面试题.html">
+            
+                <a href="../../java/java解惑/Java基础面试题.html">
+            
+                    
+                    Java基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.19" data-path="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                <a href="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                    
+                    JVM垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.20" data-path="../../java/java解惑/MD5加密.html">
+            
+                <a href="../../java/java解惑/MD5加密.html">
+            
+                    
+                    MD5加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.21" data-path="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                <a href="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                    
+                    MVC与MVP及MVVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.22" data-path="../../java/java解惑/RMB大小写转换.html">
+            
+                <a href="../../java/java解惑/RMB大小写转换.html">
+            
+                    
+                    RMB大小写转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.23" data-path="../../java/java解惑/Vim使用教程.html">
+            
+                <a href="../../java/java解惑/Vim使用教程.html">
+            
+                    
+                    Vim使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4.24" data-path="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                <a href="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                    
+                    volatile和Synchronized区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../java/设计模式/">
+            
+                <a href="../../java/设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.5.1" data-path="../../java/设计模式/01-面向对象六大原则.html">
+            
+                <a href="../../java/设计模式/01-面向对象六大原则.html">
+            
+                    
+                    01-面向对象六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.2" data-path="../../java/设计模式/02-单例模式.html">
+            
+                <a href="../../java/设计模式/02-单例模式.html">
+            
+                    
+                    02-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.3" data-path="../../java/设计模式/03-Builder模式.html">
+            
+                <a href="../../java/设计模式/03-Builder模式.html">
+            
+                    
+                    03-Builder模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.4" data-path="../../java/设计模式/04-原型模式.html">
+            
+                <a href="../../java/设计模式/04-原型模式.html">
+            
+                    
+                    04-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.5" data-path="../../java/设计模式/05-工厂方法模式.html">
+            
+                <a href="../../java/设计模式/05-工厂方法模式.html">
+            
+                    
+                    05-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.6" data-path="../../java/设计模式/06-抽象工厂模式.html">
+            
+                <a href="../../java/设计模式/06-抽象工厂模式.html">
+            
+                    
+                    06-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.7" data-path="../../java/设计模式/07-策略模式.html">
+            
+                <a href="../../java/设计模式/07-策略模式.html">
+            
+                    
+                    07-策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.8" data-path="../../java/设计模式/08-状态模式.html">
+            
+                <a href="../../java/设计模式/08-状态模式.html">
+            
+                    
+                    08-状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.9" data-path="../../java/设计模式/09-责任链模式.html">
+            
+                <a href="../../java/设计模式/09-责任链模式.html">
+            
+                    
+                    09-责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.10" data-path="../../java/设计模式/10-解释器模式.html">
+            
+                <a href="../../java/设计模式/10-解释器模式.html">
+            
+                    
+                    10-解释器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.11" data-path="../../java/设计模式/11-命令模式.html">
+            
+                <a href="../../java/设计模式/11-命令模式.html">
+            
+                    
+                    11-命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.12" data-path="../../java/设计模式/12-观察者模式.html">
+            
+                <a href="../../java/设计模式/12-观察者模式.html">
+            
+                    
+                    12-观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.13" data-path="../../java/设计模式/13-备忘录模式.html">
+            
+                <a href="../../java/设计模式/13-备忘录模式.html">
+            
+                    
+                    13-备忘录模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.14" data-path="../../java/设计模式/14-迭代器模式.html">
+            
+                <a href="../../java/设计模式/14-迭代器模式.html">
+            
+                    
+                    14-迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.15" data-path="../../java/设计模式/15-模板方法模式.html">
+            
+                <a href="../../java/设计模式/15-模板方法模式.html">
+            
+                    
+                    15-模板方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.16" data-path="../../java/设计模式/16-访问者模式.html">
+            
+                <a href="../../java/设计模式/16-访问者模式.html">
+            
+                    
+                    16-访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.17" data-path="../../java/设计模式/18-代理模式.html">
+            
+                <a href="../../java/设计模式/18-代理模式.html">
+            
+                    
+                    18-代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.18" data-path="../../java/设计模式/19-组合模式.html">
+            
+                <a href="../../java/设计模式/19-组合模式.html">
+            
+                    
+                    19-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.19" data-path="../../java/设计模式/20-适配器模式.html">
+            
+                <a href="../../java/设计模式/20-适配器模式.html">
+            
+                    
+                    20-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.20" data-path="../../java/设计模式/21-装饰模式.html">
+            
+                <a href="../../java/设计模式/21-装饰模式.html">
+            
+                    
+                    21-装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.21" data-path="../../java/设计模式/22-享元模式.html">
+            
+                <a href="../../java/设计模式/22-享元模式.html">
+            
+                    
+                    22-享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.22" data-path="../../java/设计模式/23-外观模式.html">
+            
+                <a href="../../java/设计模式/23-外观模式.html">
+            
+                    
+                    23-外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5.23" data-path="../../java/设计模式/24-桥接模式.html">
+            
+                <a href="../../java/设计模式/24-桥接模式.html">
+            
+                    
+                    24-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >事件分发机制面试</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x673A;&#x5236;">&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x673A;&#x5236;<br></h3>
+<p>android&#x5E94;&#x7528;&#x754C;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4E00;&#x822C;&#x6211;&#x4EEC;&#x5728;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x754C;&#x9762;&#x65F6;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;Activity&#x8868;&#x793A;&#xFF1B;&#x800C;Activity&#x65F6;&#x901A;&#x8FC7;Window&#x5C55;&#x793A;&#x7684;&#xFF0C;android&#x7684;Window&#x5B9E;&#x73B0;&#x7C7B;&#x53EB;PhoneWindow&#xFF1B;PhoneWindow&#x7C7B;&#x6709;&#x4E2A;mDecor&#x7684;DectorView&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x6765;&#x5BF9;&#x754C;&#x9762;&#x7684;View&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4FEE;&#x9970;&#xFF1B;DectorView&#x7528;&#x6765;&#x4FEE;&#x9970;ActionBar&#x3001;ContentView(Activity.setContentView)&#xFF1B;ContentView&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x5B50;Layout&#x3002;</p>
+<p><img src="img/view_tree1.jpg" alt=""></p>
+<p>android&#x7684;&#x89C6;&#x56FE;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;ViewGroup&#x89C6;&#x56FE;&#x548C;View&#x89C6;&#x56FE;&#xFF0C;&#x5176;&#x4E2D;View&#x89C6;&#x56FE;&#x65F6;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x4E0D;&#x80FD;&#x5B58;&#x5728;&#x5B69;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4F8B;&#x5982;TextView&#xFF1B;&#x5176;&#x4E2D;ViewGroup&#x89C6;&#x56FE;&#x7528;&#x6765;&#x5B58;&#x653E;&#x4E00;&#x7EC4;View&#x6216;ViewGroup;DectorView&#x7EE7;&#x627F;&#x81EA;FrameLayout&#xFF0C;FrameLayout&#x5C31;&#x662F;&#x4E00;&#x4E2A;ViewGroup&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x5B50;ViewGroup&#x548C;&#x5B50;View&#x3002;</p>
+<p>&#x5B89;&#x5353;&#x4E0A;&#x9762;&#x7684;View&#x662F;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#x7684;&#xFF0C;View&#x53EF;&#x80FD;&#x4F1A;&#x91CD;&#x53E0;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x7684;&#x5730;&#x65B9;&#x6709;&#x591A;&#x4E2A;View&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x5E94;&#x8BE5;&#x7ED9;&#x8C01;&#x5462;&#xFF1F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x6709;&#x4E86;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x673A;&#x5236;&#x3002;</p>
+<p>PhoneWindow&#xFF1A;&#x662F;&#x62BD;&#x8C61;&#x7C7B;Window&#x7684;&#x5B9E;&#x73B0;&#x7C7B;&#xFF0C;&#x62BD;&#x8C61;&#x7C7B;Window&#x662F;&#x6240;&#x6709;&#x89C6;&#x56FE;&#x6700;&#x9876;&#x5C42;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5305;&#x62EC;View&#x89C6;&#x56FE;&#x7684;&#x5916;&#x89C2;&#x548C;&#x884C;&#x4E3A;&#x90FD;&#x5F52;Window&#x7BA1;&#x3002;</p>
+<p>DecorView&#xFF1A;PhoneWindow&#x7684;&#x5185;&#x90E8;&#x7C7B;&#xFF0C;&#x901A;&#x8FC7;DecorView&#x4F20;&#x9012;&#x4FE1;&#x606F;&#x7ED9;&#x4E0B;&#x9762;&#x7684;View&#xFF0C;&#x4E0B;&#x9762;&#x7684;View&#x4E5F;&#x901A;&#x8FC7;DecorView&#x8FD4;&#x56DE;&#x6D88;&#x606F;&#x7ED9;PhoneWindow&#x3002;</p>
+<h3 id="&#x4E8C;&#x3001;&#x4E09;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x7684;&#x65B9;&#x6CD5;">&#x4E8C;&#x3001;&#x4E09;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x7684;&#x65B9;&#x6CD5;</h3>
+<p><strong>android touch&#x4E8B;&#x4EF6;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x4F20;&#x9012;&#xFF0C;&#x7ECF;&#x8FC7;Activity&#x2014;&gt;PhoneWindow&#x2014;&gt;DectorView&#x2014;&gt;ContentView&#x2014;&gt;ViewGroup&#x2014;&gt;ChildView&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x5C31;&#x662F;Activity&#x3001;ViewGroup&#x548C;View&#x7684;&#x5904;&#x7406;&#x3002;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x4E3B;&#x8981;&#x4F9D;&#x8D56;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;</strong>
+<img src="img/touch_1.png" alt=""></p>
+<p>1.dispatchTouchEvent &#xFF1A;&#x5904;&#x5728;&#x94FE;&#x9996;&#xFF0C;&#x7528;&#x4E8E;&#x5206;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x51B3;&#x5B9A;&#x662F;&#x7531;&#x5F53;&#x524D;View&#x81EA;&#x5DF1;&#x7684;onTouchEvent&#x6765;&#x5904;&#x7406;&#xFF0C;&#x8FD8;&#x662F;&#x5206;&#x53D1;&#x7ED9;&#x5B50;View&#xFF0C;&#x8BA9;&#x5B50;View&#x9012;&#x5F52;&#x8C03;&#x7528;&#x5176;&#x81EA;&#x8EAB;&#x7684;dispatchTouchEvent&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<p>2.onInterceptTouchEvent &#xFF1A;&#x662F;&#x7528;&#x6765;&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#x7684;&#xFF0C;&#x5F53;&#x7236;&#x63A7;&#x4EF6;&#x4E0B;&#x53D1;&#x4E8B;&#x4EF6;&#x7ED9;&#x5B50;&#x63A7;&#x4EF6;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x5B50;&#x63A7;&#x4EF6;&#x9700;&#x8981;&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5C31;&#x8981;&#x5728;onInterceptTouchEvent&#x65B9;&#x6CD5;&#x4E2D;&#x8FDB;&#x884C;&#x62E6;&#x622A;&#xFF0C;&#x7136;&#x540E;&#x5230;&#x5B50;&#x63A7;&#x4EF6;&#x7684;onTouchEvent&#x65B9;&#x6CD5;&#x4E2D;&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x7684;&#x76D1;&#x542C;&#x4EE5;&#x53CA;&#x903B;&#x8F91;&#x7684;&#x5224;&#x65AD;&#x3002;</p>
+<p>3.onTouchEvent &#xFF1A;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4F20;&#x9012;&#x5230;View&#x7684;&#x624B;&#x52BF;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;Activity&#x6709;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x548C;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x62E6;&#x622A;&#xFF1B;ViewGroup&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x6709;&#xFF1B;View&#x5219;&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x62E6;&#x622A;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;,&#xFF0C;&#x800C;View&#x7684;dispatchTouchEvent&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8C03;&#x7528;onTcouchEvent&#xFF0C;View&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x3002;</p>
+<h3 id="&#x4E09;&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x6D41;&#x7A0B;">&#x4E09;&#x3001;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x6D41;&#x7A0B;</h3>
+<p>Activity&#x2014;&#x2014;&gt;PhoneWindow&#x2014;&#x2014;&gt;DecorView&#x2014;&#x2014;&gt;ViewGroup&#x2014;&#x2014;&gt;...&#x2014;&#x2014;&gt;View
+<img src="img/event1.png" alt="">
+&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x673A;&#x5236;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x8D23;&#x4EFB;&#x94FE;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x4ECE;Activity&#x5982;&#x679C;&#x4F20;&#x5230;&#x6700;&#x4E0B;&#x5C42;&#x7684;View&#x90FD;&#x6CA1;&#x6709;&#x7EC4;&#x4EF6;&#x5904;&#x7406;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BE5;&#x4E8B;&#x4EF6;&#x4F1A;&#x4F9D;&#x6B21;&#x56DE;&#x4F20;&#x5230;Activity&#x3002;</p>
+<p>&#x5F53;&#x7528;&#x6237;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;touch&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E8B;&#x4EF6;&#x9996;&#x5148;&#x88AB;&#x5206;&#x53D1;&#x5230;Activity&#x7684;dispatchTouchEvent&#xFF0C;Activity&#x7684;dispatchTouchEvent&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="img/touch_2.png" alt="">
+activity&#x9996;&#x5148;&#x4F1A;&#x5C06;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x7ED9;Window&#x5904;&#x7406;&#xFF0C;&#x8C03;&#x7528;Window&#x7684;superDispatchTouchEvent&#xFF1B;PhoneWindow&#x53C8;&#x4F1A;&#x8C03;&#x7528;DectorView&#x7684;superDispatchTouchEvent&#x65B9;&#x6CD5;&#xFF1B;DectorView&#x4F1A;&#x8C03;&#x7528;&#x7236;&#x7C7B;FrameLayout&#x4E5F;&#x5C31;&#x662F;ViewGroup&#x7684;dispatchTouchEvent&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#xFF1B;&#x63A5;&#x7740;&#x5C31;&#x4F1A;&#x5206;&#x53D1;&#x5230;&#x7528;&#x6237;&#x8C03;&#x7528;setContentView&#x4F20;&#x5165;&#x7684;ViewGroup&#x7684;dispatchTouchEvent&#x4E2D;&#x3002;ViewGroup&#x7684;dispatchTouchEvent&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x5982;&#x4E0B;&#xFF1A;
+<img src="img/touch_3.png" alt="">
+&#x4ECE;&#x4EE3;&#x7801;&#x6D41;&#x7A0B;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;ViewGroup&#x7684;dispatchTouchEvent&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x65F6;&#xFF0C;&#x4F1A;&#x5148;&#x8C03;&#x7528;onInterceptTouchEvent&#x5224;&#x65AD;&#x662F;&#x5426;&#x62E6;&#x622A;&#x4E8B;&#x4EF6;(&#x9ED8;&#x8BA4;&#x4E0D;&#x62E6;&#x622A;)&#xFF0C;&#x5982;&#x679C;&#x62E6;&#x622A;&#x4E86;&#xFF0C;&#x5219;mFirstTouchTarget&#x4E3A;null&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x62E6;&#x622A;&#xFF0C;&#x5C31;&#x4F1A;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684;child&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;(&#x5C06;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x7ED9;child&#x8FDB;&#x4E00;&#x6B65;&#x5904;&#x7406;)&#xFF1B;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x627E;&#x5230;child&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;dispatchTransformedTouchEvent&#xFF0C;dispatchTransformedTouchEvent&#x7684;&#x4F2A;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;
+<img src="img/touch_4.png" alt=""></p>
+<p><strong>1&#x3001;&#x5F53;child&#x4E3A;null<br></strong>
+&#x4E8B;&#x4EF6;&#x88AB;&#x8BE5;ViewGroup&#x62E6;&#x622A;&#x4E86;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;child&#x6765;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#xFF1B;&#x4E8E;&#x662F;&#x5C31;&#x8C03;&#x7528;ViewGroup&#x7684;&#x7236;&#x7C7B;View.dispatchTouchEvent&#xFF0C;<strong>&#x800C;View&#x672C;&#x8EAB;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x5206;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#xFF0C;View&#x7684;dispatchTouchEvent&#x5176;&#x5B9E;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5230;View&#x7684;onTouchEvent&#x8FDB;&#x884C;&#x4E8B;&#x4EF6;&#x6D88;&#x8D39;&#x3002;</strong>&#x5982;&#x679C;onTouchEvent&#x8FD4;&#x56DE;true&#x8BF4;&#x660E;ViewGroup&#x6D88;&#x8D39;&#x4E86;&#x4E8B;&#x4EF6;&#xFF0C;ViewGroup.dispatchTouchEvent&#x8FD4;&#x56DE;true&#xFF1B;&#x53CD;&#x4E4B;&#x8FD4;&#x56DE;false&#x3002;</p>
+<p><strong>2&#x3001;&#x5F53;child&#x4E0D;&#x4E3A;null&#x65F6;<br></strong>
+child&#x4E0D;&#x4E3A;&#x7A7A;&#x8BF4;&#x660E;&#x627E;&#x5230;touch&#x4E8B;&#x4EF6;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x8005;&#xFF0C;&#x6CE8;&#x610F;&#x6B64;&#x65F6;child&#x53EF;&#x80FD;&#x4E3A;ViewGroup&#x6216;View&#xFF0C;&#x63A5;&#x7740;&#x5C31;&#x8C03;&#x7528;child.dispatchTouchEvent&#x5C06;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x7ED9;child&#x5904;&#x7406;&#xFF0C;&#x540C;&#x6837;child&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x3001;&#x5206;&#x53D1;&#x5230;child&#x7684;&#x5B50;&#x5B69;&#x5B50;&#x5904;&#x7406;(child&#x672C;&#x8EAB;&#x4E3A;ViewGrop&#x7684;&#x65F6;&#x5019;)&#x6216;&#x8005;&#x4E0D;&#x5904;&#x7406;&#x3002;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x5230;View&#x7684;onTouchEvent&#x6216;&#x8005;ViewGroup&#x7684;onTouchEvent&#x3002;</p>
+<p><strong>3&#x3001;handled&#x5904;&#x7406;&#x7ED3;&#x679C;<br></strong>
+&#x5982;&#x679C;handled&#x4E3A;true&#xFF0C;&#x8BF4;&#x660E;touch&#x4E8B;&#x4EF6;&#x5728;&#x5F53;&#x524D;&#x7684;ViewGroup&#x8282;&#x70B9;&#x6216;&#x8005;&#x67D0;&#x4E2A;child&#x5F97;&#x5230;&#x4E86;&#x5904;&#x7406;&#xFF1B;&#x5982;&#x679C;handled&#x4E3A;false&#xFF0C;&#x8BF4;&#x660E;touch&#x4E8B;&#x4EF6;&#x5728;&#x5F53;&#x524D;ViewGroup&#x53CA;&#x5176;child&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x5904;&#x7406;&#xFF0C;&#x5C31;&#x5C06;touch&#x4E8B;&#x4EF6;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;ViewGroup&#x7684;&#x7236;&#x89C6;&#x56FE;&#xFF0C;&#x6B64;&#x65F6;&#x7236;&#x89C6;&#x56FE;&#x7684;mFirstTouchTarget&#x4E3A;null&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x4E0D;&#x5230;addTouchTarget&#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x7236;&#x89C6;&#x56FE;&#x7684;mFirstTouchTarget&#x53D8;&#x91CF;&#xFF1B;&#x800C;&#x5982;&#x679C;mFirstTouchTarget&#x4E3A;null&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;onTouchEvent&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;onTouchEvent&#x8FD4;&#x56DE;false&#xFF0C;&#x90A3;&#x5C31;&#x63A5;&#x7740;&#x5411;&#x4E0A;&#x4F20;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x4E00;&#x5C42;&#x90FD;&#x4E0D;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x540E;&#x5C31;&#x5230;&#x4E86;Activity&#x7684;dispatchTouchEvent&#x4E2D;&#x3002;</p>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<p><strong>View&#x5373;&#x666E;&#x901A;&#x7684;&#x63A7;&#x4EF6;</strong>&#xFF1A;&#x6CA1;&#x6709;&#x5B50;&#x5E03;&#x5C40;&#x7684;&#xFF0C;&#x5982;Button&#x3001;TextView. ViewGroup&#x7EE7;&#x627F;&#x81EA;View&#xFF1B;<br>
+<strong>ViewGroup&#x63A7;&#x4EF6;</strong>&#xFF1A;view&#x5BB9;&#x5668;&#x6709;&#x5B50;&#x63A7;&#x4EF6;&#xFF0C;&#x5982;Linearlayout&#x3001;Listview&#x7B49;&#x3002;<br>
+&#x800C;&#x4E8B;&#x4EF6;&#x5373;MotionEvent&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6709;3&#x4E2A;:<br>
+(1)MotionEvent.ACTION_DOWN &#x6309;&#x4E0B;View&#xFF0C;&#x662F;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#x7684;&#x5F00;&#x59CB;<br>
+(2)MotionEvent.ACTION_MOVE &#x6ED1;&#x52A8;&#x4E8B;&#x4EF6;<br>
+(3)MotionEvent.ACTION_UP   &#x4E8B;&#x4EF6;&#x7684;&#x7ED3;&#x675F;&#x4E0E;ACTION_DOWN &#x5BF9;&#x5E94;<br></p>
+<p><strong>&#xFF08;&#x4E00;&#xFF09;&#x4E24;&#x7C7B;&#x63A7;&#x4EF6;&#x7684;&#x4E3B;&#x8981;&#x4E8B;&#x4EF6;&#x51FD;&#x6570;<br></strong>
+<strong>1.&#x5BF9;&#x5E94;View&#x7C7B;&#x63A7;&#x4EF6;&#x4E8B;&#x4EF6;&#x4E3B;&#x8981;&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;<br></strong>
+public boolean dispatchTouchEvent(MotionEvent ev)  &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5206;&#x53D1;TouchEvent<br>
+public boolean onTouchEvent(MotionEvent ev) &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5904;&#x7406;TouchEvent</p>
+<p><strong>2.&#x5BF9;&#x5E94;&#x7684;ViewGroup&#x7C7B;&#x63A7;&#x4EF6;&#x4E3B;&#x8981;&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6709;&#x4E09;&#x4E2A;&#xFF1A;<br></strong>
+public boolean dispatchTouchEvent(MotionEvent ev)  &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5206;&#x53D1;TouchEvent<br>
+public boolean onInterceptTouchEvent(MotionEvent ev) &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x62E6;&#x622A;TouchEvent<br>
+public boolean onTouchEvent(MotionEvent ev) &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5904;&#x7406;TouchEvent
+&#x56E0;&#x6B64;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x77E5;View&#x63A7;&#x4EF6;&#x6BD4;groupView&#x7C7B;&#x7684;&#x63A7;&#x4EF6;&#x5C11;&#x4E86;&#x4E00;&#x4E2A;onInterceptTouchEvent(MotionEvent ev)&#x7684;&#x62E6;&#x622A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;View&#x7C7B;&#x6CA1;&#x6709;&#x5B50;&#x63A7;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x62E6;&#x622A;&#x5411;&#x5B50;&#x7C7B;&#x4F20;&#x9012;&#x7684;&#x4E8B;&#x4EF6;&#x7684;&#x8BF4;&#x6CD5;&#xFF0C;&#x800C;ViewGroup&#x6709;&#x5B50;&#x7C7B;&#xFF0C;&#x53EF;&#x5224;&#x65AD;&#x662F;&#x5426;&#x62E6;&#x622A;&#x5411;&#x5B50;&#x7C7B;&#x4F20;&#x9012;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p><strong>MotionEvent&#xFF1A;</strong><br>
+&#x53C2;&#x6570;MotionEvent&#x4E3A;&#x624B;&#x673A;&#x5C4F;&#x5E55;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x5C01;&#x88C5;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x89E6;&#x6478;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x89E6;&#x6478;&#x7684;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x89E6;&#x6478;&#x7684;&#x65F6;&#x95F4;&#x7B49;&#x3002;&#x8BE5;&#x5BF9;&#x8C61;&#x4F1A;&#x5728;&#x7528;&#x6237;&#x89E6;&#x6478;&#x624B;&#x673A;&#x5C4F;&#x5E55;&#x65F6;&#x88AB;&#x521B;&#x5EFA;&#x3002;</p>
+<p><strong>&#x4E09;&#x4E2A;&#x4E8B;&#x4EF6;&#x8BF4;&#x660E;:</strong><br>
+<strong>onTouchEvent</strong></p>
+<pre><code>public boolean onTouchEvent(MotionEvent event) {
+   return super.onTouchEvent(event);
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E0E;&#x952E;&#x76D8;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x7684;&#x76F8;&#x540C;&#xFF0C;&#x540C;&#x6837;&#x662F;&#x5F53;&#x5DF2;&#x7ECF;&#x5B8C;&#x6574;&#x5730;&#x5904;&#x7406;&#x4E86;&#x8BE5;&#x4E8B;&#x4EF6;&#x4E14;&#x4E0D;&#x5E0C;&#x671B;&#x5176;&#x4ED6;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x518D;&#x6B21;&#x5904;&#x7406;&#x65F6;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false</p>
+<p><strong>onInterceptTouchEvent</strong></p>
+<pre><code>public boolean onInterceptTouchEvent(MotionEvent ev) {
+     return super.onInterceptTouchEvent(ev);
+}
+</code></pre><p>onInterceptTouchEvent()&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x5E76;&#x6539;&#x53D8;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x9012;&#x65B9;&#x5411;&#xFF0C;&#x800C;&#x51B3;&#x5B9A;&#x4F20;&#x9012;&#x65B9;&#x5411;&#x7684;&#x662F;&#x8FD4;&#x56DE;&#x503C;&#x3002;<br>
+&#x8FD4;&#x56DE;&#x4E3A;false&#x65F6;&#x4E8B;&#x4EF6;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x63A7;&#x4EF6;&#x7684;dispatchTouchEvent(),&#x518D;&#x7531;&#x5B50;&#x7C7B;&#x7684;dispatchTouchEvent()&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x53D1;<br>
+&#x8FD4;&#x56DE;&#x4E3A;true&#x65F6;&#x4E8B;&#x4EF6;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x5F53;&#x524D;&#x63A7;&#x4EF6;&#x7684;onTouchEvent()&#xFF0C;&#x800C;&#x4E0D;&#x5728;&#x4F20;&#x9012;&#x7ED9;&#x5B50;&#x63A7;&#x4EF6;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;Intercept(&#x622A;&#x65AD;)&#x3002;&#x800C;&#x4E14;&#x4E00;&#x65E6;&#x62E6;&#x622A;&#x4E86;&#x4E8B;&#x4EF6;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x88AB;&#x5F53;&#x524D;view&#xFF08;&#x5373;ViewGroup&#xFF09;&#x518D;&#x6B21;&#x8C03;&#x7528;&#x3002;</p>
+<p><strong>dispatchTouchEvent</strong></p>
+<pre><code>public boolean dispatchTouchEvent(MotionEvent ev) {
+   return super.dispatchTouchEvent(ev);
+}
+</code></pre><p>dispatchTouchEvent()&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x5BF9;onTouchEvent&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x672C;&#x8EAB;&#x4E0D;&#x5904;&#x7406;onTouchEvent&#x4E8B;&#x4EF6;&#x3002;&#x800C;&#x5206;&#x53D1;&#x7684;&#x65B9;&#x5F0F;&#x7531;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x51B3;&#x5B9A;&#x3002;<br>
+&#x8FD4;&#x56DE;&#x503C;&#x4E3A;true&#x65F6;&#xFF0C;&#x5219;&#x5C06;&#x4E8B;&#x4EF6;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;view&#x672C;&#x8EAB;&#x7684;onTouchEvent&#x5904;&#x7406;&#x3002;<br>
+&#x8FD4;&#x56DE;&#x503C;&#x4E3A;false&#x65F6;&#xFF0C;&#x5219;&#x5C06;&#x4E8B;&#x4EF6;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;view&#x672C;&#x8EAB;&#x7684;onInterceptTouchEvent()&#x5904;&#x7406;&#xFF0C;&#x518D;&#x7531;&#x5176;&#x51B3;&#x5B9A;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x65B9;&#x5411;<br></p>
+<p><strong>&#x603B;&#x4F53;&#x6982;&#x51B5;&#x4E00;&#x4E0B;&#x5C31;&#x662F;&#xFF1A;</strong><br>
+&#x5F53;TouchEvent&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x9996;&#x5148;Activity&#x5C06;TouchEvent&#x901A;&#x8FC7;getWindow().superDispatchTouchEvent(event)&#x628A;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5230;&#x5F53;&#x524D;&#x6D3B;&#x52A8;&#x7A97;&#x53E3;(PhoneWindow)&#xFF0C;&#x4E4B;&#x540E;&#x662F;&#x9876;&#x7EA7;&#x7A97;&#x53E3;&#x7684;DecorView&#xFF0C;&#x8C03;&#x7528;&#x4E86;DecorView&#x7684;dispatchTouchEvent&#xFF0C;DecorView&#x7EE7;&#x627F;&#x81EA;ViewGroup&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x8FDB;&#x5165;&#x4E86;ViewGroup&#x5C42;&#x9762;&#x7684;dispatchTouchEvent&#xFF0C;&#x7136;&#x540E;&#x7531;dispatchTouchEvent &#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x5982;&#x679C;dispatchTouchEvent&#x8FD4;&#x56DE;true &#xFF0C;&#x5219;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;view&#x7684;onTouchEvent&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;dispatchTouchEvent&#x8FD4;&#x56DE;false&#x5219;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;view(ViewGroup)&#x7684;interceptTouchEvent&#x65B9;&#x6CD5;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8981;&#x62E6;&#x622A;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5982;&#x679C; interceptTouchEvent&#x8FD4;&#x56DE;true&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x62E6;&#x622A;&#x6389;&#x4E86;&#xFF0C;&#x5219;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;&#x8FD9;&#x4E2A;view&#x7684;onTouchEvent&#x6765;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;interceptTouchEvent&#x8FD4;&#x56DE;false &#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7EE7;&#x7EED;&#x4F20;&#x9012;&#x7ED9;&#x5B50;view &#xFF0C;&#x7531;&#x5B50;view&#x7684;dispatchTouchEvent&#x518D;&#x6765;&#x5F00;&#x59CB;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x5206;&#x53D1;&#x3002;&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x5230;&#x67D0;&#x4E00;&#x5C42;&#x7684;&#x5B50;view&#x7684;onTouchEvent&#x4E0A;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E86;false &#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x4F1A;&#x4ECE;&#x8FD9;&#x4E2A;view&#x5F80;&#x4E0A;&#x4F20;&#x9012;&#xFF0C;&#x800C;&#x4E14;&#x90FD;&#x662F;onTouchEvent&#x6765;&#x63A5;&#x6536;&#x3002;&#x800C;&#x5982;&#x679C;&#x4F20;&#x9012;&#x5230;&#x6700;&#x4E0A;&#x9762;&#x7684; onTouchEvent&#x4E5F;&#x8FD4;&#x56DE;false&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5C31;&#x4F1A;&#x201C;&#x6D88;&#x5931;&#x201D;&#xFF0C; &#x800C;&#x4E14;&#x63A5;&#x6536;&#x4E0D;&#x5230;&#x4E0B;&#x4E00;&#x6B21;&#x4E8B;&#x4EF6;&#x3002;&#xFF08;&#x8FD9;&#x6307;&#x7684;&#x662F; down &#x5230; up &#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x4E8B;&#x4EF6;&#xFF09;&#x3002;Touchevent &#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x662F; true &#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x6D88;&#x8017;&#x6389;&#x4E86;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x3002;<br>
+<strong>&#x8FD9;&#x6837;&#x8BF4;&#x53EF;&#x80FD;&#x8FD8;&#x6709;&#x70B9;&#x62BD;&#x8C61;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x6765;&#x6362;&#x79CD;&#x601D;&#x8DEF;&#xFF1A;</strong><br>
+&#x5047;&#x5982;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x96BE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x96BE;&#x9898;&#x6700;&#x7EC8;&#x88AB;&#x4E0A;&#x7EA7;&#x9886;&#x5BFC;&#x5206;&#x7ED9;&#x4E86;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;&#x5E08;&#x4E3B;&#x7BA1;&#x53BB;&#x5904;&#x7406;&#xFF08;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#xFF09;&#xFF0C;&#x7136;&#x800C;&#x4E3B;&#x7BA1;&#x5F88;&#x5FD9;&#x4E0D;&#x60F3;&#x5904;&#x7406;&#xFF08;interceptTouchEvent&#x8FD4;&#x56DE;false&#x4E0D;&#x62E6;&#x622A;&#xFF09;&#xFF0C;&#x4E3B;&#x7BA1;&#x628A;&#x4EFB;&#x52A1;&#x5206;&#x7ED9;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x7ED3;&#x679C;&#x5DE5;&#x7A0B;&#x5E08;&#x6CA1;&#x6709;&#x641E;&#x5B9A;&#xFF08;onTouchEvent&#x8FD4;&#x56DE;&#x4E86;false&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x80FD;&#x4EA4;&#x7ED9;&#x5DE5;&#x7A0B;&#x5E08;-&#x4E3B;&#x7BA1;&#x5904;&#x7406;&#xFF08;&#x4E0A;&#x7EA7;&#x7684;onTouchEvent&#x88AB;&#x8C03;&#x7528;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4E3B;&#x7BA1;&#x4E5F;&#x6CA1;&#x641E;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x80FD;&#x4EA4;&#x7ED9;&#x518D;&#x5F80;&#x4E0A;&#x7684;&#x4E0A;&#x7EA7;&#x53BB;&#x89E3;&#x51B3;&#xFF0C;&#x5C31;&#x8FD9;&#x6837;&#x4E00;&#x5C42;&#x5C42;&#x5F80;&#x4E0A;&#x629B;&#x3002;&#x6240;&#x4EE5;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x5904;&#x7406;&#x5927;&#x6982;&#x4E5F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x6D41;&#x7A0B;&#x3002;</p>
+<p><img src="img/&#x4E8B;&#x4EF6;&#x4F20;&#x9012;2.jpeg" alt=""></p>
+<p>1&#x3001;Android &#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x662F;&#x5C42;&#x7EA7;&#x4F20;&#x9012;&#x7684;&#xFF1B;</p>
+<p>2&#x3001;dispatchTouchEvent&#x4ECE;&#x5E95;&#x5C42;&#x5411;&#x4E0A;&#x5C42;&#x4F20;&#x9012;(activity---&gt;view)&#xFF0C;&#x800C;onTouchEvent&#x521A;&#x597D;&#x76F8;&#x53CD;&#xFF1B;</p>
+<p>3&#x3001;onInterceptTouchEvent&#x8FD4;&#x56DE;&#x4E3A; true &#x65F6;&#xFF0C;&#x5C06;&#x6267;&#x884C;&#x540C;&#x5C42;&#x7EA7;&#x7684;onTouchEvent&#xFF0C;&#x800C;dispatchTouchEvent&#x548C;onTouchEvent&#x8FD4;&#x56DE; true &#x65F6;&#xFF0C;&#x5C06;&#x7EC8;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x4F20;&#x9012;&#x3002;</p>
+<p>4.&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x5728;view&#x6700;&#x7EC8;&#x90FD;&#x672A;&#x88AB;&#x6D88;&#x8D39;&#xFF08;&#x6240;&#x8C13;&#x7684;&#x6D88;&#x8D39;&#x662F;&#x6307;view&#x672A;&#x5904;&#x7406;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF09;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4EA4;&#x7ED9;activity&#x5904;&#x7406;</p>
+<p><strong>Android&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x6D41;&#x7A0B;&#xFF1A;</strong></p>
+<p>1.&#x4E8B;&#x4EF6;&#x90FD;&#x662F;&#x4ECE;Activity.dispatchTouchEvent()&#x5F00;&#x59CB;&#x4F20;&#x9012;</p>
+<p>2.&#x4E8B;&#x4EF6;&#x7531;&#x7236;View&#x4F20;&#x9012;&#x7ED9;&#x5B50;View&#xFF0C;ViewGroup&#x53EF;&#x4EE5;&#x901A;&#x8FC7;onInterceptTouchEvent()&#x65B9;&#x6CD5;&#x5BF9;&#x4E8B;&#x4EF6;&#x62E6;&#x622A;&#xFF0C;&#x505C;&#x6B62;&#x5176;&#x5411;&#x5B50;view&#x4F20;&#x9012;</p>
+<p>3.&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x4F20;&#x9012;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x88AB;&#x505C;&#x6B62;&#xFF0C;&#x4E14;&#x6700;&#x5E95;&#x5C42;&#x5B50;View&#x6CA1;&#x6709;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E8B;&#x4EF6;&#x4F1A;&#x53CD;&#x5411;&#x5F80;&#x4E0A;&#x4F20;&#x9012;&#xFF0C;&#x8FD9;&#x65F6;&#x7236;View(ViewGroup)&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6D88;&#x8D39;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x88AB;&#x6D88;&#x8D39;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x5230;Activity&#x7684;onTouchEvent()&#x51FD;&#x6570;&#x3002;</p>
+<p>4.&#x5982;&#x679C;View&#x6CA1;&#x6709;&#x5BF9;ACTION_DOWN&#x8FDB;&#x884C;&#x6D88;&#x8D39;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x5176;&#x4ED6;&#x4E8B;&#x4EF6;&#x4E0D;&#x4F1A;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;ACTION_DOWN&#x5FC5;&#x987B;&#x8FD4;&#x56DE;true&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x4E8B;&#x4EF6;&#x624D;&#x4F1A;&#x4F20;&#x9012;&#x8FDB;&#x6765; 
+5.OnTouchListener&#x4F18;&#x5148;&#x4E8E;onTouchEvent()&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x6D88;&#x8D39;</p>
+<p><strong>View&#x6CA1;&#x6709;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;</strong></p>
+<p><img src="img/View&#x6CA1;&#x6709;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;.jpg" alt=""></p>
+<p><strong>View&#x4E8B;&#x4EF6;&#x62E6;&#x622A;</strong></p>
+<p><img src="img/&#x4E8B;&#x4EF6;&#x62E6;&#x622A;.jpg" alt=""></p>
+<p><strong>View&#x5904;&#x7406;&#x4E8B;&#x4EF6;</strong></p>
+<p><img src="img/View&#x5904;&#x7406;&#x4E8B;&#x4EF6;.jpg" alt=""></p>
+<p><br>
+<img src="img/&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x603B;&#x7ED3;.png" alt=""></p>
+<p>Activity&#x6CA1;&#x6709;onInterceptTouchEvent&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x80FD;&#x5C06;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x4E0B;&#x4E00;&#x5C42;Viewgroup1&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x5982;&#x679C;Viewgroup1&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5C31;&#x4EA4;&#x7ED9;onTouchEvent&#x5904;&#x7406;&#xFF0C;&#x5982;&#x679C;onTouchEvent&#x8FD4;&#x56DE;true&#xFF0C;&#x5C31;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E8B;&#x4EF6;&#x6D88;&#x5931;&#xFF0C;&#x5982;&#x679C;onTouchEvent&#x8FD4;&#x56DE;false&#xFF0C;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x7236;View&#xFF1B;&#x5982;&#x679C;Viewgroup1&#x4E0D;&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#xFF0C;&#x518D;&#x4EA4;&#x7ED9;&#x4E00;&#x4E0B;&#x5C42;Viewgroup2&#x8FDB;&#x884C;&#x5206;&#x53D1;&#xFF0C;&#x5982;&#x679C;&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#xFF0C;&#x4EA4;&#x7ED9;onTouchEvent&#x5904;&#x7406;&#xFF0C;&#x800C;&#x7B80;&#x5355;View&#x6CA1;&#x6709;onInterceptTouchEvent&#x62E6;&#x622A;&#x4E8B;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x6B64;&#x5C42;&#x5C42;&#x4E0B;&#x53BB;&#xFF0C;&#x5B50;&#x53C8;&#x751F;&#x5B59;&#xFF0C;&#x5B59;&#x53C8;&#x751F;&#x5B50;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4E8B;&#x4EF6;&#x4F1A;&#x4F9D;&#x6B21;&#x5C42;&#x5C42;&#x5F80;&#x4E0A;&#x4F20;&#x9012;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="其他优化面试.html" class="navigation navigation-prev " aria-label="Previous page: 其他优化面试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="依赖注入.html" class="navigation navigation-next " aria-label="Next page: 依赖注入">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"事件分发机制面试","level":"1.4.2.6","depth":3,"next":{"title":"依赖注入","level":"1.4.2.7","depth":3,"path":"android/android面试/依赖注入.md","ref":"android/android面试/依赖注入.md","articles":[]},"previous":{"title":"其他优化面试","level":"1.4.2.5","depth":3,"path":"android/android面试/其他优化面试.md","ref":"android/android面试/其他优化面试.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/android面试/事件分发机制面试.md","mtime":"2017-12-14T12:21:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T07:37:18.413Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

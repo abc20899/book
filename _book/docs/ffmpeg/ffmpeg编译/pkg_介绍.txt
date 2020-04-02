@@ -1,0 +1,7 @@
+配置PKG_CONFIG_PATH环境变量
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+
+pkg-config -h
+
+pkg-config --libs libavformat
+-L/usr/local/Cellar/ffmpeg/4.0.2_1/lib -lavformat
