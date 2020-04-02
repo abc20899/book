@@ -1,0 +1,2900 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Android动画 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Android基础面试题.html" />
+    
+    
+    <link rel="prev" href="Android编码规范.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../gitbook/">
+            
+                <a href="../../gitbook/">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../gitbook/GitBook简单教程.html">
+            
+                <a href="../../gitbook/GitBook简单教程.html">
+            
+                    
+                    gitbook简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../python/">
+            
+                <a href="../../python/">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../python/python语法基础-1.html">
+            
+                <a href="../../python/python语法基础-1.html">
+            
+                    
+                    python语法基础-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../python/python语法基础-2.html">
+            
+                <a href="../../python/python语法基础-2.html">
+            
+                    
+                    python语法基础-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../python/python语法基础-3.html">
+            
+                <a href="../../python/python语法基础-3.html">
+            
+                    
+                    python语法基础-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../python/python语法基础-4.html">
+            
+                <a href="../../python/python语法基础-4.html">
+            
+                    
+                    python语法基础-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../python/Python虚拟环境.html">
+            
+                <a href="../../python/Python虚拟环境.html">
+            
+                    
+                    Python虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    android基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="安全退出应用程序.html">
+            
+                <a href="安全退出应用程序.html">
+            
+                    
+                    安全退出应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="病毒.html">
+            
+                <a href="病毒.html">
+            
+                    
+                    病毒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="超级管理员(DevicePoliceManager">
+            
+                <span>
+            
+                    
+                    超级管理员(DevicePoliceManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="程序的启动、卸载和分享.html">
+            
+                <a href="程序的启动、卸载和分享.html">
+            
+                    
+                    程序的启动、卸载和分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="代码混淆.html">
+            
+                <a href="代码混淆.html">
+            
+                    
+                    代码混淆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="读取用户logcat日志.html">
+            
+                <a href="读取用户logcat日志.html">
+            
+                    
+                    读取用户logcat日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="短信广播接收者.html">
+            
+                <a href="短信广播接收者.html">
+            
+                    
+                    短信广播接收者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="多线程断点下载.html">
+            
+                <a href="多线程断点下载.html">
+            
+                    
+                    多线程断点下载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="黑名单挂断电话及删除电话记录.html">
+            
+                <a href="黑名单挂断电话及删除电话记录.html">
+            
+                    
+                    黑名单挂断电话及删除电话记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="横向ListView.html">
+            
+                <a href="横向ListView.html">
+            
+                    
+                    横向ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="滑动切换Activity(GestureDetector">
+            
+                <span>
+            
+                    
+                    滑动切换Activity(GestureDetector)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="获取联系人.html">
+            
+                <a href="获取联系人.html">
+            
+                    
+                    获取联系人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.13" data-path="获取手机及SD卡可用存储空间.html">
+            
+                <a href="获取手机及SD卡可用存储空间.html">
+            
+                    
+                    获取手机及SD卡可用存储空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.14" data-path="获取手机中所有安装的程序.html">
+            
+                <a href="获取手机中所有安装的程序.html">
+            
+                    
+                    获取手机中所有安装的程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.15" data-path="获取位置(LocationManager">
+            
+                <span>
+            
+                    
+                    获取位置(LocationManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.16" data-path="获取应用程序缓存及一键清理.html">
+            
+                <a href="获取应用程序缓存及一键清理.html">
+            
+                    
+                    获取应用程序缓存及一键清理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.17" data-path="开发中异常的处理.html">
+            
+                <a href="开发中异常的处理.html">
+            
+                    
+                    开发中异常的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.18" data-path="开发中Log的管理.html">
+            
+                <a href="开发中Log的管理.html">
+            
+                    
+                    开发中Log的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.19" data-path="快捷方式工具类.html">
+            
+                <a href="快捷方式工具类.html">
+            
+                    
+                    快捷方式工具类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.20" data-path="来电号码归属地提示框.html">
+            
+                <a href="来电号码归属地提示框.html">
+            
+                    
+                    来电号码归属地提示框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.21" data-path="来电监听及录音.html">
+            
+                <a href="来电监听及录音.html">
+            
+                    
+                    来电监听及录音
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.22" data-path="零权限上传数据.html">
+            
+                <a href="零权限上传数据.html">
+            
+                    
+                    零权限上传数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.23" data-path="内存泄漏.html">
+            
+                <a href="内存泄漏.html">
+            
+                    
+                    内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.24" data-path="屏幕适配.html">
+            
+                <a href="屏幕适配.html">
+            
+                    
+                    屏幕适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.25" data-path="任务管理器(ActivityManager">
+            
+                <span>
+            
+                    
+                    任务管理器(ActivityManager)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.26" data-path="手机摇晃.html">
+            
+                <a href="手机摇晃.html">
+            
+                    
+                    手机摇晃
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.27" data-path="竖着的Seekbar.html">
+            
+                <a href="竖着的Seekbar.html">
+            
+                    
+                    竖着的Seekbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.28" data-path="数据存储.html">
+            
+                <a href="数据存储.html">
+            
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.29" data-path="搜索框.html">
+            
+                <a href="搜索框.html">
+            
+                    
+                    搜索框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.30" data-path="锁屏以及解锁监听.html">
+            
+                <a href="锁屏以及解锁监听.html">
+            
+                    
+                    锁屏以及解锁监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.31" data-path="文件上传.html">
+            
+                <a href="文件上传.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.32" data-path="下拉刷新ListView.html">
+            
+                <a href="下拉刷新ListView.html">
+            
+                    
+                    下拉刷新ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.33" data-path="修改系统组件样式.html">
+            
+                <a href="修改系统组件样式.html">
+            
+                    
+                    修改系统组件样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.34" data-path="音量及屏幕亮度调节.html">
+            
+                <a href="音量及屏幕亮度调节.html">
+            
+                    
+                    音量及屏幕亮度调节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.35" data-path="应用安装.html">
+            
+                <a href="应用安装.html">
+            
+                    
+                    应用安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.36" data-path="应用后台唤醒后数据的刷新.html">
+            
+                <a href="应用后台唤醒后数据的刷新.html">
+            
+                    
+                    应用后台唤醒后数据的刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.37" data-path="知识大杂烩.html">
+            
+                <a href="知识大杂烩.html">
+            
+                    
+                    知识大杂烩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.38" data-path="资源文件拷贝的三种方式.html">
+            
+                <a href="资源文件拷贝的三种方式.html">
+            
+                    
+                    资源文件拷贝的三种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.39" data-path="自定义背景.html">
+            
+                <a href="自定义背景.html">
+            
+                    
+                    自定义背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.40" data-path="自定义控件.html">
+            
+                <a href="自定义控件.html">
+            
+                    
+                    自定义控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.41" data-path="自定义状态栏通知.html">
+            
+                <a href="自定义状态栏通知.html">
+            
+                    
+                    自定义状态栏通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.42" data-path="自定义Toast.html">
+            
+                <a href="自定义Toast.html">
+            
+                    
+                    自定义Toast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.43" data-path="adblogcat使用简介.html">
+            
+                <a href="adblogcat使用简介.html">
+            
+                    
+                    adblogcat使用简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.44" data-path="Android编码规范.html">
+            
+                <a href="Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.45" data-path="Android动画.html">
+            
+                <a href="Android动画.html">
+            
+                    
+                    Android动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.46" data-path="Android基础面试题.html">
+            
+                <a href="Android基础面试题.html">
+            
+                    
+                    Android基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.47" data-path="Android入门介绍.html">
+            
+                <a href="Android入门介绍.html">
+            
+                    
+                    Android入门介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.48" data-path="Android四大组件之ContentProvider.html">
+            
+                <a href="Android四大组件之ContentProvider.html">
+            
+                    
+                    Android四大组件之ContentProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.49" data-path="Android四大组件之Service.html">
+            
+                <a href="Android四大组件之Service.html">
+            
+                    
+                    Android四大组件之Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.50" data-path="Ant打包.html">
+            
+                <a href="Ant打包.html">
+            
+                    
+                    Ant打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.51" data-path="Bitmap优化.html">
+            
+                <a href="Bitmap优化.html">
+            
+                    
+                    Bitmap优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.52" data-path="DLNA简介.html">
+            
+                <a href="DLNA简介.html">
+            
+                    
+                    DLNA简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.53" data-path="Fragment专题.html">
+            
+                <a href="Fragment专题.html">
+            
+                    
+                    Fragment专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.54" data-path="Home键监听.html">
+            
+                <a href="Home键监听.html">
+            
+                    
+                    Home键监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.55" data-path="HttpClient执行Get和Post请求.html">
+            
+                <a href="HttpClient执行Get和Post请求.html">
+            
+                    
+                    HttpClient执行Get和Post请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.56" data-path="JNI_C语言基础.html">
+            
+                <a href="JNI_C语言基础.html">
+            
+                    
+                    JNI_C语言基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.57" data-path="JNI基础.html">
+            
+                <a href="JNI基础.html">
+            
+                    
+                    JNI基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.58" data-path="ListView专题.html">
+            
+                <a href="ListView专题.html">
+            
+                    
+                    ListView专题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.59" data-path="Parcelable及Serializable.html">
+            
+                <a href="Parcelable及Serializable.html">
+            
+                    
+                    Parcelable及Serializable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.60" data-path="PopupWindow细节.html">
+            
+                <a href="PopupWindow细节.html">
+            
+                    
+                    PopupWindow细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.61" data-path="Scroller简介.html">
+            
+                <a href="Scroller简介.html">
+            
+                    
+                    Scroller简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.62" data-path="ScrollingTabs.html">
+            
+                <a href="ScrollingTabs.html">
+            
+                    
+                    ScrollingTabs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.63" data-path="SDKManager无法更新的问题.html">
+            
+                <a href="SDKManager无法更新的问题.html">
+            
+                    
+                    SDKManager无法更新的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.64" data-path="Selector使用.html">
+            
+                <a href="Selector使用.html">
+            
+                    
+                    Selector使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.65" data-path="SlidingMenu.html">
+            
+                <a href="SlidingMenu.html">
+            
+                    
+                    SlidingMenu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.66" data-path="String格式化.html">
+            
+                <a href="String格式化.html">
+            
+                    
+                    String格式化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.67" data-path="TextView跑马灯效果.html">
+            
+                <a href="TextView跑马灯效果.html">
+            
+                    
+                    TextView跑马灯效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.68" data-path="WebView总结.html">
+            
+                <a href="WebView总结.html">
+            
+                    
+                    WebView总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.69" data-path="Widget(窗口小部件">
+            
+                <span>
+            
+                    
+                    Widget(窗口小部件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.70" data-path="Wifi状态监听.html">
+            
+                <a href="Wifi状态监听.html">
+            
+                    
+                    Wifi状态监听
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.71" data-path="XmlPullParser.html">
+            
+                <a href="XmlPullParser.html">
+            
+                    
+                    XmlPullParser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Android编码规范.html">
+            
+                <a href="../Android编码规范.html">
+            
+                    
+                    Android编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Android命令.html">
+            
+                <a href="../Android命令.html">
+            
+                    
+                    Android命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Android坐标系.html">
+            
+                <a href="../Android坐标系.html">
+            
+                    
+                    Android坐标系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Gradle-basic.html">
+            
+                <a href="../Gradle-basic.html">
+            
+                    
+                    Gradle-basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Java内置的进制转换.html">
+            
+                <a href="../Java内置的进制转换.html">
+            
+                    
+                    Java内置的进制转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Java中创建对象的5种方式.html">
+            
+                <a href="../Java中创建对象的5种方式.html">
+            
+                    
+                    Java中创建对象的5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../rxjava-doc-1.html">
+            
+                <a href="../rxjava-doc-1.html">
+            
+                    
+                    rxjava-doc-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../rxjava-doc-2.html">
+            
+                <a href="../rxjava-doc-2.html">
+            
+                    
+                    rxjava-doc-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../rxjava-doc-3.html">
+            
+                <a href="../rxjava-doc-3.html">
+            
+                    
+                    rxjava-doc-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../rxjava-doc-4.html">
+            
+                <a href="../rxjava-doc-4.html">
+            
+                    
+                    rxjava-doc-4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../dart2/">
+            
+                <a href="../../dart2/">
+            
+                    
+                    dart2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../dart2/dart-overview.html">
+            
+                <a href="../../dart2/dart-overview.html">
+            
+                    
+                    dart概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../ffmpeg/">
+            
+                <a href="../../ffmpeg/">
+            
+                    
+                    ffmpeg
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../ffmpeg/ffmpeg编译.html">
+            
+                <a href="../../ffmpeg/ffmpeg编译.html">
+            
+                    
+                    ffmpeg编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../ffmpeg/ffmpeg常用命令.html">
+            
+                <a href="../../ffmpeg/ffmpeg常用命令.html">
+            
+                    
+                    ffmpeg常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../ffmpeg/音频基础知识.html">
+            
+                <a href="../../ffmpeg/音频基础知识.html">
+            
+                    
+                    音频基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../ffmpeg/ffmpeg开发基础.html">
+            
+                <a href="../../ffmpeg/ffmpeg开发基础.html">
+            
+                    
+                    ffmpeg开发基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../ffmpeg/c基础开发.html">
+            
+                <a href="../../ffmpeg/c基础开发.html">
+            
+                    
+                    c基础开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../flutter/">
+            
+                <a href="../../flutter/">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../flutter/flutter笔记.html">
+            
+                <a href="../../flutter/flutter笔记.html">
+            
+                    
+                    flutter笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../git教程/">
+            
+                <a href="../../git教程/">
+            
+                    
+                    git教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../git教程/Git命令.html">
+            
+                <a href="../../git教程/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../git教程/Git学习.html">
+            
+                <a href="../../git教程/Git学习.html">
+            
+                    
+                    Git学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../ios/">
+            
+                <a href="../../ios/">
+            
+                    
+                    ios
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../javascript/">
+            
+                <a href="../../javascript/">
+            
+                    
+                    javascript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../kotlin/">
+            
+                <a href="../../kotlin/">
+            
+                    
+                    kotlin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../kotlin/Kotlin基础语法.html">
+            
+                <a href="../../kotlin/Kotlin基础语法.html">
+            
+                    
+                    Kotlin基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../linux/linux命令行相关.html">
+            
+                <a href="../../linux/linux命令行相关.html">
+            
+                    
+                    linux命令行相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../linux/Linux常用命令.html">
+            
+                <a href="../../linux/Linux常用命令.html">
+            
+                    
+                    linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../notes/">
+            
+                <a href="../../notes/">
+            
+                    
+                    notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../notes/yisi.html">
+            
+                <a href="../../notes/yisi.html">
+            
+                    
+                    yisi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../notes/weex基础.html">
+            
+                <a href="../../notes/weex基础.html">
+            
+                    
+                    weex基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../notes/weex-native.html">
+            
+                <a href="../../notes/weex-native.html">
+            
+                    
+                    weex-native
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../notes/TensorFlow安装.html">
+            
+                <a href="../../notes/TensorFlow安装.html">
+            
+                    
+                    TensorFlow安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                <a href="../../notes/SublimeText3运行JavaScript控制台.html">
+            
+                    
+                    SublimeText3运行JavaScript控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../notes/RN-环境搭建.html">
+            
+                <a href="../../notes/RN-环境搭建.html">
+            
+                    
+                    RN-环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../../notes/Mac开发必备.html">
+            
+                <a href="../../notes/Mac开发必备.html">
+            
+                    
+                    Mac开发必备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../../notes/Mac键盘快捷键.html">
+            
+                <a href="../../notes/Mac键盘快捷键.html">
+            
+                    
+                    Mac键盘快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../../notes/Mac常用命令.html">
+            
+                <a href="../../notes/Mac常用命令.html">
+            
+                    
+                    Mac常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../../notes/远程调试WebView.html">
+            
+                <a href="../../notes/远程调试WebView.html">
+            
+                    
+                    远程调试WebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../../notes/颜色透明度换算.html">
+            
+                <a href="../../notes/颜色透明度换算.html">
+            
+                    
+                    颜色透明度换算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../c/c++/README.md">
+            
+                <span>
+            
+                    
+                    c/c++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../java/">
+            
+                <a href="../../java/">
+            
+                    
+                    java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../java/java解惑/">
+            
+                <a href="../../java/java解惑/">
+            
+                    
+                    java解惑
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../../java/java解惑/常用命令行大全.html">
+            
+                <a href="../../java/java解惑/常用命令行大全.html">
+            
+                    
+                    常用命令行大全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.2" data-path="../../java/java解惑/单例的最佳实现方式.html">
+            
+                <a href="../../java/java解惑/单例的最佳实现方式.html">
+            
+                    
+                    单例的最佳实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.3" data-path="../../java/java解惑/单链表.html">
+            
+                <a href="../../java/java解惑/单链表.html">
+            
+                    
+                    单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.4" data-path="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                <a href="../../java/java解惑/获取今后多少天后的日期.html">
+            
+                    
+                    获取今后多少天后的日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.5" data-path="../../java/java解惑/剑指Offer(上">
+            
+                <span>
+            
+                    
+                    剑指Offer(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.6" data-path="../../java/java解惑/剑指Offer(下">
+            
+                <span>
+            
+                    
+                    剑指Offer(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.7" data-path="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                <a href="../../java/java解惑/强引用、软引用、弱引用、虚引用.html">
+            
+                    
+                    强引用、软引用、弱引用、虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.8" data-path="../../java/java解惑/生产者消费者.html">
+            
+                <a href="../../java/java解惑/生产者消费者.html">
+            
+                    
+                    生产者消费者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.9" data-path="../../java/java解惑/死锁.html">
+            
+                <a href="../../java/java解惑/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.10" data-path="../../java/java解惑/算法.html">
+            
+                <a href="../../java/java解惑/算法.html">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.11" data-path="../../java/java解惑/网络请求相关内容总结.html">
+            
+                <a href="../../java/java解惑/网络请求相关内容总结.html">
+            
+                    
+                    网络请求相关内容总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.12" data-path="../../java/java解惑/线程池的原理.html">
+            
+                <a href="../../java/java解惑/线程池的原理.html">
+            
+                    
+                    线程池的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.13" data-path="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                <a href="../../java/java解惑/原子性、可见性以及有序性.html">
+            
+                    
+                    原子性、可见性以及有序性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.14" data-path="../../java/java解惑/Base64加密.html">
+            
+                <a href="../../java/java解惑/Base64加密.html">
+            
+                    
+                    Base64加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.15" data-path="../../java/java解惑/Git命令.html">
+            
+                <a href="../../java/java解惑/Git命令.html">
+            
+                    
+                    Git命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.16" data-path="../../java/java解惑/hashCode与equals.html">
+            
+                <a href="../../java/java解惑/hashCode与equals.html">
+            
+                    
+                    hashCode与equals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.17" data-path="../../java/java解惑/HashMap实现原理分析.html">
+            
+                <a href="../../java/java解惑/HashMap实现原理分析.html">
+            
+                    
+                    HashMap实现原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.18" data-path="../../java/java解惑/Java基础面试题.html">
+            
+                <a href="../../java/java解惑/Java基础面试题.html">
+            
+                    
+                    Java基础面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.19" data-path="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                <a href="../../java/java解惑/JVM垃圾回收机制.html">
+            
+                    
+                    JVM垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.20" data-path="../../java/java解惑/MD5加密.html">
+            
+                <a href="../../java/java解惑/MD5加密.html">
+            
+                    
+                    MD5加密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.21" data-path="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                <a href="../../java/java解惑/MVC与MVP及MVVM.html">
+            
+                    
+                    MVC与MVP及MVVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.22" data-path="../../java/java解惑/RMB大小写转换.html">
+            
+                <a href="../../java/java解惑/RMB大小写转换.html">
+            
+                    
+                    RMB大小写转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.23" data-path="../../java/java解惑/Vim使用教程.html">
+            
+                <a href="../../java/java解惑/Vim使用教程.html">
+            
+                    
+                    Vim使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.1.24" data-path="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                <a href="../../java/java解惑/volatile和Synchronized区别.html">
+            
+                    
+                    volatile和Synchronized区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../java/设计模式/">
+            
+                <a href="../../java/设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.2.1" data-path="../../java/设计模式/01-面向对象六大原则.html">
+            
+                <a href="../../java/设计模式/01-面向对象六大原则.html">
+            
+                    
+                    01-面向对象六大原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.2" data-path="../../java/设计模式/02-单例模式.html">
+            
+                <a href="../../java/设计模式/02-单例模式.html">
+            
+                    
+                    02-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.3" data-path="../../java/设计模式/03-Builder模式.html">
+            
+                <a href="../../java/设计模式/03-Builder模式.html">
+            
+                    
+                    03-Builder模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.4" data-path="../../java/设计模式/04-原型模式.html">
+            
+                <a href="../../java/设计模式/04-原型模式.html">
+            
+                    
+                    04-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.5" data-path="../../java/设计模式/05-工厂方法模式.html">
+            
+                <a href="../../java/设计模式/05-工厂方法模式.html">
+            
+                    
+                    05-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.6" data-path="../../java/设计模式/06-抽象工厂模式.html">
+            
+                <a href="../../java/设计模式/06-抽象工厂模式.html">
+            
+                    
+                    06-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.7" data-path="../../java/设计模式/07-策略模式.html">
+            
+                <a href="../../java/设计模式/07-策略模式.html">
+            
+                    
+                    07-策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.8" data-path="../../java/设计模式/08-状态模式.html">
+            
+                <a href="../../java/设计模式/08-状态模式.html">
+            
+                    
+                    08-状态模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.9" data-path="../../java/设计模式/09-责任链模式.html">
+            
+                <a href="../../java/设计模式/09-责任链模式.html">
+            
+                    
+                    09-责任链模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.10" data-path="../../java/设计模式/10-解释器模式.html">
+            
+                <a href="../../java/设计模式/10-解释器模式.html">
+            
+                    
+                    10-解释器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.11" data-path="../../java/设计模式/11-命令模式.html">
+            
+                <a href="../../java/设计模式/11-命令模式.html">
+            
+                    
+                    11-命令模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.12" data-path="../../java/设计模式/12-观察者模式.html">
+            
+                <a href="../../java/设计模式/12-观察者模式.html">
+            
+                    
+                    12-观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.13" data-path="../../java/设计模式/13-备忘录模式.html">
+            
+                <a href="../../java/设计模式/13-备忘录模式.html">
+            
+                    
+                    13-备忘录模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.14" data-path="../../java/设计模式/14-迭代器模式.html">
+            
+                <a href="../../java/设计模式/14-迭代器模式.html">
+            
+                    
+                    14-迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.15" data-path="../../java/设计模式/15-模板方法模式.html">
+            
+                <a href="../../java/设计模式/15-模板方法模式.html">
+            
+                    
+                    15-模板方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.16" data-path="../../java/设计模式/16-访问者模式.html">
+            
+                <a href="../../java/设计模式/16-访问者模式.html">
+            
+                    
+                    16-访问者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.17" data-path="../../java/设计模式/18-代理模式.html">
+            
+                <a href="../../java/设计模式/18-代理模式.html">
+            
+                    
+                    18-代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.18" data-path="../../java/设计模式/19-组合模式.html">
+            
+                <a href="../../java/设计模式/19-组合模式.html">
+            
+                    
+                    19-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.19" data-path="../../java/设计模式/20-适配器模式.html">
+            
+                <a href="../../java/设计模式/20-适配器模式.html">
+            
+                    
+                    20-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.20" data-path="../../java/设计模式/21-装饰模式.html">
+            
+                <a href="../../java/设计模式/21-装饰模式.html">
+            
+                    
+                    21-装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.21" data-path="../../java/设计模式/22-享元模式.html">
+            
+                <a href="../../java/设计模式/22-享元模式.html">
+            
+                    
+                    22-享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.22" data-path="../../java/设计模式/23-外观模式.html">
+            
+                <a href="../../java/设计模式/23-外观模式.html">
+            
+                    
+                    23-外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.23" data-path="../../java/设计模式/24-桥接模式.html">
+            
+                <a href="../../java/设计模式/24-桥接模式.html">
+            
+                    
+                    24-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Android动画</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="android&#x52A8;&#x753B;">Android&#x52A8;&#x753B;</h1>
+<ol>
+<li><p>AlphaAnimation</p>
+<pre><code> RelativeLayout rl_splash = (RelativeLayout) findViewById(R.id.rl_splash);
+ //&#x64AD;&#x653E;&#x52A8;&#x753B;&#x6548;&#x679C;
+ AlphaAnimation animation = new AlphaAnimation(1.0f, 0.0f);
+ //&#x8BBE;&#x7F6E;Alpha&#x52A8;&#x753B;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;
+ animation.setDuration(2000);
+ //&#x64AD;&#x653E;Alpha&#x52A8;&#x753B;
+ rl_splash.setAnimation(animation);
+</code></pre></li>
+<li><p>RotateAnimation</p>
+<pre><code> //&#x76F8;&#x5BF9;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x65CB;&#x8F6C;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x53F3;&#x4E0B;&#x89D2;
+ RotateAnimation ra = new RotateAnimation(0, 360,  //&#x4ECE;&#x54EA;&#x65CB;&#x8F6C;&#xFF0C;&#x65CB;&#x8F6C;&#x591A;&#x5C11;&#x5EA6;
+         Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF,
+         1.0f);
+ ra.setDuration(800);
+ ra.setRepeatCount(Animation.INFINITE);
+ ra.setRepeatMode(Animation.RESTART);
+ iv_scan.startAnimation(ra);
+</code></pre></li>
+<li><p>ScaleAnimation(&#x7F29;&#x653E;&#x52A8;&#x753B;)    </p>
+<pre><code> ScaleAnimation(float fromX, float toX, float fromY, float toY) 
+ Constructor to use when building a ScaleAnimation from code
+</code></pre></li>
+<li><p>TranslateAnimation(&#x4F4D;&#x79FB;&#x52A8;&#x753B;)     </p>
+<pre><code> TranslateAnimation(int fromXType, float fromXValue, int toXType, float toXValue, int fromYType, float fromYValue, int toYType, float toYValue) 
+ Constructor to use when building a TranslateAnimation from code
+</code></pre></li>
+<li><p>AnimationSet (&#x591A;&#x7EC4;&#x52A8;&#x753B;)</p>
+<pre><code> ScaleAnimation sa = new ScaleAnimation(0.2f, 1.0f, 0.4f,1.0f);//&#x7F29;&#x653E;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;,1.0f&#x5C31;&#x4EE3;&#x8868;&#x7A97;&#x4F53;&#x7684;&#x603B;&#x5BBD;&#x6216;&#x8005;&#x9AD8;
+ sa.setDuration(400);
+ TranslateAnimation ta = new TranslateAnimation(//&#x4F4D;&#x79FB;&#x52A8;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;
+           Animation.RELATIVE_TO_SELF, 0,//&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x8C01;
+           Animation.RELATIVE_TO_SELF, 0.1f,
+           Animation.RELATIVE_TO_SELF, 0,
+           Animation.RELATIVE_TO_SELF, 0);
+ ta.setDuration(300);
+ AnimationSet set = new AnimationSet(false);//&#x5982;&#x679C;&#x60F3;&#x64AD;&#x653E;&#x591A;&#x79CD;&#x52A8;&#x753B;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x8981;&#x7528;&#x5230;&#x4E86;AnimationSet
+ set.addAnimation(sa);
+ set.addAnimation(ta);
+ contentView.startAnimation(set); // &#x64AD;&#x653E;&#x4E00;&#x7EC4;&#x52A8;&#x753B;.
+</code></pre></li>
+<li><p>Frame&#x52A8;&#x753B;<br> &#x5728;<code>SDK</code>&#x4E2D;&#x63D0;&#x5230;&#xFF0C;&#x4E0D;&#x8981;&#x5728;<code>onCreate</code>&#x4E2D;&#x8C03;&#x7528;<code>start</code>&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x64AD;&#x653E;<code>Frame</code>&#x52A8;&#x753B;&#xFF0C;&#x56E0;&#x4E3A;<code>AnimationDrawable</code>&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x5168;&#x8DDF;<code>Window</code>&#x76F8;&#x5173;&#x8054;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x754C;&#x9762;&#x663E;&#x793A;&#x65F6;&#x5C31;&#x5F00;&#x59CB;&#x64AD;&#x653E;&#x5E27;&#x52A8;&#x753B;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;<code>onWindowFocusChanged()</code>&#x4E2D;&#x8C03;&#x7528;<code>start()</code>&#x3002;</p>
+<ul>
+<li><p>&#x5728;<code>drawable</code>&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;<code>xml</code>&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code>  &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+  &lt;animation-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+      android:oneshot=&quot;true&quot; &gt; //onshot&#x662F;&#x6307;&#x5B9A;&#x662F;&#x5426;&#x5FAA;&#x73AF;&#x64AD;&#x653E;
+      &lt;item
+          android:drawable=&quot;@drawable/desktop_rocket_launch_1&quot;  //Frame&#x52A8;&#x753B;&#x7684;&#x56FE;&#x7247;
+          android:duration=&quot;50&quot;/&gt; //&#x64AD;&#x653E;&#x8FD9;&#x4E2A;&#x56FE;&#x7247;&#x6301;&#x7EED;&#x7684;&#x65F6;&#x95F4;
+      &lt;item
+          android:drawable=&quot;@drawable/desktop_rocket_launch_2&quot;
+          android:duration=&quot;100&quot;/&gt;
+  &lt;/animation-list&gt;
+</code></pre></li>
+<li><p>&#x64AD;&#x653E;Frame&#x52A8;&#x753B;</p>
+<pre><code>  AnimationDrawable rocketAnimation;
+  public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        ImageView rocketImage = (ImageView) findViewById(R.id.iv);
+        rocketImage.setBackgroundResource(R.drawable.animlist); //&#x5C06;&#x4E0A;&#x8FB9;&#x5EFA;&#x7684;Frame&#x52A8;&#x753B;&#x7684;xml&#x6587;&#x4EF6;&#x901A;&#x8FC7;&#x80CC;&#x666F;&#x8D44;&#x6E90;&#x8BBE;&#x7F6E;&#x7ED9;&#x56FE;&#x7247;
+        rocketAnimation = (AnimationDrawable) rocketImage.getBackground();  //&#x83B7;&#x53D6;&#x5230;&#x56FE;&#x7247;&#x7684;&#x80CC;&#x666F;&#x8D44;&#x6E90;
+  }
+  public void start(View view) {
+        if (!rocketAnimation.isRunning()) {
+             rocketAnimation.start();  //&#x64AD;&#x653E;
+        }
+  }
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x4FDD;&#x6301;&#x52A8;&#x753B;&#x64AD;&#x653E;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x72B6;&#x6001;<code>animation.setFillAfter(true);</code>   </p>
+<pre><code> Interpolator //&#x5B9A;&#x4E49;&#x4E86;&#x52A8;&#x753B;&#x7684;&#x53D8;&#x5316;&#x901F;&#x5EA6;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5300;&#x901F;&#x3001;&#x6B63;&#x52A0;&#x901F;&#x3001;&#x8D1F;&#x52A0;&#x901F;&#x3001;&#x65E0;&#x89C4;&#x5219;&#x53D8;&#x52A0;&#x901F;&#x5EA6;
+ AccelerateDecelerateInterpolator//&#x5148;&#x52A0;&#x901F;&#x540E;&#x51CF;&#x901F;&#x3002;
+ AccelerateInterpolator//&#x9010;&#x6E10;&#x52A0;&#x901F;&#x3002;    
+ LinearInterpolator//&#x5E73;&#x7A33;&#x4E0D;&#x53D8;&#x7684;   
+ DecelerateInterpolator//&#x9010;&#x6E10;&#x51CF;&#x901F;
+ CycleInterpolator//&#x66F2;&#x7EBF;&#x8FD0;&#x52A8;&#x7279;&#x6548;&#xFF0C;&#x8981;&#x4F20;&#x9012;float&#x578B;&#x7684;&#x53C2;&#x6570;&#x3002;     
+ animation.setInterpolator(new LinearInterpolator());//&#x6307;&#x5B9A;&#x52A8;&#x753B;&#x7684;&#x8FD0;&#x884C;&#x6548;&#x679C;
+</code></pre></li>
+</ol>
+<p>&#x4E0A;&#x9762;&#x6240;&#x8BB2;&#x7684;&#x52A8;&#x753B;&#x90FD;&#x662F;<code>Android 3.0</code>&#x4E4B;&#x524D;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x6700;&#x5148;&#x719F;&#x6089;&#x7684;<code>Frame</code>&#x52A8;&#x753B;&#x548C;<code>Tween</code>&#x52A8;&#x753B;&#x3002;</p>
+<p>&#x4ECE;<code>3.0</code>&#x5F00;&#x59CB;&#x53C8;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x52A8;&#x753B;&#x53EB;&#x505A;<code>Property</code>&#x52A8;&#x753B;&#x3002;&#x5E76;&#x4E14;&#x9488;&#x5BF9;&#x8FD9;&#x4E09;&#x79CD;&#x52A8;&#x753B;&#x7684;&#x52A8;&#x753B;&#x6A21;&#x5F0F;&#x5206;&#x4E3A;:</p>
+<ul>
+<li><code>Property Animation</code> : &#x5C5E;&#x6027;&#x52A8;&#x753B;,&#x4ECE;<code>Android 3.0</code>&#x5F00;&#x59CB;&#x5F15;&#x8FDB;&#xFF0C;&#x66F4;&#x6539;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x9645;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E14;&#x5C5E;&#x6027;&#x52A8;&#x753B;&#x4E0D;&#x6B62;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;<code>View</code>&#x8FD8;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>View Animation</code> : &#x6307;&#x4E4B;&#x524D;&#x7684;<code>Tween</code>&#x52A8;&#x753B;&#xFF0C;<code>alpha scale translate rotate</code>&#x7B49;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x53EB;&#x505A;<code>View Animation</code>&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x5B83;&#x53EA;&#x80FD;&#x5E94;&#x7528;&#x4E8E;<code>View</code>&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E14;&#x53EA;&#x652F;&#x6301;&#x4E00;&#x90E8;&#x5206;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x652F;&#x6301;&#x7F29;&#x653E;&#x65CB;&#x8F6C;&#x800C;&#x4E0D;&#x652F;&#x6301;&#x80CC;&#x666F;&#x989C;&#x8272;&#x7684;&#x53D8;&#x5316;&#x3002;&#x5BF9;&#x4E8E;<code>View Animation</code>&#x800C;&#x8A00;&#xFF0C;&#x5B83;&#x53EA;&#x6539;&#x53D8;&#x4E86;<code>View</code>&#x5BF9;&#x8C61;&#x7ED8;&#x5236;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x6539;&#x53D8;<code>View</code>&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;200<em>200&#x5927;&#x5C0F;&#x7684;<code>Button</code>&#xFF0C;&#x4F60;&#x7528;<code>Tween</code>&#x52A8;&#x753B;&#x7ED9;&#x653E;&#x5927;&#x5230;500</em>500&#x4F46;&#x662F;&#x5B83;&#x7684;&#x6709;&#x6548;&#x70B9;&#x51FB;&#x533A;&#x57DF;&#x8FD8;&#x662F;200*200&#x3002;</li>
+<li><code>Drawable Animation</code> : &#x6307;&#x4E4B;&#x524D;&#x7684;<code>Frame</code>&#x52A8;&#x753B;&#x3002;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x5E27;&#x5E27;&#x7684;&#x56FE;&#x7247;&#x6765;&#x64AD;&#x653E;&#x7684;&#x3002;</li>
+</ul>
+<h2 id="&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4ED4;&#x7EC6;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;property-animation">&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4ED4;&#x7EC6;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;<code>Property Animation</code></h2>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x662F;&#x8FD9;&#x6837;&#x8FD9;&#x6837;&#x4ECB;&#x7ECD;&#x5C5E;&#x6027;&#x52A8;&#x753B;&#x7684;:      </p>
+<pre><code>The property animation system is a robust framework that allows you to animate almost anything. You can define an animation to change any object property over time, regardless of whether it draws to the screen or not. A property animation changes a property&apos;s (a field in an object) value over a specified length of time. To animate something, you specify the object property that you want to animate, such as an object&apos;s position on the screen, how long you want to animate it for, and what values you want to animate between.
+</code></pre><p>&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x6846;&#x67B6;&#x3002;    </p>
+<p>&#x5728;<code>Property Animation</code>&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x52A8;&#x753B;&#x5E94;&#x7528;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;:   </p>
+<ul>
+<li><code>Duration</code>: &#x6307;&#x5B9A;&#x52A8;&#x753B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x662F;<code>300ms</code>      </li>
+<li><code>TimeInterpolation</code>: &#x4E00;&#x4E9B;&#x6548;&#x679C;&#xFF0C;&#x5982;&#x52A0;&#x901F;&#x3001;&#x52A0;&#x901F;&#x7B49;&#x3002;</li>
+<li><code>Repeat count and behavior</code>: &#x91CD;&#x590D;&#x6B21;&#x6570;&#x5DF2;&#x7ECF;</li>
+<li><code>Animation Set</code>: &#x52A8;&#x753B;&#x5408;&#x96C6;&#x3002;&#x7528;&#x6765;&#x540C;&#x65F6;&#x6216;&#x8005;&#x987A;&#x5E8F;&#x64AD;&#x653E;&#x591A;&#x4E2A;&#x52A8;&#x753B;&#x3002;</li>
+<li><code>Frame Refresh Delay</code>: &#x591A;&#x957F;&#x65F6;&#x95F4;&#x5237;&#x65B0;&#x4E00;&#x6B21;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>10ms</code>&#x3002;</li>
+</ul>
+<h3 id="valueanimator"><code>ValueAnimator</code></h3>
+<p><code>ValueAnimator</code>&#x5305;&#x542B;<code>Property Animation</code>&#x52A8;&#x753B;&#x7684;&#x6240;&#x6709;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x52A8;&#x753B;&#x65F6;&#x95F4;&#xFF0C;&#x5F00;&#x59CB;&#x3001;&#x7ED3;&#x675F;&#x5C5E;&#x6027;&#x503C;&#xFF0C;&#x76F8;&#x5E94;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#x503C;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x7B49;&#x3002;&#x5E94;&#x7528;<code>Property Animation</code>&#x6709;&#x4E24;&#x4E2A;&#x6B65;&#x805A;&#xFF1A;       </p>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x5C5E;&#x6027;&#x503C;</li>
+<li>&#x6839;&#x636E;&#x5C5E;&#x6027;&#x503C;&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x5982;&#x6539;&#x53D8;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E00;&#x5C5E;&#x6027;&#x3002;</li>
+</ul>
+<p><code>ValuAnimiator</code>&#x53EA;&#x5B8C;&#x6210;&#x4E86;&#x7B2C;&#x4E00;&#x6B65;&#x5DE5;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5B8C;&#x6210;&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x9700;&#x8981;&#x5B9E;&#x73B0;<code>ValueAnimator.onUpdateListener</code>&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>onAnimationUpdate()</code>&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x4F1A;&#x4F20;&#x5165;<code>ValueAnimator</code>&#x5BF9;&#x8C61;&#x505A;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;<code>ValueAnimator</code>&#x5BF9;&#x8C61;&#x7684;<code>getAnimatedValue()</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;</p>
+<h3 id="objectanimator"><code>ObjectAnimator</code></h3>
+<p>&#x7EE7;&#x627F;&#x81EA;<code>ValueAnimator</code>&#xFF0C;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53CA;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x5C5E;&#x6027;&#x503C;&#x8BA1;&#x7B97;&#x5B8C;&#x6210;&#x65F6;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x76F8;&#x5E94;&#x5C5E;&#x6027;&#xFF0C;&#x5373;&#x5B8C;&#x6210;&#x4E86;<code>Property Animation</code>&#x7684;&#x5168;&#x90E8;&#x4E24;&#x6B65;&#x64CD;&#x4F5C;&#x3002;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x7528;<code>ObjectAnimator</code>&#x6765;&#x6539;&#x53D8;&#x67D0;&#x4E00;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E00;&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x7528;<code>ObjectAnimator</code>&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x8981;&#x60F3;&#x4F7F;&#x7528;<code>ObjectAnimator</code>&#xFF0C;&#x5E94;&#x8BE5;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;<code>setter</code>&#x51FD;&#x6570;&#xFF1A;<code>set&lt;PropertyName&gt;</code>&#xFF08;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;&#xFF09;</li>
+<li>&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x50CF;<code>ofFloat</code>&#x4E4B;&#x7C7B;&#x7684;&#x5DE5;&#x573A;&#x65B9;&#x6CD5;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x5BF9;&#x8C61;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4E3A;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;<code>values&#x2026;</code>&#x53C2;&#x6570;&#x53EA;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x5047;&#x5B9A;&#x4E3A;&#x76EE;&#x7684;&#x503C;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x53D8;&#x5316;&#x8303;&#x56F4;&#x4E3A;&#x5F53;&#x524D;&#x503C;&#x5230;&#x76EE;&#x7684;&#x503C;&#xFF0C;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x503C;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x8981;&#x6709;&#x76F8;&#x5E94;&#x5C5E;&#x6027;&#x7684;<code>getter</code>&#x65B9;&#x6CD5;&#xFF1A;<code>get&lt;PropertyName&gt;</code></li>
+<li>&#x5982;&#x679C;&#x6709;<code>getter</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x5E94;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x5E94;&#x4E0E;&#x76F8;&#x5E94;&#x7684;<code>setter</code>&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x4E00;&#x81F4;&#x3002;</li>
+<li><code>object</code>&#x7684;<code>setXxx</code>&#x5BF9;&#x5C5E;&#x6027;<code>xxx</code>&#x6240;&#x505A;&#x7684;&#x6539;&#x53D8;&#x5FC5;&#x987B;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x67D0;&#x79CD;&#x65B9;&#x6CD5;&#x53CD;&#x6620;&#x51FA;&#x6765;&#xFF0C;&#x6BD4;&#x5982;&#x4F1A;&#x5E26;&#x6765;<code>ui</code>&#x7684;&#x6539;&#x53D8;&#x5565;&#x7684;&#xFF08;&#x5982;&#x679C;&#x8FD9;&#x6761;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x52A8;&#x753B;&#x65E0;&#x6548;&#x679C;&#xFF09;,&#x4F8B;&#x5982;&#x6211;&#x5BF9;<code>TextView</code>&#x6216;&#x8005;<code>Button</code>&#x4F7F;&#x7528;<code>width</code>&#x7684;<code>ObjectAnimator</code>&#x52A8;&#x753B;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x65E0;&#x6548;&#xFF0C;&#x867D;&#x7136;&#x4ED6;&#x4EEC;&#x90FD;&#x6709;<code>setWidth</code>&#x548C;<code>getWidth</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;<code>setWidth</code>&#x65B9;&#x6CD5;&#x7684;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x662F;&#x6539;&#x53D8;<code>TextView</code>&#x7684;&#x6700;&#x5927;&#x5BBD;&#x5EA6;&#x548C;&#x6700;&#x5C0F;&#x5BBD;&#x5EA6;&#x7684;&#xFF0C;&#x548C;<code>TextView</code>&#x7684;&#x5BBD;&#x5EA6;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x3002;&#x6240;&#x4EE5;&#x52A8;&#x753B;&#x5C31;&#x4F1A;&#x65E0;&#x6548;&#x3002;&#x786E;&#x5207;&#x7684;&#x8BF4;<code>TextView</code>&#x7684;&#x5BBD;&#x5EA6;&#x5BF9;&#x5E94;&#x7684;&#x662F;<code>xml</code>&#x4E2D;<code>android:layout_width</code>&#x5C5E;&#x6027;&#xFF0C;&#x800C;<code>TextView</code>&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;:<code>android:width</code>&#xFF0C;&#x800C;<code>android:width</code> &#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;<code>TextView</code>&#x4E2D;&#x7684;<code>setWidth</code>&#x65B9;&#x6CD5;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4E0A;&#x8FF0;&#x6761;&#x4EF6;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x7528;<code>ObjectAnimator</code>&#xFF0C;&#x5E94;&#x7528;<code>ValueAnimator</code>&#x4EE3;&#x66FF;&#x3002;
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;<code>ObjectAnimator</code>&#x5185;&#x90E8;&#x7684;&#x5DE5;&#x4F5C;&#x673A;&#x5236;&#x662F;&#x901A;&#x8FC7;&#x5BFB;&#x627E;&#x7279;&#x5B9A;&#x5C5E;&#x6027;&#x7684;<code>get</code>&#x548C;<code>set</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x4E0D;&#x65AD;&#x5730;&#x5BF9;&#x503C;&#x8FDB;&#x884C;&#x6539;&#x53D8;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x52A8;&#x753B;&#x6548;&#x679C;&#x7684;&#x3002;</p>
+<h3 id="animationset"><code>AnimationSet</code></h3>
+<p><code>AnimationSet</code>&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x628A;&#x591A;&#x4E2A;&#x52A8;&#x753B;&#x7EC4;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x7EC4;&#x5408;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5E76;&#x53EF;&#x8BBE;&#x7F6E;&#x7EC4;&#x4E2D;&#x52A8;&#x753B;&#x7684;&#x65F6;&#x5E8F;&#x5173;&#x7CFB;&#xFF0C;&#x5982;&#x540C;&#x65F6;&#x64AD;&#x653E;&#xFF0C;&#x987A;&#x5E8F;&#x64AD;&#x653E;&#x7B49;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x540C;&#x65F6;&#x5E94;&#x7528;5&#x4E2A;&#x52A8;&#x753B;:   </p>
+<ul>
+<li>Plays bounceAnim.</li>
+<li>Plays squashAnim1, squashAnim2, stretchAnim1, and stretchAnim2 at the same time.</li>
+<li>Plays bounceBackAnim.</li>
+<li>Plays fadeAnim.</li>
+</ul>
+<pre><code>AnimatorSet bouncer = new AnimatorSet();
+bouncer.play(bounceAnim).before(squashAnim1);
+bouncer.play(squashAnim1).with(squashAnim2);
+bouncer.play(squashAnim1).with(stretchAnim1);
+bouncer.play(squashAnim1).with(stretchAnim2);
+bouncer.play(bounceBackAnim).after(stretchAnim2);
+ValueAnimator fadeAnim = ObjectAnimator.ofFloat(newBall, &quot;alpha&quot;, 1f, 0f);
+fadeAnim.setDuration(250);
+AnimatorSet animatorSet = new AnimatorSet();
+animatorSet.play(bouncer).before(fadeAnim);
+animatorSet.start();
+</code></pre><h3 id="typeevalutors">TypeEvalutors</h3>
+<p>&#x6839;&#x636E;&#x5C5E;&#x6027;&#x7684;&#x5F00;&#x59CB;&#x3001;&#x7ED3;&#x675F;&#x503C;&#x4E0E;<code>TimeInterpolation</code>&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x6BD4;&#x4F8B;&#x503C;&#x6765;&#x8BA1;&#x7B97;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x503C;&#xFF0C;<code>Android</code>&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;<code>evalutor</code>:    </p>
+<ul>
+<li><code>IntEvalutor</code>:<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x503C;</li>
+<li><code>FloatEvaluator</code>:</li>
+<li><code>ArgbEvaluator</code>: &#x5C5E;&#x6027;&#x7684;&#x503C;&#x7C7B;&#x578B;&#x4E3A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x989C;&#x8272;&#x503C;&#xFF1B;</li>
+<li><code>TypeEvaluator</code>: &#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;&#x8BE5;&#x63A5;&#x53E3;&#x81EA;&#x5B9A;&#x4E49;Evaluator&#x3002;
+&#x81EA;&#x5B9A;&#x4E49;<code>TypeEvaluator</code>&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;<code>FloatEvalutor</code>&#x7684;&#x5B9A;&#x4E49;:     <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FloatEvaluator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">TypeEvaluator</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">evaluate</span><span class="hljs-params">(<span class="hljs-keyword">float</span> fraction, Object startValue, Object endValue)</span> </span>{
+      <span class="hljs-keyword">float</span> startFloat = ((Number) startValue).floatValue();
+      <span class="hljs-keyword">return</span> startFloat + fraction * (((Number) endValue).floatValue() - startFloat);
+  }
+}
+</code></pre>
+<code>evaluate()</code>&#x65B9;&#x6CD5;&#x5F53;&#x4E2D;&#x4F20;&#x5165;&#x4E86;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>fraction</code>&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x52A8;&#x753B;&#x7684;&#x5B8C;&#x6210;&#x5EA6;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x6839;&#x636E;&#x5B83;&#x6765;&#x8BA1;&#x7B97;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x7B2C;&#x4E8C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5206;&#x522B;&#x8868;&#x793A;&#x52A8;&#x753B;&#x7684;&#x521D;&#x59CB;&#x503C;&#x548C;&#x7ED3;&#x675F;&#x503C;&#x3002;&#x90A3;&#x4E48;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;&#x903B;&#x8F91;&#x5C31;&#x6BD4;&#x8F83;&#x6E05;&#x6670;&#x4E86;&#xFF0C;&#x7528;&#x7ED3;&#x675F;&#x503C;&#x51CF;&#x53BB;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x7B97;&#x51FA;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x4E58;&#x4EE5;<code>fraction</code>&#x8FD9;&#x4E2A;&#x7CFB;&#x6570;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x7684;&#x503C;&#x4E86;&#x3002;</li>
+</ul>
+<h3 id="timeinterplator"><code>TimeInterplator</code></h3>
+<p>Time interplator&#x5B9A;&#x4E49;&#x4E86;&#x5C5E;&#x6027;&#x503C;&#x53D8;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x7EBF;&#x6027;&#x5747;&#x5300;&#x6539;&#x53D8;&#xFF0C;&#x5F00;&#x59CB;&#x6162;&#x7136;&#x540E;&#x9010;&#x6E10;&#x5FEB;&#x7B49;&#x3002;&#x5728;Property Animation&#x4E2D;&#x662F;TimeInterplator&#xFF0C;&#x5728;View Animation&#x4E2D;&#x662F;Interplator&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5728;3.0&#x4E4B;&#x524D;&#x53EA;&#x6709;Interplator&#xFF0C;3.0&#x4E4B;&#x540E;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x8F6C;&#x79FB;&#x81F3;&#x4E86;TimeInterplator&#x3002;Interplator&#x7EE7;&#x627F;&#x81EA;TimeInterplator&#xFF0C;&#x5185;&#x90E8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x4EE3;&#x7801;&#x3002;</p>
+<ul>
+<li>AccelerateInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;     &#x52A0;&#x901F;&#xFF0C;&#x5F00;&#x59CB;&#x65F6;&#x6162;&#x4E2D;&#x95F4;&#x52A0;&#x901F;</li>
+<li>DecelerateInterpolator&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;   &#x51CF;&#x901F;&#xFF0C;&#x5F00;&#x59CB;&#x65F6;&#x5FEB;&#x7136;&#x540E;&#x51CF;&#x901F;</li>
+<li>AccelerateDecelerateInterolator&#x3000;   &#x5148;&#x52A0;&#x901F;&#x540E;&#x51CF;&#x901F;&#xFF0C;&#x5F00;&#x59CB;&#x7ED3;&#x675F;&#x65F6;&#x6162;&#xFF0C;&#x4E2D;&#x95F4;&#x52A0;&#x901F;</li>
+<li>AnticipateInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;  &#x53CD;&#x5411; &#xFF0C;&#x5148;&#x5411;&#x76F8;&#x53CD;&#x65B9;&#x5411;&#x6539;&#x53D8;&#x4E00;&#x6BB5;&#x518D;&#x52A0;&#x901F;&#x64AD;&#x653E;</li>
+<li>AnticipateOvershootInterpolator&#x3000;   &#x53CD;&#x5411;&#x52A0;&#x56DE;&#x5F39;&#xFF0C;&#x5148;&#x5411;&#x76F8;&#x53CD;&#x65B9;&#x5411;&#x6539;&#x53D8;&#xFF0C;&#x518D;&#x52A0;&#x901F;&#x64AD;&#x653E;&#xFF0C;&#x4F1A;&#x8D85;&#x51FA;&#x76EE;&#x7684;&#x503C;&#x7136;&#x540E;&#x7F13;&#x6162;&#x79FB;&#x52A8;&#x81F3;&#x76EE;&#x7684;&#x503C;</li>
+<li>BounceInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;  &#x8DF3;&#x8DC3;&#xFF0C;&#x5FEB;&#x5230;&#x76EE;&#x7684;&#x503C;&#x65F6;&#x503C;&#x4F1A;&#x8DF3;&#x8DC3;&#xFF0C;&#x5982;&#x76EE;&#x7684;&#x503C;100&#xFF0C;&#x540E;&#x9762;&#x7684;&#x503C;&#x53EF;&#x80FD;&#x4F9D;&#x6B21;&#x4E3A;85&#xFF0C;77&#xFF0C;70&#xFF0C;80&#xFF0C;90&#xFF0C;100</li>
+<li>CycleIinterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000; &#x5FAA;&#x73AF;&#xFF0C;&#x52A8;&#x753B;&#x5FAA;&#x73AF;&#x4E00;&#x5B9A;&#x6B21;&#x6570;&#xFF0C;&#x503C;&#x7684;&#x6539;&#x53D8;&#x4E3A;&#x4E00;&#x6B63;&#x5F26;&#x51FD;&#x6570;&#xFF1A;Math.sin(2 <em> mCycles </em> Math.PI * input)</li>
+<li>LinearInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000; &#x7EBF;&#x6027;&#xFF0C;&#x7EBF;&#x6027;&#x5747;&#x5300;&#x6539;&#x53D8;</li>
+<li>OvershottInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;  &#x56DE;&#x5F39;&#xFF0C;&#x6700;&#x540E;&#x8D85;&#x51FA;&#x76EE;&#x7684;&#x503C;&#x7136;&#x540E;&#x7F13;&#x6162;&#x6539;&#x53D8;&#x5230;&#x76EE;&#x7684;&#x503C;</li>
+<li>TimeInterpolator&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;   &#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5141;&#x8BB8;&#x4F60;&#x81EA;&#x5B9A;&#x4E49;interpolator&#xFF0C;&#x4EE5;&#x4E0A;&#x51E0;&#x4E2A;&#x90FD;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;</li>
+</ul>
+<h3 id="propertyvaluesholder"><code>PropertyValuesHolder</code></h3>
+<p>&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0D;&#x540C;&#x5C5E;&#x6027;&#x7684;&#x52A8;&#x753B;&#x6548;&#x679C;&#xFF0C;&#x9664;&#x4E86;<code>Set</code>&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5229;&#x7528;<code>PropertyValuesHolder</code>&#x548C;<code>ViewPropertyAnimator</code>&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5177;&#x4F53;&#x505A;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>PropertyValuesHolder pvhX = PropertyValuesHolder.ofFloat(&quot;x&quot;, 50f);
+PropertyValuesHolder pvhY = PropertyValuesHolder.ofFloat(&quot;y&quot;, 100f);
+ObjectAnimator.ofPropertyValuesHolder(myView, pvhX, pvyY).start();
+</code></pre><h3 id="viewpropertyanimator"><code>ViewPropertyAnimator</code></h3>
+<p>`* </p><p>This class is not constructed by the caller, but rather by the View whose properties</p>
+<ul>
+<li>it will animate. Calls to {@link android.view.View#animate()} will return a reference</li>
+<li>to the appropriate ViewPropertyAnimator object for that View.&lt;/p&gt;`</li>
+</ul>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5BF9;&#x4E00;&#x4E2A;View&#x7684;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x52A8;&#x753B;&#x53EF;&#x4EE5;&#x7528;ViewPropertyAnimator&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x5BF9;&#x591A;&#x5C5E;&#x6027;&#x52A8;&#x753B;&#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#xFF0C;&#x4F1A;&#x5408;&#x5E76;&#x4E00;&#x4E9B;invalidate()&#x6765;&#x51CF;&#x5C11;&#x5237;&#x65B0;&#x89C6;&#x56FE;&#xFF0C;&#x8BE5;&#x7C7B;&#x5728;3.1&#x4E2D;&#x5F15;&#x5165;&#x3002;</p>
+<p><code>view.animate()</code>&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;<code>ViewPropertyAnimator</code>&#x7C7B;&#x3002;</p>
+<pre><code>myView.animate().x(50f).y(100f);
+</code></pre><p>&#x7684;&#x6548;&#x679C;&#x4E0E;&#x4E0A;&#x9762;&#x7684;<code>PropertyValuesHolder</code>&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x6548;&#x679C;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002;
+&#x4F46;&#x662F;&#x4F60;&#x6709;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x6211;&#x4EEC;&#x81EA;&#x59CB;&#x81F3;&#x7EC8;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#x8FC7;<code>start()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x65B0;&#x7684;&#x63A5;&#x53E3;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x9690;&#x5F0F;&#x542F;&#x52A8;&#x52A8;&#x753B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x8981;&#x6211;&#x4EEC;&#x5C06;&#x52A8;&#x753B;&#x5B9A;&#x4E49;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x52A8;&#x753B;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#x3002;&#x5E76;&#x4E14;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x5BF9;&#x4E8E;&#x7EC4;&#x5408;&#x52A8;&#x753B;&#x4E5F;&#x540C;&#x6837;&#x6709;&#x6548;&#xFF0C;&#x53EA;&#x8981;&#x6211;&#x4EEC;&#x4E0D;&#x65AD;&#x5730;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x52A8;&#x753B;&#x5C31;&#x4E0D;&#x4F1A;&#x7ACB;&#x523B;&#x6267;&#x884C;&#xFF0C;&#x7B49;&#x5230;&#x6240;&#x6709;&#x5728;<code>ViewPropertyAnimator</code>&#x4E0A;&#x8BBE;&#x7F6E;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x52A8;&#x753B;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#x3002;&#x5F53;&#x7136;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x8FD9;&#x4E00;&#x9ED8;&#x8BA4;&#x673A;&#x5236;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x663E;&#x5F0F;&#x5730;&#x8C03;&#x7528;<code>start()</code>&#x65B9;&#x6CD5;&#x6765;&#x542F;&#x52A8;&#x52A8;&#x753B;&#x3002;</p>
+<h3 id="xml&#x4E2D;&#x5B9A;&#x4E49;">XML&#x4E2D;&#x5B9A;&#x4E49;</h3>
+<p>&#x5728;<code>res/animator</code>&#x4E2D;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x7684;&#x52A8;&#x753B;<code>xml</code>       </p>
+<ul>
+<li><animator>  &#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x4E2D;&#x7684;ValueAnimator</animator></li>
+<li><objectanimator>  &#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x4E2D;&#x7684;ObjectAnimator</objectanimator></li>
+<li><set>  &#x5BF9;&#x5E94;&#x4EE3;&#x7801;&#x4E2D;&#x7684;AnimatorSet 
+&#x4F8B;&#x5982;:       </set></li>
+</ul>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;  
+&lt;objectAnimator   
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;   
+    android:propertyName=&quot;scaleX&quot;  
+    android:duration=&quot;2000&quot;  
+    android:valueFrom=&quot;1.0&quot;  
+    android:valueTo=&quot;2.0&quot;  
+    android:valueType=&quot;floatType&quot; 
+    android:repeatCount=&quot;1&quot;  
+    android:repeatMode=&quot;reverse&quot;&gt;  
+&lt;/objectAnimator&gt;
+</code></pre><p>&#x8FD9;&#x91CC;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;<code>valueFrom</code>&#x548C;<code>valueTo</code>:&#x662F;&#x52A8;&#x753B;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7F29;&#x653E;&#xFF0C;&#x5219;&#x5B83;&#x4EEC;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x500D;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E73;&#x79FB;&#x5219;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x8DDD;&#x79BB;&#x4E86;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x4E86;</p>
+<pre><code>scaleXAnimator = (ObjectAnimator)AnimatorInflater.loadAnimator(this, R.animator.scalex);  
+scaleXAnimator.setTarget(btnScaleX);  
+scaleXAnimator.start();
+</code></pre><p>&#x90A3;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x64AD;&#x653E;&#x591A;&#x4E2A;&#x52A8;&#x753B;&#x600E;&#x4E48;&#x529E;?  </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;  
+&lt;set xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;   
+    android:ordering=&quot;together&quot;&gt;  
+    &lt;objectAnimator  
+        android:duration=&quot;2000&quot;  
+        android:propertyName=&quot;scaleX&quot;  
+        android:repeatCount=&quot;1&quot;  
+        android:repeatMode=&quot;reverse&quot;  
+        android:valueFrom=&quot;1.0&quot;  
+        android:valueTo=&quot;2.0&quot; &gt;  
+    &lt;/objectAnimator&gt;  
+    &lt;objectAnimator  
+        android:duration=&quot;2000&quot;  
+        android:propertyName=&quot;scaleY&quot;  
+        android:repeatCount=&quot;1&quot;  
+        android:repeatMode=&quot;reverse&quot;  
+        android:valueFrom=&quot;1.0&quot;  
+        android:valueTo=&quot;2.0&quot; &gt;  
+    &lt;/objectAnimator&gt;  
+&lt;/set&gt;
+</code></pre><pre><code class="lang-java">animatorScaleSet = (AnimatorSet)AnimatorInflater.loadAnimator(<span class="hljs-keyword">this</span>, R.animator.scale);  
+animatorScaleSet.setTarget(btnScale);  
+animatorScaleSet.start();
+</code></pre>
+<p><code>Android L</code>&#x53C8;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x79CD;&#x52A8;&#x753B;&#x6837;&#x5F0F;&#xFF0C;&#x53EB;&#x505A;<code>Reveal Animation</code>&#x3002;
+&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x6548;&#x679C;:    </p>
+<p><img src="https://raw.githubusercontent.com/CharonChui/Pictures/master/reveal.gif?raw=true" alt="image">    </p>
+<p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;<code>ViewAnimationUtils.createCircularReveal()</code>&#x65B9;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x3002;</p>
+<pre><code>/**
+ * Returns an Animator which can animate a clipping circle.
+ * &lt;p&gt;
+ * Any shadow cast by the View will respect the circular clip from this animator.
+ * &lt;p&gt;
+ * Only a single non-rectangular clip can be applied on a View at any time.
+ * Views clipped by a circular reveal animation take priority over
+ * {@link View#setClipToOutline(boolean) View Outline clipping}.
+ * &lt;p&gt;
+ * Note that the animation returned here is a one-shot animation. It cannot
+ * be re-used, and once started it cannot be paused or resumed. It is also
+ * an asynchronous animation that automatically runs off of the UI thread.
+ * As a result {@link AnimatorListener#onAnimationEnd(Animator)}
+ * will occur after the animation has ended, but it may be delayed depending
+ * on thread responsiveness.
+ *
+ * @param view The View will be clipped to the animating circle.
+ * @param centerX The x coordinate of the center of the animating circle, relative to
+ *                &lt;code&gt;view&lt;/code&gt;.
+ * @param centerY The y coordinate of the center of the animating circle, relative to
+ *                &lt;code&gt;view&lt;/code&gt;.
+ * @param startRadius The starting radius of the animating circle.
+ * @param endRadius The ending radius of the animating circle.
+ */
+public static Animator createCircularReveal(View view,
+        int centerX,  int centerY, float startRadius, float endRadius) {
+    return new RevealAnimator(view, centerX, centerY, startRadius, endRadius);
+}
+</code></pre><p>&#x4EE3;&#x7801;&#x5982;&#x4E0B;:    </p>
+<pre><code>void enterReveal() {
+    final View myView = findViewById(R.id.my_view);
+
+    int cx = myView.getMeasuredWidth() / 2;
+    int cy = myView.getMeasuredHeight() / 2;
+
+    int finalRadius = Math.max(myView.getWidth(), myView.getHeight()) / 2;
+
+    Animator anim =
+        ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
+
+    anim.start();
+}
+
+void exitReveal() {
+    final View myView = findViewById(R.id.my_view);
+
+    int cx = myView.getMeasuredWidth() / 2;
+    int cy = myView.getMeasuredHeight() / 2;
+
+    int initialRadius = myView.getWidth() / 2;
+
+    Animator anim =
+        ViewAnimationUtils.createCircularReveal(myView, cx, cy, initialRadius, 0);
+
+    anim.addListener(new AnimatorListenerAdapter() {
+        @Override
+        public void onAnimationEnd(Animator animation) {
+            super.onAnimationEnd(animation);
+            myView.setVisibility(View.INVISIBLE);
+        }
+    });
+
+    anim.start();
+}
+</code></pre><p>&#x6709;&#x5173;&#x5982;&#x4F55;&#x63D0;&#x9AD8;&#x52A8;&#x753B;&#x6027;&#x80FD;&#x8BF7;&#x770B;:<a href="https://github.com/CharonChui/AndroidNote/blob/master/Android%E5%8A%A0%E5%BC%BA/%E9%80%9A%E8%BF%87Hardware%20Layer%E6%8F%90%E9%AB%98%E5%8A%A8%E7%94%BB%E6%80%A7%E8%83%BD.md" target="_blank">&#x901A;&#x8FC7;Hardware Layer&#x63D0;&#x9AD8;&#x52A8;&#x753B;&#x6027;&#x80FD;</a></p>
+<hr>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Android编码规范.html" class="navigation navigation-prev " aria-label="Previous page: Android编码规范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Android基础面试题.html" class="navigation navigation-next " aria-label="Next page: Android基础面试题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Android动画","level":"1.4.1.45","depth":3,"next":{"title":"Android基础面试题","level":"1.4.1.46","depth":3,"path":"android/android基础/Android基础面试题.md","ref":"android/android基础/Android基础面试题.md","articles":[]},"previous":{"title":"Android编码规范","level":"1.4.1.44","depth":3,"path":"android/android基础/Android编码规范.md","ref":"android/android基础/Android编码规范.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","splitter","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/android基础/Android动画.md","mtime":"2020-04-01T10:58:35.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-02T02:22:25.925Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
